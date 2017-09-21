@@ -1,0 +1,83 @@
+.statsContainer
+  display: block
+  height: 48px
+
+.stats
+  margin-top: 10px
+  border-bottom: 1px solid #e6ecf0
+  border-top: 1px solid #e6ecf0
+  width: 100%
+  overflow: hidden
+  display: block
+  li
+    display: block
+    float: left
+    overflow: hidden
+
+// Retweets
+.retweets
+  margin-right: 10px
+  padding-top: 12px
+
+.insideRetweets
+  line-height: 16px
+  font-size: 14px
+  color: #657786
+  transition: opacity 0.1s ease-out
+  input
+    +placeholder
+      color: #000
+    &:hover
+    	opacity: 0.8
+    &:focus
+      opacity: 1
+
+.retweetAndLikeNumber
+  color: #000
+  display: inline
+  font-size: 14px
+  font-weight: bold
+  line-height: 20px
+  width: 36.9px
+
+// Likes
+.likes
+  margin-right: 10px
+  padding-top: 12px
+
+.insideLikes
+  line-height: 16px
+  font-size: 14px
+  color: #657786
+  transition: opacity 0.1s ease-out
+  input
+    +placeholder
+      color: #000
+    &:hover
+      opacity: 0.84
+    &:focus
+      opacity: 1
+
+// Favourite Icons
+
+.avatarRow
+  position: relative
+
+.avatarRow .avatarImageOuter
+  &:nth-child(1)
+    padding: 11px 0
+    padding-left: 12px
+    border-left: 1px solid #e6ecf0
+    float: left
+  padding: 11px 0
+  float: left
+
+.avatarImageInner
+  float: left
+  margin-right: 5px
+  border-radius: 50%
+  width: 24px
+  height: 24px
+  transition: opacity .1s ease-out
+  &:hover
+    opacity: 0.85

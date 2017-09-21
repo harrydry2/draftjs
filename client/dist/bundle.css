@@ -1,0 +1,704 @@
+/**
+ * modified version of eric meyer's reset 2.0
+ * http://meyerweb.com/eric/tools/css/reset/
+ */
+/**
+ * basic reset
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/**
+ * HTML5 display-role reset for older browsers
+ */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section,
+main, summary {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * modified version of normalize.css 3.0.2
+ * http://necolas.github.io/normalize.css/
+ */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * HTML5 display definitions
+ * =============================================================================
+ */
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/**
+ * Links
+ * =============================================================================
+ */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/**
+ * Text-level semantics
+ * =============================================================================
+ */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * 1. Address styling not present in Safari and Chrome.
+ * 2. Set previously resetted italic font-style
+ */
+dfn,
+i, em {
+  font-style: italic; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * Embedded content
+ * =============================================================================
+ */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/**
+ * Grouping content
+ * =============================================================================
+ */
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; }
+
+/**
+ * Forms
+ * =============================================================================
+ */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'proxima-bold';
+  src: url("//p2.zdassets.com/hc/theme_assets/482660/200018834/Proxima_Nova_Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'proxima-regular';
+  src: url("//p2.zdassets.com/hc/theme_assets/482660/200018834/Proxima_Nova_Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'proxima-semibold';
+  src: url("//p4.zdassets.com/hc/theme_assets/913881/200060273/proxima-nova-semibold.svg") format("svg"), url("//p4.zdassets.com/hc/theme_assets/913881/200060273/proxima-nova-semibold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'proxima-thin';
+  src: url("//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-9e619ad2490098a587bc46fb466bec9b__1_.woff") format("woff"), url("//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-6fbe9763d2dcda6c55f0bbd22a4835ed.ttf") format("truetype"), url("//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-f7aae9fd81400f75a2de578c385d13c1.svg") format("svg"); }
+
+body, html {
+  font-family: 'proxima-regular'; }
+
+input, .tweetTextSize {
+  outline: none;
+  border: none;
+  margin: 0px;
+  padding: 0px; }
+
+.backgroundImage {
+  position: absolute;
+  z-index: 0;
+  width: 730px;
+  height: 500px;
+  filter: blur(2px);
+  transform: scale(0.72, 0.72);
+  top: 10%;
+  left: 42%;
+  background-image: url(https://pbs.twimg.com/profile_banners/309705015/1476982221); }
+
+.backgroundImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.72, 0.72);
+  width: 730px;
+  height: 500px;
+  position: absolute;
+  top: 10%;
+  left: 42%; }
+
+.backgroundTweet {
+  height: 346px;
+  width: 560px;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 10px;
+  position: relative; }
+
+body {
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, #8668ad 0, #79ccf2 100%) 1; }
+
+.wrapper {
+  background: white;
+  width: 100%;
+  min-height: 100vh; }
+
+.clearFix {
+  margin-left: 58px;
+  display: block; }
+
+.permalinkHeader {
+  height: 48px;
+  width: 502px;
+  margin-bottom: 15px;
+  display: flex;
+  line-height: 20px;
+  align-items: center; }
+
+.accountGroup {
+  flex: 1 1 0; }
+
+.profileImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  float: left;
+  margin-left: -58px; }
+
+.fullNameGroup {
+  display: block; }
+
+.fullName {
+  line-height: 24px;
+  color: #14171a;
+  font-size: 18px;
+  font-weight: bold; }
+
+.username {
+  color: #657786;
+  font-size: 14px;
+  line-height: 19.25px;
+  display: inline-block;
+  transition: opacity 0.1s ease-out; }
+
+.usernameHover::-webkit-input-placeholder {
+  color: #657786; }
+
+.usernameHover:-moz-placeholder {
+  color: #657786; }
+
+.usernameHover::-moz-placeholder {
+  color: #657786; }
+
+.usernameHover:-ms-input-placeholder {
+  color: #657786; }
+
+.usernameHover:hover {
+  opacity: 0.85; }
+
+.usernameHover:focus {
+  opacity: 1; }
+
+.userBadges {
+  position: relative;
+  top: 1px; }
+
+.verificationIcon {
+  display: inline-block;
+  padding-left: 4px;
+  width: 12.9px;
+  height: 13.85px; }
+
+.followBar {
+  display: block; }
+
+button {
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 16px;
+  border: 1.111px solid;
+  border-radius: 100px;
+  background-color: #329CC3;
+  color: white;
+  font-family: 'Helvetica Neue';
+  background-clip: border-box;
+  font-weight: bold; }
+
+.profileTweetAction {
+  float: right;
+  margin: -2px -9px 0 0;
+  display: inline-block;
+  min-width: 0;
+  display: flex; }
+
+.twitterDownArrow {
+  width: 12.6px;
+  height: 8.7px;
+  padding: 2px 9px;
+  margin-left: 9px; }
+
+.textContainer {
+  display: block; }
+
+.tweetTextSize {
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  height: 160px; }
+
+.handle {
+  color: #0084B4; }
+
+.hashtag {
+  color: #0084B4; }
+
+.draftJsEmojiPlugin__emojiSelectButton__1hHuM {
+  background: no-repeat center/30% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emoji.png") !important;
+  position: absolute;
+  bottom: 35%;
+  right: 2%;
+  border: none !important; }
+  .draftJsEmojiPlugin__emojiSelectButton__1hHuM:hover {
+    background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important; }
+
+.draftJsEmojiPlugin__emojiSelectButtonPressed__3sOeC {
+  background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important;
+  border: none !important;
+  position: absolute;
+  bottom: 35%;
+  right: 2%; }
+
+.clientAndActions {
+  clear: both;
+  margin-top: 10px;
+  line-height: 19.25px; }
+
+.metadata {
+  font-size: 14px;
+  color: #657786;
+  line-height: 24px;
+  overflow: hidden; }
+  .metadata input {
+    width: 160px;
+    transition: opacity .1s ease-out; }
+    .metadata input::-webkit-input-placeholder {
+      color: #657786; }
+    .metadata input:-moz-placeholder {
+      color: #657786; }
+    .metadata input::-moz-placeholder {
+      color: #657786; }
+    .metadata input:-ms-input-placeholder {
+      color: #657786; }
+    .metadata input:hover {
+      opacity: 0.9; }
+    .metadata input:focus {
+      opacity: 1; }
+
+.statsContainer {
+  display: block;
+  height: 48px; }
+
+.stats {
+  margin-top: 10px;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+  width: 100%;
+  overflow: hidden;
+  display: block; }
+  .stats li {
+    display: block;
+    float: left;
+    overflow: hidden; }
+
+.retweets {
+  margin-right: 10px;
+  padding-top: 12px; }
+
+.insideRetweets {
+  line-height: 16px;
+  font-size: 14px;
+  color: #657786;
+  transition: opacity 0.1s ease-out; }
+  .insideRetweets input::-webkit-input-placeholder {
+    color: #000; }
+  .insideRetweets input:-moz-placeholder {
+    color: #000; }
+  .insideRetweets input::-moz-placeholder {
+    color: #000; }
+  .insideRetweets input:-ms-input-placeholder {
+    color: #000; }
+  .insideRetweets input:hover {
+    opacity: 0.8; }
+  .insideRetweets input:focus {
+    opacity: 1; }
+
+.retweetAndLikeNumber {
+  color: #000;
+  display: inline;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 36.9px; }
+
+.likes {
+  margin-right: 10px;
+  padding-top: 12px; }
+
+.insideLikes {
+  line-height: 16px;
+  font-size: 14px;
+  color: #657786;
+  transition: opacity 0.1s ease-out; }
+  .insideLikes input::-webkit-input-placeholder {
+    color: #000; }
+  .insideLikes input:-moz-placeholder {
+    color: #000; }
+  .insideLikes input::-moz-placeholder {
+    color: #000; }
+  .insideLikes input:-ms-input-placeholder {
+    color: #000; }
+  .insideLikes input:hover {
+    opacity: 0.84; }
+  .insideLikes input:focus {
+    opacity: 1; }
+
+.avatarRow {
+  position: relative; }
+
+.avatarRow .avatarImageOuter {
+  padding: 11px 0;
+  float: left; }
+  .avatarRow .avatarImageOuter:nth-child(1) {
+    padding: 11px 0;
+    padding-left: 12px;
+    border-left: 1px solid #e6ecf0;
+    float: left; }
+
+.avatarImageInner {
+  float: left;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: opacity .1s ease-out; }
+  .avatarImageInner:hover {
+    opacity: 0.85; }
+
+.streamItemFooter {
+  font-size: 12px;
+  padding-top: 1px; }
+  .streamItemFooter .tweetActionList {
+    font-size: 0;
+    height: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+    margin-top: 10px; }
+    .streamItemFooter .tweetActionList .footerOuter {
+      display: inline-block;
+      min-width: 80px; }
+      .streamItemFooter .tweetActionList .footerOuter .actionButton {
+        color: #657786;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1;
+        padding: 0 2px;
+        position: relative; }
+        .streamItemFooter .tweetActionList .footerOuter .actionButton .iconContainer {
+          display: inline-block;
+          line-height: 0;
+          position: relative;
+          vertical-align: middle; }
+        .streamItemFooter .tweetActionList .footerOuter .actionButton .actionCount {
+          color: #657786;
+          display: inline-block;
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 1;
+          margin-left: 7.3px;
+          position: relative;
+          vertical-align: text-bottom; }
+
+.replyIcon {
+  width: 15.6px;
+  height: 15.6px;
+  transform: translate(0px, 0.1px); }
+
+.retweetIcon {
+  width: 20.4px;
+  height: 15.8px;
+  transform: translate(0px, 0.1px); }
+
+.favouriteIcon {
+  width: 15.3px;
+  height: 15.3px;
+  transform: translate(0px, 0.8px); }
+
+.dmIcon {
+  width: 16.8px;
+  height: 15.25px;
+  transform: translate(-6.2px, 1px); }
+
+.inputReplies {
+  width: 25px;
+  transform: translateY(0.9px);
+  transition: opacity 0.1s ease-out; }
+  .inputReplies::-webkit-input-placeholder {
+    color: #657786; }
+  .inputReplies:-moz-placeholder {
+    color: #657786; }
+  .inputReplies::-moz-placeholder {
+    color: #657786; }
+  .inputReplies:-ms-input-placeholder {
+    color: #657786; }
+  .inputReplies:hover {
+    opacity: 0.9; }
+  .inputReplies:focus {
+    opacity: 1; }

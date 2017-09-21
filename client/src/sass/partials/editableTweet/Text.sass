@@ -1,0 +1,56 @@
+// for text
+.textContainer
+	display: block
+
+.tweetTextSize
+	font-size: 27px
+	line-height: 32px
+	letter-spacing: 0.01em
+	resize: none
+	overflow: hidden
+	width: 100%
+	height: 160px
+
+// Draft.js css
+.handle 
+	color: $inTweetBlue
+
+.hashtag 
+	color: $inTweetBlue
+
+.draftJsEmojiPlugin__emojiSelectButton__1hHuM
+	background: no-repeat center/30% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emoji.png") !important
+	position: absolute
+	bottom: 35%
+	right: 2%
+	border: none !important
+	&:hover
+		background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important
+
+.draftJsEmojiPlugin__emojiSelectButtonPressed__3sOeC
+	background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important
+	border: none !important
+	position: absolute
+	bottom: 35%
+	right: 2%
+
+// for date and time
+.clientAndActions
+	clear: both
+	margin-top: 10px
+	line-height: 19.25px
+
+.metadata
+	font-size: 14px
+	color: #657786
+	line-height: 24px
+	overflow: hidden
+	input
+		width: 160px
+		transition: opacity .1s ease-out
+		+placeholder
+			color: #657786
+		&:hover
+		  opacity: 0.9
+		&:focus
+		  opacity: 1

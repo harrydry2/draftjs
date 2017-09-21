@@ -1,0 +1,86 @@
+.clearFix
+  margin-left: 58px
+  display: block
+
+.permalinkHeader
+  height: 48px
+  width: 502px
+  margin-bottom: 15px
+  display: flex
+  line-height: 20px
+  align-items: center
+
+.accountGroup
+  flex: 1 1 0
+
+.profileImage
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  float: left
+  margin-left: -58px
+
+.fullNameGroup
+  display: block
+
+.fullName
+  line-height: 24px
+  color: #14171a
+  font-size: 18px
+  font-weight: bold
+
+.username
+  color: #657786
+  font-size: 14px
+  line-height: 19.25px
+  display: inline-block
+  transition: opacity 0.1s ease-out
+
+.usernameHover
+  +placeholder
+    color: #657786
+  &:hover
+    opacity: 0.85
+  &:focus
+    opacity: 1
+
+.userBadges
+  position: relative
+  top: 1px
+
+.verificationIcon
+  display: inline-block
+  padding-left: 4px
+  width: 12.9px
+  height: 13.85px
+
+// Following Button Section
+
+.followBar
+  display: block
+
+button
+  align-items: flex-start
+  font-size: 14px
+  line-height: 20px
+  padding: 6px 16px
+  border: 1.111px solid
+  border-radius: 100px
+  background-color: $twitterBlue
+  color: white
+  font-family: 'Helvetica Neue'
+  background-clip: border-box
+  font-weight: bold
+
+.profileTweetAction
+  float: right
+  margin: -2px -9px 0 0
+  display: inline-block
+  min-width: 0
+  display: flex
+
+.twitterDownArrow
+  width: 12.6px
+  height: 8.7px
+  padding: 2px 9px
+  margin-left: 9px
