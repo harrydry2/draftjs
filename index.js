@@ -6,7 +6,7 @@ const keys = require('./config/keys');
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
-require('./models/Purchase');
+require('./models/schema.js');
 
 const app = express();
 
