@@ -1,19 +1,19 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const keys = require('./config/keys');
+mongoose.Promise = global.Promise;
+mongoose.connect(keys.mongoURI);
 
-// const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-// const keys = require('./config/keys');
-// require('./models/purchase');
-
-// mongoose.Promise = global.Promise;
-// mongoose.connect(keys.mongoURI);
+require('./models/Purchase');
 
 const app = express();
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-// require('./routes/authRoutes')(app);
+require('./routes/twitterRoutes')(app);
+require('./routes/billingRoutes')(app);
 
 if (process.env.NODE_ENV !== 'production') {
   const webpackMiddleware = require('webpack-dev-middleware');

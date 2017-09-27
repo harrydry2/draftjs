@@ -4,11 +4,12 @@ mongoose.Promise = global.Promise;
 const purchaseSchema = new mongoose.Schema({
 	username: {
 		type: String,
-		trim: true,
-		required: 'Please enter a sender name'
 	},
 	tweetDate: {
 		type: String
+	},
+	tweetText: {
+		type: [String]
 	},
 	retweets: {
 		type: String
@@ -17,7 +18,7 @@ const purchaseSchema = new mongoose.Schema({
 		type: String
 	},
 	favouritesArray: {
-		type: String
+		type: [String]
 	},
 	replies: {
 		type: String
@@ -59,6 +60,9 @@ const purchaseSchema = new mongoose.Schema({
 		type: String
 	},
 	stripeShippingAddressState: {
+		type: String
+	},
+	timeOfPurchase: {
 		type: String
 	}
 });

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import EditableTweet from './editableTweet/editableTweet';
+import PaymentBlock from './PaymentBlock';
+
 
 class App extends Component {
 	render() {
@@ -8,6 +10,7 @@ class App extends Component {
 				<div className="cursor" />
 				<div className="wrapper">
 					<EditableTweet />
+					<PaymentBlock />
 				</div>
 			</div>
 		);

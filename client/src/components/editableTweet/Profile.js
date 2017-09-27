@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
 
 class Profile extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	typeAhead (e) {
+		e.preventDefault();
+		const twitterLookup = e.target[0].value;
+		this.props.fetchUser(twitterLookup)
+	}
+	
 	render() {
+		const {fullName, profileImage} = this.props.infoObject;
 		return (
 			<div>
 				<div className="clearFix">
 					<div className="permalinkHeader">
 						<div className="accountGroup">
-							<img src="http://pbs.twimg.com/profile_images/849708930213306368/8vsuutgz_normal.jpg" className="profileImage" alt="" />
+							<img src={profileImage} className="profileImage" alt="" />
 							<span className="fullNameGroup">
-								<strong className="fullName">Nassim Nicholas Taleb</strong>
+								<strong className="fullName">{fullName}</strong>
 								<span className="userBadges">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/verification.png" className="verificationIcon" alt="" />
 								</span>
 							</span>
-							<form className="search">
+							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
 								<span className="username">@</span>
 								<input type="text" className="username" placeholder="nntaleb" />
 							</form>
@@ -31,4 +44,8 @@ class Profile extends Component {
 		);
 	}
 }
-export default Profile;
+function mapStateToProps({ infoObject }) {
+  return { infoObject };
+}
+
+export default connect(mapStateToProps, actions)(Profile);

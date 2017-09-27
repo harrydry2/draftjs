@@ -4,14 +4,16 @@ import { EditorState, CompositeDecorator } from 'draft-js';
 import createEmojiPlugin from 'draft-js-emoji-plugin';
 import 'draft-js-emoji-plugin/lib/plugin.css';
 import moment from 'moment';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
 const text = `@140_Canvas Add your tweet here, Throw in an emoji or two and you're good to go. #easypeasy `;
+
 
 function findWithRegex(regex, contentBlock, callback) {
 	const text = contentBlock.getText();
 	let matchArr;
 	let start;
 	while ((matchArr = regex.exec(text)) !== null) {
-		console.log(matchArr);
 		start = matchArr.index;
 		callback(start, start + matchArr[0].length);
 	}
@@ -53,18 +55,45 @@ class Text extends Component {
 		super(props);
 		this.state = {
 			editorState: createEditorStateWithText(text),
-			dateAndTime: "6:57 AM - 22 Sep 2017",
+			dateAndTime: moment().format('h:mm A - D MMM YYYY'),
+			lines: 3,
 		};
-		this.onChange = editorState => this.setState({ editorState });
-	}
-
-	componentDidMount() {
-		const dateAndTime = moment().format('h:mm A - D MMM YYYY')
-		this.setState({ dateAndTime })
+		this.onChange = (editorState) => {
+			this.setState({editorState})
+		}
 	}
 	
 	focus() {
 		this.editor.focus();
+	}
+
+	onChangeDate(e) {
+		this.setState({
+			dateAndTime: e.target.value
+		})
+	}
+
+	componentDidUpdate() {
+		const contentState1 = this.state.editorState.getCurrentContent().getBlocksAsArray().map(block => block.getText());
+	  if(this.tweetTextSize) {
+	  	let height = this.tweetTextSize.offsetHeight;
+	  	if (height === 32 && this.state.lines !== 1) {
+	  		this.setState({lines: 1})
+	  	}
+	  	if (height === 64 && this.state.lines !== 2) {
+	  		this.setState({lines: 2})
+	  	}
+	  	if (height === 96 && this.state.lines !== 3) {
+	  		this.setState({lines: 3})
+	  	}
+	  	if (height === 128 && this.state.lines !== 4) {
+	  		this.setState({lines: 4})
+	  	}
+	  	if (height === 160 && this.state.lines !== 5) {
+	  		this.setState({lines: 5})
+	  	} 
+	  }
+	  this.props.saveTweetDetails(contentState1, this.state.dateAndTime, this.state.lines);
 	}
 
 	render() {
@@ -72,7 +101,11 @@ class Text extends Component {
 		return (
 			<div>
 				<div className="textContainer">
-					<div className="tweetTextSize" onClick={() => this.focus()}>
+					<div 
+						className="tweetTextSize" 
+						onClick={() => this.focus()}
+						ref={(element) => { this.tweetTextSize = element; }}
+					>
 						<Editor
 							editorState={editorState}
 							onChange={this.onChange}
@@ -87,17 +120,18 @@ class Text extends Component {
 							plugins={[emojiPlugin]}
 							ref={(element) => { this.editor = element; }}
 						/>
-						<EmojiSuggestions />
-						<EmojiSelect />
+						{/*<EmojiSuggestions />
+						<EmojiSelect />*/}
 					</div>
 				</div>
 				<div className="clientAndActions">
 					<div className="metadata">
-						<input type="text" className="tweetDate" placeholder={dateAndTime} />
+						<input type="text" className="tweetDate" value={dateAndTime} onChange={(e) => this.onChangeDate(e)} />
 					</div>
 				</div>
 			</div>
 		);
 	}
 }
-export default Text;
+
+export default connect(null, actions)(Text);
