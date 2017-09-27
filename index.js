@@ -5,8 +5,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
-
-require('./models/schema.js');
+require('./models/Purchase.js');
 
 const app = express();
 
