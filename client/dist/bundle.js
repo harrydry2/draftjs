@@ -17499,10 +17499,10 @@ const saveTweetDetails = exports.saveTweetDetails = (editorState, dateAndTime, l
 	dispatch({ type: 'TEXT_REDUCER', payload: obj });
 };
 
-const saveStatsDetails = exports.saveStatsDetails = (insideRetweets, insideLikes, favouritesArray) => async dispatch => {
+const saveStatsDetails = exports.saveStatsDetails = (footerRetweets, footerLikes, favouritesArray) => async dispatch => {
 	const obj = {
-		insideRetweets,
-		insideLikes,
+		footerRetweets,
+		footerLikes,
 		favouritesArray
 	};
 	dispatch({ type: 'STATS_REDUCER', payload: obj });
@@ -73925,12 +73925,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function mathsville(num) {
+	if (num.length <= 3) return num;
+	let parsed = parseFloat(num);
+	if (num.length === 4) {
+		let rounded = parsed.toPrecision(2).toString().slice(0, 3);
+		return `${rounded}K`;
+	}
+	if (num.length === 5) {
+		let rounded = parsed.toPrecision(2).toString().replace(/\./g, "").slice(0, 2);
+		return `${rounded}K`;
+	}
+	if (num.length === 6) {
+		let rounded = parsed.toPrecision(3).toString().replace(/\./g, "").slice(0, 3);
+		return `${rounded}K`;
+	}
+	if (num.length === 7) {
+		let rounded = parsed.toPrecision(2).toString().slice(0, 3);
+		return `${rounded}M`;
+	}
+}
+
 class Stats extends _react.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			insideRetweets: "1,670,390",
 			insideLikes: "3,844,290",
+			footerRetweets: "3,844,290",
+			footerLikes: "3,844,290",
 			favourites: [["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "neymarjr"], ["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "thecampaignbook"], ["http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "ArianaGrande"], ["http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "chris_kammy"], ["http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "Cristiano"], ["http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "jeremycorbyn"], ["http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "JLo"], ["http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "Oprah"], ["http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg", "MariaSharapova"]],
 			lastHovered: 0,
 			hover: false,
@@ -73939,23 +73962,31 @@ class Stats extends _react.Component {
 		};
 	}
 	onChangeRetweets(e) {
-		const noCommas = e.target.value.replace(/,/g, '');
-		const commasInserted = new Intl.NumberFormat().format(noCommas);
+		const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+		const retweetsForFooter = mathsville(justNumbers);
+		this.setState({
+			footerRetweets: retweetsForFooter
+		});
+		const commasInserted = new Intl.NumberFormat().format(justNumbers);
 		this.setState({
 			insideRetweets: commasInserted
 		});
 	}
 
 	onChangeLikes(e) {
-		const noCommas = e.target.value.replace(/,/g, '');
-		const commasInserted = new Intl.NumberFormat().format(noCommas);
+		const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+		const likesForFooter = mathsville(justNumbers);
+		this.setState({
+			footerLikes: likesForFooter
+		});
+		const commasInserted = new Intl.NumberFormat().format(justNumbers);
 		this.setState({
 			insideLikes: commasInserted
 		});
 	}
 
 	componentDidUpdate() {
-		this.props.saveStatsDetails(this.state.insideRetweets, this.state.insideLikes, this.state.favourites);
+		this.props.saveStatsDetails(this.state.footerRetweets, this.state.footerLikes, this.state.favourites);
 		if (this.rtRef.value) {
 			let rtLength = this.rtRef.value.length;
 			if (rtLength === 1 && this.state.rtLength !== 1) {
@@ -74239,7 +74270,7 @@ class Footer extends _react.Component {
 
 	render() {
 		const { insideReplies } = this.state;
-		const { insideRetweets, insideLikes } = this.props.statsReducer;
+		const { footerRetweets, footerLikes } = this.props.statsReducer;
 		return _react2.default.createElement(
 			'div',
 			null,
@@ -74277,7 +74308,7 @@ class Footer extends _react.Component {
 							_react2.default.createElement(
 								'div',
 								{ className: 'actionCount footerRetweets' },
-								insideRetweets
+								footerRetweets
 							)
 						)
 					),
@@ -74295,7 +74326,7 @@ class Footer extends _react.Component {
 							_react2.default.createElement(
 								'div',
 								{ className: 'actionCount footerFavourites' },
-								insideLikes
+								footerLikes
 							)
 						)
 					),
@@ -75041,8 +75072,8 @@ const initialTextObject = {
 };
 
 const initialStatsObject = {
-	insideRetweets: "4,345",
-	insideLikes: "9600",
+	footerRetweets: "1.7M",
+	footerLikes: "3.8M",
 	favouritesArray: [["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "neymarjr"], ["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "thecampaignbook"], ["http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "ArianaGrande"], ["http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "chris_kammy"], ["http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "Cristiano"], ["http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "jeremycorbyn"], ["http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "JLo"], ["http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "Oprah"], ["http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg", "MariaSharapova"]]
 };
 

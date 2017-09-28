@@ -3,12 +3,35 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 import axios from 'axios';
 
+function mathsville (num) {
+	if (num.length <= 3) return num;
+	let parsed = parseFloat(num);
+	if (num.length === 4) {
+		let rounded = parsed.toPrecision(2).toString().slice(0,3);
+		return `${rounded}K`	
+	}
+	if (num.length === 5) {
+		let rounded = parsed.toPrecision(2).toString().replace(/\./g, "").slice(0,2);
+		return `${rounded}K`
+	}
+	if (num.length === 6) {
+		let rounded = parsed.toPrecision(3).toString().replace(/\./g, "").slice(0,3);
+		return `${rounded}K`	
+	}
+	if (num.length === 7) {
+		let rounded = parsed.toPrecision(2).toString().slice(0,3);
+		return `${rounded}M`	
+	}
+}  
+
 class Stats extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			insideRetweets: "1,670,390",
 			insideLikes: "3,844,290",
+			footerRetweets: "3,844,290",
+			footerLikes: "3,844,290",
 			favourites: [
 				["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "neymarjr"],
 				["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "thecampaignbook"],
@@ -22,28 +45,36 @@ class Stats extends Component {
 			],
 			lastHovered: 0,
 			hover: false,
-			rtLength:9,
-			favLength:9,
+			rtLength: 9,
+			favLength: 9,
 		}
 	}
 	onChangeRetweets(e) {
-		const noCommas = e.target.value.replace(/,/g,'');
-		const commasInserted = new Intl.NumberFormat().format(noCommas);
+		const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+		const retweetsForFooter = mathsville(justNumbers);
+		this.setState({
+			footerRetweets: retweetsForFooter
+		})
+		const commasInserted = new Intl.NumberFormat().format(justNumbers);
 		this.setState({
 			insideRetweets: commasInserted
 		})
 	}
 
 	onChangeLikes(e) {
-		const noCommas = e.target.value.replace(/,/g,'');
-		const commasInserted = new Intl.NumberFormat().format(noCommas);
+		const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+		const likesForFooter = mathsville(justNumbers)
+		this.setState({
+			footerLikes: likesForFooter
+		})
+		const commasInserted = new Intl.NumberFormat().format(justNumbers);
 		this.setState({
 			insideLikes: commasInserted
 		})
 	}
 
 	componentDidUpdate() {
-	  this.props.saveStatsDetails(this.state.insideRetweets, this.state.insideLikes, this.state.favourites);
+	  this.props.saveStatsDetails(this.state.footerRetweets, this.state.footerLikes, this.state.favourites);
 	  if(this.rtRef.value) {
 	  	let rtLength = this.rtRef.value.length;
 	  	if (rtLength === 1 && this.state.rtLength !== 1) {

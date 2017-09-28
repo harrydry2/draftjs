@@ -22,7 +22,7 @@ class Footer extends Component {
 
 	render() {
 		const {insideReplies} = this.state;
-		const {insideRetweets, insideLikes } = this.props.statsReducer
+		const {footerRetweets, footerLikes } = this.props.statsReducer
 		return (
 			<div>
 				<div className="streamItemFooter">
@@ -42,7 +42,7 @@ class Footer extends Component {
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/retweetfaint.png" alt="" className="retweetIcon" />
 								</div>
-								<div className="actionCount footerRetweets">{insideRetweets}</div>
+								<div className="actionCount footerRetweets">{footerRetweets}</div>
 							</div>
 						</div>
 
@@ -51,7 +51,7 @@ class Footer extends Component {
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/favouritefaint.png" alt="" className="favouriteIcon" />
 								</div>
-								<div className="actionCount footerFavourites">{insideLikes}</div>
+								<div className="actionCount footerFavourites">{footerLikes}</div>
 							</div>
 						</div>
 

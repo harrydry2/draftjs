@@ -15,10 +15,10 @@ export const saveTweetDetails = (editorState, dateAndTime, lines) => async dispa
 	dispatch({type: 'TEXT_REDUCER', payload: obj})
 };
 
-export const saveStatsDetails = (insideRetweets, insideLikes, favouritesArray) => async dispatch => {
+export const saveStatsDetails = (footerRetweets, footerLikes, favouritesArray) => async dispatch => {
 	const obj = {
-		insideRetweets,
-		insideLikes,
+		footerRetweets,
+		footerLikes,
 		favouritesArray,
 	}
 	dispatch({type: 'STATS_REDUCER', payload: obj})

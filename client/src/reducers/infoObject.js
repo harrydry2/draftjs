@@ -15,8 +15,8 @@ const initialTextObject = {
 }
 
 const initialStatsObject = {
-	insideRetweets: "4,345",
-	insideLikes: "9600",
+	footerRetweets: "1.7M",
+	footerLikes: "3.8M",
 	favouritesArray: [
 		["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "neymarjr"],
 		["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "thecampaignbook"],
