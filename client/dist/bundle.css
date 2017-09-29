@@ -327,6 +327,7 @@ body, html {
   font-family: 'Helvetica'; }
 
 input, .tweetTextSize {
+  cursor: none !important;
   outline: none;
   border: none;
   margin: 0px;
@@ -365,6 +366,34 @@ input, .tweetTextSize {
 body {
   border-top: 2px solid transparent;
   border-image: linear-gradient(to right, #8668ad 0, #79ccf2 100%) 1; }
+
+.cursor {
+  background-image: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fingerUp1.png");
+  width: 37px;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 9999; }
+
+.laptopPlayback {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border: 2px solid blue; }
+
+.macBook {
+  width: 100%;
+  height: 100%; }
+
+.obamaVideo {
+  position: absolute;
+  top: 16%;
+  left: 17.4%;
+  width: 65.2%; }
 
 .clearFix {
   margin-left: 58px;
@@ -531,12 +560,10 @@ button {
   border-bottom: 1px solid #e6ecf0;
   border-top: 1px solid #e6ecf0;
   width: 100%;
-  overflow: hidden;
-  display: block; }
+  display: inline-block; }
   .stats li {
     display: block;
-    float: left;
-    overflow: hidden; }
+    float: left; }
 
 .retweets {
   margin-right: 10px;
@@ -611,9 +638,39 @@ button {
   .avatarImageInner:hover {
     opacity: 0.85; }
 
+.favouriteSearchBox {
+  position: absolute;
+  opacity: 0;
+  top: -20px;
+  left: 17px;
+  transition: opacity .3s, transform 0.2s;
+  z-index: 4; }
+
+.favouriteSearchBox.open {
+  opacity: 1; }
+
+.favouriteUsername {
+  color: #657786;
+  font-size: 14px;
+  line-height: 19.25px;
+  transition: opacity 0.1s ease-out;
+  width: 10px; }
+
+.favouriteUsernameHover {
+  width: 110px; }
+  .favouriteUsernameHover::-webkit-input-placeholder {
+    color: #657786; }
+  .favouriteUsernameHover:-moz-placeholder {
+    color: #657786; }
+  .favouriteUsernameHover::-moz-placeholder {
+    color: #657786; }
+  .favouriteUsernameHover:-ms-input-placeholder {
+    color: #657786; }
+
 .streamItemFooter {
   font-size: 12px;
-  padding-top: 1px; }
+  padding-top: 1px;
+  transform: translateY(10px); }
   .streamItemFooter .tweetActionList {
     font-size: 0;
     height: 18px;
@@ -646,7 +703,7 @@ button {
           vertical-align: text-bottom; }
 
 .replyIcon {
-  width: 15.6px;
+  width: 17.6px;
   height: 15.6px;
   transform: translate(0px, 0.1px); }
 
@@ -666,7 +723,7 @@ button {
   transform: translate(-6.2px, 1px); }
 
 .inputReplies {
-  width: 25px;
+  width: 36px;
   transform: translateY(0.9px);
   transition: opacity 0.1s ease-out; }
   .inputReplies::-webkit-input-placeholder {
@@ -681,31 +738,3 @@ button {
     opacity: 0.9; }
   .inputReplies:focus {
     opacity: 1; }
-
-.favouriteSearchBox {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  transition: opacity .3s, transform 0.2s; }
-
-.favouriteSearchBox.open {
-  opacity: 1; }
-
-.favouriteUsername {
-  color: #657786;
-  font-size: 14px;
-  line-height: 19.25px;
-  transition: opacity 0.1s ease-out;
-  width: 10px; }
-
-.favouriteUsernameHover {
-  width: 120px; }
-  .favouriteUsernameHover::-webkit-input-placeholder {
-    color: #657786; }
-  .favouriteUsernameHover:-moz-placeholder {
-    color: #657786; }
-  .favouriteUsernameHover::-moz-placeholder {
-    color: #657786; }
-  .favouriteUsernameHover:-ms-input-placeholder {
-    color: #657786; }
