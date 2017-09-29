@@ -22,12 +22,10 @@ class App extends Component {
 
 	imgLoaded(e){
 		this.setState({isLoading: true})
-		console.log('e')
 	}
 
 	vidLoaded(e){
-		this.setState({isLoading: false})
-		console.log('jeeee')
+		setTimeout(() => this.setState({isLoading: false}), 700)
 	}
 
 	render() {
@@ -53,7 +51,12 @@ class App extends Component {
 					<PaymentBlock />
 					<div className={`laptopPlayback ${isLoading ? 'isLoading' : ''}`}>
 						<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/macBook1.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
-						<video src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4" onCanPlayThrough={(e) => this.vidLoaded(e)} autoPlay muted playsInline loop width="400" className="obamaVideo" />
+						<video 
+							src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4" 
+							onCanPlayThrough={(e) => this.vidLoaded(e)}
+							ref={(element) => { this.videoRef = element; }} 
+							autoPlay muted playsInline loop width="400" className="obamaVideo" 
+						/>
 						<div className="lds-css ng-scope positionSpinner">
 						<div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 					</div>

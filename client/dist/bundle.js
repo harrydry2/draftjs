@@ -56670,12 +56670,10 @@ class App extends _react.Component {
 
 	imgLoaded(e) {
 		this.setState({ isLoading: true });
-		console.log('e');
 	}
 
 	vidLoaded(e) {
-		this.setState({ isLoading: false });
-		console.log('jeeee');
+		setTimeout(() => this.setState({ isLoading: false }), 700);
 	}
 
 	render() {
@@ -56706,7 +56704,14 @@ class App extends _react.Component {
 					'div',
 					{ className: `laptopPlayback ${isLoading ? 'isLoading' : ''}` },
 					_react2.default.createElement('img', { src: 'https://s3.eu-west-2.amazonaws.com/lifeishappening/macBook1.png', onLoad: e => this.imgLoaded(e), className: 'macBook' }),
-					_react2.default.createElement('video', { src: 'https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4', onCanPlayThrough: e => this.vidLoaded(e), autoPlay: true, muted: true, playsInline: true, loop: true, width: '400', className: 'obamaVideo' }),
+					_react2.default.createElement('video', {
+						src: 'https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4',
+						onCanPlayThrough: e => this.vidLoaded(e),
+						ref: element => {
+							this.videoRef = element;
+						},
+						autoPlay: true, muted: true, playsInline: true, loop: true, width: '400', className: 'obamaVideo'
+					}),
 					_react2.default.createElement(
 						'div',
 						{ className: 'lds-css ng-scope positionSpinner' },
