@@ -24,7 +24,7 @@ $twitterBlue: #329CC3
 $inTweetBlue: #0084B4
 
 input, .tweetTextSize
-  // cursor: none !important
+  cursor: none !important
   outline: none
   border: none
   margin: 0px
@@ -66,18 +66,31 @@ body
   border-top: 2px solid transparent
   border-image: linear-gradient(to right, #8668ad 0, #79ccf2 100%) 1
 
-// .noCursor
-//   cursor: none !important
+.cursor
+  background-image: url('https://s3.eu-west-2.amazonaws.com/lifeishappening/fingerUp1.png')
+  width: 37px
+  height: 76px
+  position: fixed
+  top: 0
+  left: 0
+  pointer-events: none
+  opacity: 0
+  transition: opacity .3s ease
+  z-index: 9999
 
-// .cursor
-//   background-image: url('https://s3.eu-west-2.amazonaws.com/lifeishappening/fingerUp1.png')
-//   width: 37px
-//   height: 76px
-//   position: fixed
-//   top: 0
-//   left: 0
-//   pointer-events: none
-//   opacity: 0
-//   transition: opacity .3s ease
-//   z-index: 9999
+.laptopPlayback
+  position: relative
+  width: 500px
+  height: 300px
+  border: 2px solid blue
+
+.macBook
+  width: 100%
+  height: 100%
+
+.obamaVideo
+  position: absolute
+  top: 16%
+  left: 17.4%
+  width: 65.2%
 

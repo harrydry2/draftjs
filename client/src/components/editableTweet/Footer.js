@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
+import {repliesRando} from '../../helpers'
 
 class Footer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			insideReplies: 180,
+			insideReplies: repliesRando(),
 		}
 	}
 
@@ -22,7 +23,7 @@ class Footer extends Component {
 
 	render() {
 		const {insideReplies} = this.state;
-		const {footerRetweets, footerLikes } = this.props.statsReducer
+		const {footerRetweets, footerLikes} = this.props.statsReducer
 		return (
 			<div>
 				<div className="streamItemFooter">
@@ -33,7 +34,13 @@ class Footer extends Component {
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/replyfaint.png" alt="" className="replyIcon" />
 								</div>
-								<input type="text" value={insideReplies} onChange={(e) => this.onChangeReplies(e)} className="actionCount inputReplies"/>
+								<input 
+									type="text" 
+									value={insideReplies} 
+									onChange={(e) => this.onChangeReplies(e)} 
+									className="actionCount inputReplies" 
+									maxLength="4"
+								/>
 							</div>
 						</div>
 

@@ -11,7 +11,6 @@ export const saveTweetDetails = (editorState, dateAndTime, lines) => async dispa
 		dateAndTime,
 		lines
 	}
-	console.log(obj)
 	dispatch({type: 'TEXT_REDUCER', payload: obj})
 };
 
@@ -29,4 +28,11 @@ export const saveFooterDetails = (insideReplies) => async dispatch => {
 		insideReplies
 	}
 	dispatch({type: 'FOOTER_REDUCER', payload: obj})
+};
+
+export const saveYeState = (ye) => async dispatch => {
+	const obj = {
+		ye,
+	}
+	dispatch({type: 'ET_REDUCER', payload: obj})
 };

@@ -2,27 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 import axios from 'axios';
-
-function mathsville (num) {
-	if (num.length <= 3) return num;
-	let parsed = parseFloat(num);
-	if (num.length === 4) {
-		let rounded = parsed.toPrecision(2).toString().slice(0,3);
-		return `${rounded}K`	
-	}
-	if (num.length === 5) {
-		let rounded = parsed.toPrecision(2).toString().replace(/\./g, "").slice(0,2);
-		return `${rounded}K`
-	}
-	if (num.length === 6) {
-		let rounded = parsed.toPrecision(3).toString().replace(/\./g, "").slice(0,3);
-		return `${rounded}K`	
-	}
-	if (num.length === 7) {
-		let rounded = parsed.toPrecision(2).toString().slice(0,3);
-		return `${rounded}M`	
-	}
-}  
+import {mathsville} from '../../helpers'
 
 class Stats extends Component {
 	constructor(props) {
@@ -30,8 +10,8 @@ class Stats extends Component {
 		this.state = {
 			insideRetweets: "1,670,390",
 			insideLikes: "3,844,290",
-			footerRetweets: "3,844,290",
-			footerLikes: "3,844,290",
+			footerRetweets: "1.7M",
+			footerLikes: "3.8M",
 			favourites: [
 				["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "neymarjr"],
 				["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "thecampaignbook"],
@@ -125,17 +105,6 @@ class Stats extends Component {
 	  }
 	}
 
-	animateFavourites(e, i) {
-		let lastHovered = this.state.lastHovered;
-		lastHovered = i;
-		this.setState({
-			lastHovered,
-			hover: true
-		});
-		this.favouriteInput.focus();
-		this.favouriteInput.value = '';
-		this.favouriteInput.placeholder = this.state.favourites[i][1]
-	}
 
 	hoverOut(e, i) {
 		let hoverState = this.state.hover
@@ -154,13 +123,18 @@ class Stats extends Component {
 		this.setState(favourites)
 	}
 
-	captureXY(e) {
-	  if (!e.target.getAttribute('data-inner')) return;
-	  const leftOfIcon = e.target.getBoundingClientRect().left * 1.3889;
-	  const topOfIcon = e.target.getBoundingClientRect().top * 1.3889;
-		const startingLeftValue = ((window.innerWidth - 640) / 2)
-		const startingTopValue = ((window.innerHeight - 406) / 2)
-	  this.formSubmit.style.transform = `translate(${leftOfIcon - startingLeftValue - 528}px, ${topOfIcon - startingTopValue + window.scrollY -118}px)`
+	animateFavourites(e, i) {
+		// translateX
+		this.formSubmit.style.transform = `translateX(${i*29}px)`
+		let lastHovered = this.state.lastHovered;
+		lastHovered = i;
+		this.setState({
+			lastHovered,
+			hover: true
+		});
+		this.favouriteInput.focus();
+		this.favouriteInput.value = '';
+		this.favouriteInput.placeholder = this.state.favourites[i][1]
 	}
 
 	render() {
@@ -193,7 +167,6 @@ class Stats extends Component {
 			<div>
 				<div className="statsContainer">
 					<div className="stats">
-
 						<li className="retweets">
 							<div className="insideRetweets">
 								<input 
@@ -216,51 +189,50 @@ class Stats extends Component {
 							</div>
 						</li>
 
-						<li className="avatarRow" onMouseOver={(e) => this.captureXY(e)}>
+						<li className="avatarRow">
 							<div className="avatarImageOuter">
-								<img src={favourites[0][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 0)} onMouseLeave={(e) => this.hoverOut(e, 0)} className="avatarImageInner" />
+								<img src={favourites[0][0]} alt="" data-inner="1" onMouseOver={(e) => this.animateFavourites(e, 0)} onMouseLeave={(e) => this.hoverOut(e, 0)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[1][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 1)} onMouseLeave={(e) => this.hoverOut(e, 1)} className="avatarImageInner" />
+								<img src={favourites[1][0]} alt="" data-inner="2" onMouseOver={(e) => this.animateFavourites(e, 1)} onMouseLeave={(e) => this.hoverOut(e, 1)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[2][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 2)} onMouseLeave={(e) => this.hoverOut(e, 2)} className="avatarImageInner" />
+								<img src={favourites[2][0]} alt="" data-inner="3" onMouseOver={(e) => this.animateFavourites(e, 2)} onMouseLeave={(e) => this.hoverOut(e, 2)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[3][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 3)} onMouseLeave={(e) => this.hoverOut(e, 3)} className="avatarImageInner" />
+								<img src={favourites[3][0]} alt="" data-inner="4" onMouseOver={(e) => this.animateFavourites(e, 3)} onMouseLeave={(e) => this.hoverOut(e, 3)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[4][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 4)} onMouseLeave={(e) => this.hoverOut(e, 4)} className="avatarImageInner" />
+								<img src={favourites[4][0]} alt="" data-inner="5" onMouseOver={(e) => this.animateFavourites(e, 4)} onMouseLeave={(e) => this.hoverOut(e, 4)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[5][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 5)} onMouseLeave={(e) => this.hoverOut(e, 5)} className="avatarImageInner" />
+								<img src={favourites[5][0]} alt="" data-inner="6" onMouseOver={(e) => this.animateFavourites(e, 5)} onMouseLeave={(e) => this.hoverOut(e, 5)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[6][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 6)} onMouseLeave={(e) => this.hoverOut(e, 6)} className="avatarImageInner" />
+								<img src={favourites[6][0]} alt="" data-inner="7" onMouseOver={(e) => this.animateFavourites(e, 6)} onMouseLeave={(e) => this.hoverOut(e, 6)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[7][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 7)} onMouseLeave={(e) => this.hoverOut(e, 7)} className="avatarImageInner" />
+								<img src={favourites[7][0]} alt="" data-inner="8" onMouseOver={(e) => this.animateFavourites(e, 7)} onMouseLeave={(e) => this.hoverOut(e, 7)} className="avatarImageInner" />
 							</div>
 							<div className="avatarImageOuter">
-								<img src={favourites[8][0]} alt="" data-inner onMouseOver={(e) => this.animateFavourites(e, 8)} onMouseLeave={(e) => this.hoverOut(e, 8)} className="avatarImageInner" />
+								<img src={favourites[8][0]} alt="" data-inner="9" onMouseOver={(e) => this.animateFavourites(e, 8)} onMouseLeave={(e) => this.hoverOut(e, 8)} className="avatarImageInner" />
 							</div>
+							<form className={this.state.hover ? "favouriteSearchBox open" : "favouriteSearchBox"}
+								ref={(input) => { this.formSubmit = input; }}
+								onSubmit={(e) => this.changeFavourites(e)}
+							>
+								<span className="favouriteUsername">@</span>
+									<input 
+										type="text" 
+										className="favouriteUsername favouriteUsernameHover"
+										placeholder='' 
+										ref={(input) => { this.favouriteInput = input; }}
+										autoComplete="off"
+									/>
+							</form>
 						</li>
-
 					</div>
 				</div>
-					<form className={this.state.hover ? "favouriteSearchBox open" : "favouriteSearchBox"}
-						ref={(input) => { this.formSubmit = input; }}
-						onSubmit={(e) => this.changeFavourites(e)}
-					>
-						<span className="favouriteUsername">@</span>
-							<input 
-								type="text" 
-								className="favouriteUsername favouriteUsernameHover"
-								placeholder='' 
-								ref={(input) => { this.favouriteInput = input; }}
-								autoComplete="off"
-							/>
-					</form>
 			</div>
 		);
 	}

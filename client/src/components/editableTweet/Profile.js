@@ -14,7 +14,16 @@ class Profile extends Component {
 	}
 	
 	render() {
-		const {fullName, profileImage} = this.props.infoObject;
+		const {fullName, profileImage, verified} = this.props.infoObject;
+		let display;
+		if (!verified) {
+			display = "none";
+		} else {
+			display = "inline"
+		}
+		const userBadges = {
+		  display: `${display}`
+		};
 		return (
 			<div>
 				<div className="clearFix">
@@ -23,13 +32,13 @@ class Profile extends Component {
 							<img src={profileImage} className="profileImage" alt="" />
 							<span className="fullNameGroup">
 								<strong className="fullName">{fullName}</strong>
-								<span className="userBadges">
+								<span className="userBadges" style={userBadges}>
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/verification.png" className="verificationIcon" alt="" />
 								</span>
 							</span>
 							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
 								<span className="username">@</span>
-								<input type="text" className="username" placeholder="nntaleb" />
+								<input type="text" className="username" placeholder="" />
 							</form>
 						</div>
 						<div className="follorBar">

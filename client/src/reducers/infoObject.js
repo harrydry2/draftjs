@@ -34,6 +34,10 @@ const initialReplies = {
 	insideReplies: "180",
 }
 
+const initialYe = {
+	ye: false
+}
+
 const infoObject = (state = initialInfoObject, action) => {
 	switch(action.type) {
 		case 'FETCH_USER':
@@ -70,9 +74,19 @@ const footerReducer = (state = initialReplies, action) => {
 	}
 }
 
+const etReducer = (state = initialYe, action) => {
+	switch(action.type) {
+		case 'ET_REDUCER':
+			return action.payload || false;
+		default: 
+			return state;
+	}
+}
+
 module.exports = {
 	infoObject,
 	textReducer,
 	statsReducer,
-	footerReducer
+	footerReducer,
+	etReducer,
 }

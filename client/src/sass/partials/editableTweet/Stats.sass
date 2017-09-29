@@ -8,12 +8,10 @@
   border-bottom: 1px solid #e6ecf0
   border-top: 1px solid #e6ecf0
   width: 100%
-  overflow: hidden
-  display: block
+  display: inline-block
   li
     display: block
     float: left
-    overflow: hidden
 
 // Retweets
 .retweets
@@ -80,3 +78,27 @@
   transition: opacity .1s ease-out
   &:hover
     opacity: 0.85
+
+// favouriteContainer 
+.favouriteSearchBox
+  position: absolute
+  opacity: 0
+  top: -20px
+  left: 17px
+  transition: opacity .3s, transform 0.2s
+  z-index: 4
+  
+.favouriteSearchBox.open
+  opacity: 1
+
+.favouriteUsername
+  color: #657786
+  font-size: 14px
+  line-height: 19.25px
+  transition: opacity 0.1s ease-out
+  width: 10px
+
+.favouriteUsernameHover
+  width: 110px
+  +placeholder
+    color: #657786
