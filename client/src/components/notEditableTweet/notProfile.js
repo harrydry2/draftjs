@@ -2,19 +2,37 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 
-class Profile extends Component {
+const fullName = ['Barack Obama', 'J.K. Rowling', 'Oprah Winfrey', 'Roger Federer']
+const profileImage = ['https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/897556072470384640/OIUnazvN_400x400.jpg', 'https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/897556072470384640/OIUnazvN_400x400.jpg']
+const username = ['barackobama', 'jk_rowling', 'Oprah', 'rogerfederer']
+const verified = [true, true, true, false]
+let index = 0
+
+class notProfile extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			fullName: fullName[0],
+			profileImage: profileImage[0],
+			verified: verified[0],
+			username: username[0],
+		}
 	}
 
-	typeAhead (e) {
-		e.preventDefault();
-		const twitterLookup = e.target[0].value;
-		this.props.fetchUser(twitterLookup)
+	componentDidMount() {
+	  setInterval(() => {
+		index === 3 ? index=0 : index++;
+	  	this.setState({
+	  		fullName: fullName[index],
+	  		profileImage: profileImage[index],
+	  		verified: verified[index],
+	  		username: username[index],
+	  	})
+	  }, 2800);
 	}
 
 	render() {
-		const {fullName, profileImage, verified} = this.props.infoObject;
+		const {fullName, profileImage, username, verified} = this.state;
 		let display;
 		if (!verified) {
 			display = "none";
@@ -36,9 +54,9 @@ class Profile extends Component {
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/verification.png" className="verificationIcon" alt="" />
 								</span>
 							</span>
-							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
+							<form className="search">
 								<span className="username">@</span>
-								<input type="text" className="username" placeholder="" />
+								<input type="text" className="username" placeholder="" value={username} />
 							</form>
 						</div>
 						<div className="follorBar">
@@ -53,8 +71,5 @@ class Profile extends Component {
 		);
 	}
 }
-function mapStateToProps({ infoObject }) {
-  return { infoObject };
-}
 
-export default connect(mapStateToProps, actions)(Profile);
+export default notProfile;

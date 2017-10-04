@@ -41,7 +41,7 @@ class editableTweet extends Component {
 	};
 
 		return (
-			<div>
+			<div className="borderBox">
 				<div className="backgroundImage" style={backgroundImageStyle}/>
 				<div className="backgroundImageContainer" style={backgroundImageContainer}>
 					<div 
