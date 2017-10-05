@@ -1,4 +1,4 @@
-import moment from 'moment';
+// import moment from 'moment';
 	
 const initialInfoObject = {
 	backgroundImage: "url('https://pbs.twimg.com/profile_banners/45157016/1496254233')",
@@ -10,7 +10,7 @@ const initialInfoObject = {
 
 const initialTextObject = {
 	editorState: ["Fuck this bitch"],
-	dateAndTime: moment().format('h:mm A - D MMM YYYY'),
+	dateAndTime: '12th',
 	lines: 3,
 }
 

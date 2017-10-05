@@ -2,11 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// minify build
+const CompressionPlugin = require("compression-webpack-plugin")
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry: {
-		// bundle: './client/src/index.js',
-		bundle: './src/index.js',
+		bundle: './client/src/index.js',
+		// bundle: './src/index.js',
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -36,9 +39,19 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			// template: './client/index.html',
-			template: './index.html',
+			template: './client/index.html',
+			// template: './index.html',
 		}),
 		new ExtractTextPlugin('bundle.css'),
+
+		// minify
+		new BundleAnalyzerPlugin(),
+		new CompressionPlugin({
+		  asset: "[path].gz[query]",
+		  algorithm: "gzip",
+		  test: /\.js/,
+		  threshold: 10240,
+		  minRatio: 0
+		})
 	],
 };

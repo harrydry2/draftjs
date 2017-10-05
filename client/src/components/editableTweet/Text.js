@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Editor, { createEditorStateWithText } from 'draft-js-plugins-editor';
 import { EditorState, CompositeDecorator } from 'draft-js';
-import createEmojiPlugin from 'draft-js-emoji-plugin';
-import 'draft-js-emoji-plugin/lib/plugin.css';
-import moment from 'moment';
+// import createEmojiPlugin from 'draft-js-emoji-plugin';
+// import 'draft-js-emoji-plugin/lib/plugin.css';
+// import moment from 'moment';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 const text = '@140_Canvas Add your tweet here, Throw in an emoji or two and youre good to go';
@@ -44,17 +44,18 @@ const HashtagSpan = (props) => {
 	);
 };
 
-const emojiPlugin = createEmojiPlugin({
-	selectButtonContent: '',
-});
-const { EmojiSuggestions, EmojiSelect } = emojiPlugin;
+// const emojiPlugin = createEmojiPlugin({
+// 	selectButtonContent: '',
+// });
+// const { EmojiSuggestions, EmojiSelect } = emojiPlugin;
 
 class Text extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			editorState: createEditorStateWithText(text),
-			dateAndTime: moment().format('h:mm A - D MMM YYYY'),
+			// dateAndTime: moment().format('h:mm A - D MMM YYYY'),
+			dateAndTime: '3:14 PM —',
 			lines: 3,
 		};
 		this.onChange = (editorState) => {
@@ -116,11 +117,8 @@ class Text extends Component {
 								strategy: hashtagStrategy,
 								component: HashtagSpan,
 							}]}
-							plugins={[emojiPlugin]}
 							ref={(element) => { this.editor = element; }}
 						/>
-						{/*<EmojiSuggestions />
-						<EmojiSelect />*/}
 					</div>
 				</div>
 				<div className="clientAndActions">
