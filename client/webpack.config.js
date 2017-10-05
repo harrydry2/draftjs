@@ -51,7 +51,8 @@ module.exports = {
 		  algorithm: "gzip",
 		  test: /\.js/,
 		  threshold: 10240,
-		  minRatio: 0
+		  minRatio: 0,
+		  deleteOriginalAssets: true,
 		})
 	],
 };
