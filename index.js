@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
+var expressStaticGzip = require("express-static-gzip");
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 require('./models/Purchase.js');
@@ -20,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   const webpackConfig = require('./client/webpack.config.js');
   app.use(webpackMiddleware(webpack(webpackConfig)));
 } else {
-  app.use(express.static('client/dist'));
+  app.use("/", expressStaticGzip("client/dist"));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/dist/index.html'));
   });
