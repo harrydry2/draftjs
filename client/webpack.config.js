@@ -52,7 +52,7 @@ module.exports = {
 		  test: /\.js/,
 		  threshold: 10240,
 		  minRatio: 0,
-		  deleteOriginalAssets: true,
+		  // deleteOriginalAssets: true,
 		})
 	],
 };

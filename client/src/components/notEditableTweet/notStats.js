@@ -34,7 +34,7 @@ class notStats extends Component {
 	}
 
 	render() {
-		const {insideRetweets, insideLikes} = this.state;
+		const {insideRetweets, insideLikes, favourites} = this.state;
 		const inputRetweets = {
 		  width: `${64.5}px`
 		};
