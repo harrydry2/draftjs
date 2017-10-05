@@ -402,6 +402,12 @@ body {
   transition: opacity .3s ease;
   z-index: 9999; }
 
+.hanger {
+  position: absolute;
+  top: 5.5%;
+  left: 42.5%;
+  z-index: 1; }
+
 .laptopPlayback {
   position: relative;
   width: 735px;

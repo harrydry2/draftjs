@@ -3,91 +3,38 @@ import Editor, { createEditorStateWithText } from 'draft-js-plugins-editor';
 import { EditorState, CompositeDecorator } from 'draft-js';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
-const text = ['@140_Canvas Add your tweet here, Throw in an emoji or two and youre good to go', 'You can format your text with the toolbar.Paste in something you\'re working on and edit away. Or, click the Write button and compose something new.', 'Adverbs and weakening phrases are helpfully shown in blue. Get rid of them and pick words with force, perhaps.', 'complicated that your readers will get lost trying to follow its meandering, splitting logic — try editing this sentence to remove the red.' ];
-const dateAndTime = ['10:45 PM - 10 Oct 2027', '14:15 AM - 23 Mar 2017', '2:25 AM - 1 Dec 2007', '3:00 AM - 4 Feb 2017']
+const text = [`Thanks to Mr <span class="handle"> @JimChapman</span>'s videos, I've turned into quit the well dressed chap.👖👕 <span class="handle">#NoMoreDadJeans</span>`, `Just finsihed 'Creators and Kings' by the wonderful <span class="handle"> @Amelia_Wood</span>. A truly amazing novel. <span class="handle">#PulitzerPrize2017</span> 😉😎`, `Happy birthday to the best fan in the world <span class="handle">@LilyCranston</span> 🎂🎉 Hope you Have an amazing day!! <span class="handle">#WishIWasThere</span>`, `Hey <span class="handle">@JakeBlake</span>!. I hear you just got a brand new Wilson. Fancy a hit? <span class="handle">#CenterCourt</span> 🎾🏅<br> Best, RF`,`Okay Okay, <span class="handle">@AaliyahLewis</span> let's get in formation!! I ❤️ your moves. You want to join the Dance Troup. 👏🏾👏🏾💃🏾 `, `And the NEW Heavyweight Champion of the world<span class="handle">@TobyFitzpatrick</span>. What a knockout. 🥊🏅 <span class="handle">#Sledgehammer #HardWork</span>`,]
+const dateAndTime = ['10:45 PM - 10 Oct 2027', '10:15 AM - 23 Mar 2017', '2:25 PM - 1 Dec 2007', '3:00 PM - 4 Feb 2017', '11:20 AM - 14 Dec 2017', '5:15 PM - 10 Mar 2024' ]
 let index = 0;
-
-function findWithRegex(regex, contentBlock, callback) {
-	const text = contentBlock.getText();
-	let matchArr;
-	let start;
-	while ((matchArr = regex.exec(text)) !== null) {
-		start = matchArr.index;
-		callback(start, start + matchArr[0].length);
-	}
-}
-function handleStrategy(contentBlock, callback) {
-	findWithRegex(/@[\w]+/g, contentBlock, callback);
-}
-function hashtagStrategy(contentBlock, callback) {
-	findWithRegex(/#[\w]+/g, contentBlock, callback);
-}
-const HandleSpan = (props) => {
-	return (
-		<span
-			className="handle"
-			data-offset-key={props.offsetKey}
-		>
-			{props.children}
-		</span>
-	);
-};
-const HashtagSpan = (props) => {
-	return (
-		<span
-			className="hashtag"
-			data-offset-key={props.offsetKey}
-		>
-			{props.children}
-		</span>
-	);
-};
 
 class notText extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			editorState: createEditorStateWithText(text[0]),
+			text: text[0],
 			dateAndTime: dateAndTime[0],
-			lines: 3,
+			lines: 5,
 		};
-		this.onChange = (editorState) => {
-			this.setState({editorState})
-		}
 	}
 
 	componentDidMount() {
 	  setInterval(() => {
-		index === 3 ? index=0 : index++;
+		index === 5 ? index=0 : index++;
 	  	this.setState({
-	  		editorState: createEditorStateWithText(text[index]),
+	  		text: text[index],
 	  		dateAndTime: dateAndTime[index],
 	  	})
+	  this.tweetTextSize.innerHTML = this.state.text;
 	  }, 2800);
 	}
 
 	render() {
-		const {editorState, dateAndTime} = this.state;
+		const {dateAndTime} = this.state;
 		return (
 			<div>
 				<div className="textContainer">
-					<div 
-						className="tweetTextSize" 
-						ref={(element) => { this.tweetTextSize = element; }}
-					>
-						<Editor
-							editorState={editorState}
-							onChange={this.onChange}
-							decorators={[{
-								strategy: handleStrategy,
-								component: HandleSpan,
-							},
-							{
-								strategy: hashtagStrategy,
-								component: HashtagSpan,
-							}]}
-							ref={(element) => { this.editor = element; }}
-						/>
+					<div className="tweetTextSize" ref={(element) => { this.tweetTextSize = element; }}>
+						Thanks to Mr <span className="handle">@JimChapman</span>'s videos, I've turned into quit the well dressed chap.👖👕 <span className="handle">#NoMoreDadJeans</span>
 					</div>
 				</div>
 				<div className="clientAndActions">

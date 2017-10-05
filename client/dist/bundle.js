@@ -74565,59 +74565,60 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const heightBIC = [291, 337, 314, 314];
-const heightBT = [250, 314, 282, 282];
-const backgroundImage = [`url("https://pbs.twimg.com/profile_banners/45157016/1496254233")`, `url("https://pbs.twimg.com/profile_banners/62513246/1502828967")`, `url("https://pbs.twimg.com/profile_banners/19397785/1419227197")`, `url("https://pbs.twimg.com/profile_banners/1337785291/1487462562")`];
+const backgroundImage = [`url("https://pbs.twimg.com/profile_banners/813286/1502508746")`, `url("https://pbs.twimg.com/profile_banners/62513246/1507128751")`, `url("https://pbs.twimg.com/profile_banners/181572333/1462042825")`, `url("https://pbs.twimg.com/profile_banners/1337785291/1487462562")`, `url("https://pbs.twimg.com/profile_banners/31239408/1461463043")`, `url("https://pbs.twimg.com/profile_banners/19230601/1500474389")`];
 let index = 0;
 
 class notEditableTweet extends _react.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			heightBIC: heightBIC[0],
-			heightBT: heightBT[0],
 			backgroundImage: backgroundImage[0]
 		};
 	}
 
 	componentDidMount() {
 		setInterval(() => {
-			index === 3 ? index = 0 : index++;
+			index === 5 ? index = 0 : index++;
 			this.setState({
-				heightBIC: heightBIC[index],
-				heightBT: heightBT[index]
+				backgroundImage: backgroundImage[index]
 			});
 		}, 2800);
 	}
 
 	render() {
+		const { backgroundImage } = this.state;
 		const backgroundImageStyle = {
-			backgroundImage: `${backgroundImage[index]}`,
-			height: `${heightBIC[index]}px`
+			backgroundImage,
+			height: `${318}px`
 		};
 		const backgroundImageContainer = {
-			height: `${heightBIC[index]}px`
+			height: `${318}px`
 		};
 		const backgroundTweet = {
-			height: `${heightBT[index]}px`
+			height: `${282}px`
 		};
 		return _react2.default.createElement(
 			'div',
-			{ className: 'borderBox' },
-			_react2.default.createElement('div', { className: 'backgroundImage', style: backgroundImageStyle }),
+			null,
+			_react2.default.createElement('img', { src: 'https://s3.eu-west-2.amazonaws.com/lifeishappening/hangerv2.png', className: 'hanger', alt: '' }),
 			_react2.default.createElement(
 				'div',
-				{ className: 'backgroundImageContainer', style: backgroundImageContainer },
+				{ className: 'borderBox' },
+				_react2.default.createElement('div', { className: 'backgroundImage', style: backgroundImageStyle }),
 				_react2.default.createElement(
 					'div',
-					{
-						className: 'backgroundTweet',
-						style: backgroundTweet
-					},
-					_react2.default.createElement(_notProfile2.default, null),
-					_react2.default.createElement(_notText2.default, null),
-					_react2.default.createElement(_notStats2.default, null),
-					_react2.default.createElement(_notFooter2.default, null)
+					{ className: 'backgroundImageContainer', style: backgroundImageContainer },
+					_react2.default.createElement(
+						'div',
+						{
+							className: 'backgroundTweet',
+							style: backgroundTweet
+						},
+						_react2.default.createElement(_notProfile2.default, null),
+						_react2.default.createElement(_notText2.default, null),
+						_react2.default.createElement(_notStats2.default, null),
+						_react2.default.createElement(_notFooter2.default, null)
+					)
 				)
 			)
 		);
@@ -74651,10 +74652,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const fullName = ['Barack Obama', 'J.K. Rowling', 'Oprah Winfrey', 'Roger Federer'];
-const profileImage = ['https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/897556072470384640/OIUnazvN_400x400.jpg', 'https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/897556072470384640/OIUnazvN_400x400.jpg'];
-const username = ['barackobama', 'jk_rowling', 'Oprah', 'rogerfederer'];
-const verified = [true, true, true, false];
+const fullName = ['Barack Obama', 'J.K. Rowling', 'Lil Chano From 79th', 'Roger Federer', 'BEYONCÉ', 'Sky Sports 📺'];
+const profileImage = ['https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/915594670272581633/obwjv8zn_400x400.jpg', 'https://pbs.twimg.com/profile_images/726486379484553216/nxNz44_J_400x400.jpg', 'https://pbs.twimg.com/profile_images/833104478328877056/8z-8v1Fw_400x400.jpg', 'https://pbs.twimg.com/profile_images/724054682579161088/3GgLeR65_400x400.jpg', 'https://pbs.twimg.com/profile_images/887155291284025344/nZUmdyu7_400x400.jpg'];
+const username = ['barackobama', 'jk_rowling', 'chancetherapper', 'rogerfederer', 'Beyonce', 'skysports'];
+const verified = [true, true, true, true, true, true];
 let index = 0;
 
 class notProfile extends _react.Component {
@@ -74670,7 +74671,7 @@ class notProfile extends _react.Component {
 
 	componentDidMount() {
 		setInterval(() => {
-			index === 3 ? index = 0 : index++;
+			index === 5 ? index = 0 : index++;
 			this.setState({
 				fullName: fullName[index],
 				profileImage: profileImage[index],
@@ -74782,71 +74783,33 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const text = ['@140_Canvas Add your tweet here, Throw in an emoji or two and youre good to go', 'You can format your text with the toolbar.Paste in something you\'re working on and edit away. Or, click the Write button and compose something new.', 'Adverbs and weakening phrases are helpfully shown in blue. Get rid of them and pick words with force, perhaps.', 'complicated that your readers will get lost trying to follow its meandering, splitting logic — try editing this sentence to remove the red.'];
-const dateAndTime = ['10:45 PM - 10 Oct 2027', '14:15 AM - 23 Mar 2017', '2:25 AM - 1 Dec 2007', '3:00 AM - 4 Feb 2017'];
+const text = [`Thanks to Mr <span class="handle"> @JimChapman</span>'s videos, I've turned into quit the well dressed chap.👖👕 <span class="handle">#NoMoreDadJeans</span>`, `Just finsihed 'Creators and Kings' by the wonderful <span class="handle"> @Amelia_Wood</span>. A truly amazing novel. <span class="handle">#PulitzerPrize2017</span> 😉😎`, `Happy birthday to the best fan in the world <span class="handle">@LilyCranston</span> 🎂🎉 Hope you Have an amazing day!! <span class="handle">#WishIWasThere</span>`, `Hey <span class="handle">@JakeBlake</span>!. I hear you just got a brand new Wilson. Fancy a hit? <span class="handle">#CenterCourt</span> 🎾🏅<br> Best, RF`, `Okay Okay, <span class="handle">@AaliyahLewis</span> let's get in formation!! I ❤️ your moves. You want to join the Dance Troup. 👏🏾👏🏾💃🏾 `, `And the NEW Heavyweight Champion of the world<span class="handle">@TobyFitzpatrick</span>. What a knockout. 🥊🏅 <span class="handle">#Sledgehammer #HardWork</span>`];
+const dateAndTime = ['10:45 PM - 10 Oct 2027', '10:15 AM - 23 Mar 2017', '2:25 PM - 1 Dec 2007', '3:00 PM - 4 Feb 2017', '11:20 AM - 14 Dec 2017', '5:15 PM - 10 Mar 2024'];
 let index = 0;
-
-function findWithRegex(regex, contentBlock, callback) {
-	const text = contentBlock.getText();
-	let matchArr;
-	let start;
-	while ((matchArr = regex.exec(text)) !== null) {
-		start = matchArr.index;
-		callback(start, start + matchArr[0].length);
-	}
-}
-function handleStrategy(contentBlock, callback) {
-	findWithRegex(/@[\w]+/g, contentBlock, callback);
-}
-function hashtagStrategy(contentBlock, callback) {
-	findWithRegex(/#[\w]+/g, contentBlock, callback);
-}
-const HandleSpan = props => {
-	return _react2.default.createElement(
-		'span',
-		{
-			className: 'handle',
-			'data-offset-key': props.offsetKey
-		},
-		props.children
-	);
-};
-const HashtagSpan = props => {
-	return _react2.default.createElement(
-		'span',
-		{
-			className: 'hashtag',
-			'data-offset-key': props.offsetKey
-		},
-		props.children
-	);
-};
 
 class notText extends _react.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			editorState: (0, _draftJsPluginsEditor.createEditorStateWithText)(text[0]),
+			text: text[0],
 			dateAndTime: dateAndTime[0],
-			lines: 3
-		};
-		this.onChange = editorState => {
-			this.setState({ editorState });
+			lines: 5
 		};
 	}
 
 	componentDidMount() {
 		setInterval(() => {
-			index === 3 ? index = 0 : index++;
+			index === 5 ? index = 0 : index++;
 			this.setState({
-				editorState: (0, _draftJsPluginsEditor.createEditorStateWithText)(text[index]),
+				text: text[index],
 				dateAndTime: dateAndTime[index]
 			});
+			this.tweetTextSize.innerHTML = this.state.text;
 		}, 2800);
 	}
 
 	render() {
-		const { editorState, dateAndTime } = this.state;
+		const { dateAndTime } = this.state;
 		return _react2.default.createElement(
 			'div',
 			null,
@@ -74855,26 +74818,21 @@ class notText extends _react.Component {
 				{ className: 'textContainer' },
 				_react2.default.createElement(
 					'div',
-					{
-						className: 'tweetTextSize',
-						ref: element => {
+					{ className: 'tweetTextSize', ref: element => {
 							this.tweetTextSize = element;
-						}
-					},
-					_react2.default.createElement(_draftJsPluginsEditor2.default, {
-						editorState: editorState,
-						onChange: this.onChange,
-						decorators: [{
-							strategy: handleStrategy,
-							component: HandleSpan
-						}, {
-							strategy: hashtagStrategy,
-							component: HashtagSpan
-						}],
-						ref: element => {
-							this.editor = element;
-						}
-					})
+						} },
+					'Thanks to Mr ',
+					_react2.default.createElement(
+						'span',
+						{ className: 'handle' },
+						'@JimChapman'
+					),
+					'\'s videos, I\'ve turned into quit the well dressed chap.\uD83D\uDC56\uD83D\uDC55 ',
+					_react2.default.createElement(
+						'span',
+						{ className: 'handle' },
+						'#NoMoreDadJeans'
+					)
 				)
 			),
 			_react2.default.createElement(
@@ -74909,11 +74867,9 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const insideRetweets = ['139,421', '9,800,000', '321,000', '890,090'];
-const insideLikes = ['1,190,289', '29,431,280', '919,633', '4,287,080'];
-const favourites = [["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg"], ["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg"], ["http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg", "http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg"], ["http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg", "http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg"]];
-const widthIR = [64.5, 53, 46.4, 46.4];
-const widthIL = [64.5, 64.5, 53, 54.5];
+const insideRetweets = ['1,139,421', '4,877,430', '5,321,000', '1,890,090', '2,241,187', '3,189,100'];
+const insideLikes = ['3,190,289', '9,431,280', '2,919,633', '4,287,080', '5,844,300', '5,701,955'];
+const favourites = [["http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png", "http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg", "http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg", "http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg", "http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg", "http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg", "http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg"], ["https://pbs.twimg.com/profile_images/791423363797377024/svEXr6X8_400x400.jpg", "https://pbs.twimg.com/profile_images/852489294102974465/4ew6HxaY_400x400.jpg", "https://pbs.twimg.com/profile_images/657199367556866048/EBEIl2ol_400x400.jpg", "https://pbs.twimg.com/profile_images/905479981459013637/a6BbKh4k_400x400.jpg", "https://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg", "https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg", "https://pbs.twimg.com/profile_images/793884255977934849/J4hOlMzx_400x400.jpg", "https://pbs.twimg.com/profile_images/883134939205705728/703FLbqR_400x400.jpg", "https://pbs.twimg.com/profile_images/1132466648/MichaelCaine_10_400x400.JPG"], ["https://pbs.twimg.com/profile_images/908545940948115459/JGM3RNOF_400x400.jpg", "https://pbs.twimg.com/profile_images/822549020006551552/2M_tBm-q_400x400.jpg", "https://pbs.twimg.com/profile_images/902653914465550336/QE3287ZJ_400x400.jpg", "https://pbs.twimg.com/profile_images/782474226020200448/zDo-gAo0_400x400.jpg", "https://pbs.twimg.com/profile_images/563843814725402624/Vb8k670S_400x400.png", "https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg", "https://pbs.twimg.com/profile_images/839198522385793025/jPENEMJT_400x400.jpg", "https://pbs.twimg.com/profile_images/882661553220145152/EQkH0WSX_400x400.jpg", "https://pbs.twimg.com/profile_images/777892792328531968/aRbbZcMo_400x400.jpg"], ["https://pbs.twimg.com/profile_images/3082717887/53c25540c8b93ea92856a1883da99358_400x400.png", "https://pbs.twimg.com/profile_images/898280220037443585/mthp5TlW_400x400.jpg", "https://pbs.twimg.com/profile_images/821094867069784068/ArhiJe3W_400x400.jpg", "https://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg", "https://pbs.twimg.com/profile_images/727894487775756288/tdDOOm_L_400x400.jpg", "https://pbs.twimg.com/profile_images/2355604111/Pseudo_Roddick_400x400.jpg", "https://pbs.twimg.com/profile_images/479970482091864064/oaSYe5s2_400x400.jpeg", "https://pbs.twimg.com/profile_images/910421250568282112/Veu2ug0S_400x400.jpg", "https://pbs.twimg.com/profile_images/831238969576677376/B90v9FF6_400x400.jpg"], ["https://pbs.twimg.com/profile_images/720789479087165440/Uq72sasc_400x400.jpg", "https://pbs.twimg.com/profile_images/900399601282424832/sNDnYYZe_400x400.jpg", "https://pbs.twimg.com/profile_images/884533034669588480/am6x8vE4_400x400.jpg", "https://pbs.twimg.com/profile_images/780891913570299904/JGnEOBiU_400x400.jpg", "https://pbs.twimg.com/profile_images/726486379484553216/nxNz44_J_400x400.jpg", "https://pbs.twimg.com/profile_images/906517174411579393/UfP8Fq6P_400x400.jpg", "https://pbs.twimg.com/profile_images/712863751/lil-wayne-gq-2_400x400.jpg", "https://pbs.twimg.com/profile_images/898295311893880832/bCps4HFV_400x400.jpg", "https://pbs.twimg.com/profile_images/874682365506756608/WcFH3Ypp_400x400.jpg"], ["https://pbs.twimg.com/profile_images/858707223119376385/V6WITTWC_400x400.jpg", "https://pbs.twimg.com/profile_images/523395738181439488/ZSdNbxJ3_400x400.png", "https://pbs.twimg.com/profile_images/872496239258066946/4mbvQr9E_400x400.jpg", "https://pbs.twimg.com/profile_images/424184673938329600/FArA372x_400x400.jpeg", "https://pbs.twimg.com/profile_images/803637616956481536/DZbmIcj9_400x400.jpg", "https://pbs.twimg.com/profile_images/880823985537130496/1W3Uzo99_400x400.jpg", "https://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED_400x400.png", "https://pbs.twimg.com/profile_images/810887013356314624/E1Uu6n58_400x400.jpg", "https://pbs.twimg.com/profile_images/886862124340957184/ULFkeJhk_400x400.jpg"]];
 let index = 0;
 
 class notStats extends _react.Component {
@@ -74922,32 +74878,28 @@ class notStats extends _react.Component {
 		this.state = {
 			insideRetweets: insideRetweets[0],
 			insideLikes: insideLikes[0],
-			favourites: favourites[0],
-			widthIR: widthIR[0],
-			widthIL: widthIL[0]
+			favourites: favourites[0]
 		};
 	}
 
 	componentDidMount() {
 		setInterval(() => {
-			index === 3 ? index = 0 : index++;
+			index === 5 ? index = 0 : index++;
 			this.setState({
 				insideRetweets: insideRetweets[index],
 				insideLikes: insideLikes[index],
-				favourites: favourites[index],
-				widthIR: widthIR[index],
-				widthIL: widthIL[index]
+				favourites: favourites[index]
 			});
 		}, 2800);
 	}
 
 	render() {
-		const { insideRetweets, insideLikes, favourites, widthIR, widthIL } = this.state;
+		const { insideRetweets, insideLikes, favourites } = this.state;
 		const inputRetweets = {
-			width: `${widthIR}px`
+			width: `${64.5}px`
 		};
 		const inputLikes = {
-			width: `${widthIL}px`
+			width: `${64.5}px`
 		};
 		return _react2.default.createElement(
 			'div',
@@ -75063,9 +75015,9 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const insideReplies = ['6.1K', '92K', '12.9K', '20K'];
-const footerRetweets = ['139K', '9.8M', '321K', '890K'];
-const footerLikes = ['1.2M', '29M', '920K', '4.3M'];
+const insideReplies = ['60K', '92K', '12K', '20K', '42K', '63K'];
+const footerRetweets = ['1.1M', '4.9M', '5.3M', '1.9M', '2.2M', '3.2M'];
+const footerLikes = ['3.2M', '9.4M', '2.9M', '4.3M', '5.8M', '5.7M'];
 let index = 0;
 
 class Footer extends _react.Component {
@@ -75080,7 +75032,7 @@ class Footer extends _react.Component {
 
 	componentDidMount() {
 		setInterval(() => {
-			index === 3 ? index = 0 : index++;
+			index === 5 ? index = 0 : index++;
 			this.setState({
 				insideReplies: insideReplies[index],
 				footerRetweets: footerRetweets[index],

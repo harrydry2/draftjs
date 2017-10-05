@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const insideReplies = ['6.1K', '92K', '12.9K', '20K']
-const footerRetweets = ['139K', '9.8M', '321K', '890K']
-const footerLikes = ['1.2M', '29M', '920K', '4.3M']
+const insideReplies = ['60K', '92K', '12K', '20K', '42K', '63K']
+const footerRetweets = ['1.1M', '4.9M', '5.3M', '1.9M', '2.2M', '3.2M']
+const footerLikes = ['3.2M', '9.4M', '2.9M', '4.3M', '5.8M', '5.7M']
 let index = 0;
 
 class Footer extends Component {
@@ -17,7 +17,7 @@ class Footer extends Component {
 
 	componentDidMount() {
 	  setInterval(() => {
-		index === 3 ? index=0 : index++;
+		index === 5 ? index=0 : index++;
 	  	this.setState({
 	  		insideReplies: insideReplies[index],
 	  		footerRetweets: footerRetweets[index],
