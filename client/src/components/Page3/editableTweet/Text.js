@@ -5,8 +5,8 @@ import { EditorState, CompositeDecorator } from 'draft-js';
 // import 'draft-js-emoji-plugin/lib/plugin.css';
 // import moment from 'moment';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index';
-const text = '@140_Canvas Add your tweet here, Throw in an emoji or two and youre good to go';
+import * as actions from '../../../actions/index';
+const text = '@140_Canvas This is an editable tweet. Add your tweet here, Throw in an emoji or two and youre good to go #simple 🚀🔥 ';
 
 function findWithRegex(regex, contentBlock, callback) {
 	const text = contentBlock.getText();

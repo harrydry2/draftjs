@@ -64,7 +64,13 @@ const purchaseSchema = new mongoose.Schema({
 	},
 	timeOfPurchase: {
 		type: String
-	}
+	},
+	size: {
+		type: String
+	},
+	emailPrice: {
+		type: String
+	},
 });
 
 module.exports = mongoose.model('Purchase', purchaseSchema);

@@ -1,29 +1,54 @@
 // @font-face 
-//   font-family: 'proxima-bold'
-//   src: url('//p2.zdassets.com/hc/theme_assets/482660/200018834/Proxima_Nova_Bold.woff') format('woff')
+//   font-family: GothamRounded-Medium
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-RoundedMedium.eot")
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-RoundedMedium.eot?") format("eot"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-RoundedMedium.woff") format("woff"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-RoundedMedium.ttf") format("truetype")
+
+@font-face 
+  font-family: GothamRounded-Medium
+  src: url("https://www.yolt.com/assets/fonts/gotham/GothamRounded-Medium.eot")
+  src: url("https://www.yolt.com/assets/fonts/gotham/GothamRounded-Medium.eot?") format("eot"), url("https://www.yolt.com/assets/fonts/gotham/GothamRounded-Medium.woff") format("woff"), url("https://www.yolt.com/assets/fonts/gotham/GothamRounded-Medium.ttf") format("truetype")
 
 // @font-face 
-//   font-family: 'proxima-regular'
-//   src: url('//p2.zdassets.com/hc/theme_assets/482660/200018834/Proxima_Nova_Regular.woff') format('woff')
+//   font-family: Gotham-Bold
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Bold.eot")
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Bold.eot?") format("eot"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Bold.woff") format("woff"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Bold.ttf") format("truetype")
+
+@font-face 
+  font-family: Gotham-Bold
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Bold.eot")
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Bold.eot?") format("eot"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Bold.woff") format("woff"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Bold.ttf") format("truetype")
+
+@font-face 
+  font-family: Gotham-BookItalic
+  src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-BookItalic.eot")
+  src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-BookItalic.eot?") format("eot"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-BookItalic.woff") format("woff"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-BookItalic.ttf") format("truetype")
 
 // @font-face 
-//   font-family: 'proxima-semibold'
-//   src: url('//p4.zdassets.com/hc/theme_assets/913881/200060273/proxima-nova-semibold.svg') format('svg'), url('//p4.zdassets.com/hc/theme_assets/913881/200060273/proxima-nova-semibold.ttf') format('truetype')
+//   font-family: Gotham-Book
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Book.eot")
+//   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Book.eot?") format("eot"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Book.woff") format("woff"), url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Book.ttf") format("truetype")
 
-// @font-face 
-//   font-family: 'proxima-thin'
-//   src: url('//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-9e619ad2490098a587bc46fb466bec9b__1_.woff') format('woff'), url('//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-6fbe9763d2dcda6c55f0bbd22a4835ed.ttf') format('truetype'), url('//p2.zdassets.com/hc/theme_assets/482660/200018834/proxima-nova-thin-f7aae9fd81400f75a2de578c385d13c1.svg') format('svg')
+@font-face 
+  font-family: Gotham-Book
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Book.eot")
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Book.eot?") format("eot"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Book.woff") format("woff"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Book.ttf") format("truetype")
 
+@font-face 
+  font-family: Gotham-Medium
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Medium.eot")
+  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Medium.eot?") format("eot"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Medium.woff") format("woff"), url("https://www.yolt.com/assets/fonts/gotham/Gotham-Medium.ttf") format("truetype")
 
 body, html
   font-family: 'Helvetica'
   max-width: 100%
   overflow-x: hidden
   box-sizing: border-box
-  background: #f4f7fb
-  *, *:before, *:after
-    box-sizing: inherit
-  
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+*, *:before, *:after
+  box-sizing: inherit
+  outline: none !important
 
 $centralColor: #57bae9
 $twitterBlue: #329CC3
@@ -36,59 +61,10 @@ input, .tweetTextSize
   margin: 0px
   padding: 0px
 
-.page1Wrapper
-  height: 100vh
-
-.page1WrapperBackground
-  transform: skewY(-20deg) translateY(-100px)
-  transform-origin: 0
-  width: 100%
-  min-height: 57em
-  height: 60vw
-  overflow: hidden
-  position: absolute
-
-.page2Wrapper
-  height: 100vh
-  position: relative
-
 .borderBox
   box-sizing: content-box
 
-//Pre Profile Section
-.backgroundImage
-  position: absolute
-  z-index: 0
-  width: 526px
-  filter: blur(1px)
-  top: 20%
-  left: 42%
-  border: 2px solid black
-
-.backgroundImageContainer
-  display: flex
-  justify-content: center
-  align-items: center
-  width: 526px
-  position: absolute
-  top: 20%
-  left: 42%
-  border: 2px solid black
-  box-shadow: 0px 2px 12px 1.5px rgba(0, 0, 0, 0.34)
-  
-.backgroundTweet
-  width: 560px
-  padding: 30px 40px
-  background: white
-  border-radius: 10px
-  position: relative
-  transform: scale(0.72, 0.72)
-
 // body/cursor/wrapper
-body
-  border-top: 2px solid transparent
-  border-image: linear-gradient(to right, #8668ad 0, #79ccf2 100%) 1
-
 .cursor
   background-image: url('https://s3.eu-west-2.amazonaws.com/lifeishappening/fingerUp1.png')
   width: 37px
@@ -101,10 +77,34 @@ body
   transition: opacity .3s ease
   z-index: 9999
 
-.hanger
-  position: absolute
-  top: 5.5%
-  left: 42.5%
-  z-index: 1
+// Global Font Styles
+.gothamRM
+  font-family: GothamRounded-Medium
+  font-size: 46px
+  line-height: 52px
+  letter-spacing: -0.78px
+  @media screen and (max-width: 1199px) and (min-width: 1021px)
+    font-size: 3.84vw
+    line-height: 4.34vw
+    letter-spacing: -0.065vw
+  @media screen and (max-width: 414px)
+    font-size: 34px
+    line-height: 45px
+    letter-spacing: -0.78px
+
+
+.gothamBook
+  font-family: Gotham-Book
+  font-size: 21px
+  line-height: 29px
+  letter-spacing: -0.78px
+  @media screen and (max-width: 1199px) and (min-width: 1021px)
+    font-size: 1.75vw
+    line-height: 2.42vw
+    letter-spacing: -0.065vw
+  @media screen and (max-width: 414px)
+    font-size: 18px
+    line-height: 27px
+    letter-spacing: -0.78px
 
 

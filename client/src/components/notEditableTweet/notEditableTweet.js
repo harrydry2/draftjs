@@ -25,7 +25,7 @@ componentDidMount() {
 		this.setState({
 			backgroundImage: backgroundImage[index],
 		})
-  }, 2800);
+  }, 4800);
 }
 
 	render() {

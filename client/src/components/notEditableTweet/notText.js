@@ -25,7 +25,7 @@ class notText extends Component {
 	  		dateAndTime: dateAndTime[index],
 	  	})
 	  this.tweetTextSize.innerHTML = this.state.text;
-	  }, 2800);
+	  }, 4800);
 	}
 
 	render() {

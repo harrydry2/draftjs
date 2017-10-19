@@ -30,7 +30,7 @@ class notStats extends Component {
 	  		insideLikes: insideLikes[index],
 	  		favourites: favourites[index],
 	  	})
-	  }, 2800);
+	  }, 4800);
 	}
 
 	render() {

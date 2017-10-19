@@ -21,8 +21,8 @@ class Video extends Component {
 	render() {
 		const {isLoading} = this.state
 		return (
-			<div className={`laptopPlayback ${isLoading ? 'isLoading' : ''}`}>
-				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/macBook3.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
+			<div className={`videoWrapper ${isLoading ? 'isLoading' : ''}`}>
+				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/latestMacbookTrans.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
 				<video 
 					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4" 
 					onCanPlayThrough={(e) => this.vidLoaded(e)} 

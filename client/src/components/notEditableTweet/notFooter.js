@@ -23,7 +23,7 @@ class Footer extends Component {
 	  		footerRetweets: footerRetweets[index],
 	  		footerLikes: footerLikes[index],
 	  	})
-	  }, 2800);
+	  }, 4800);
 	}
 
 	render() {

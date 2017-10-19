@@ -1,0 +1,83 @@
+.positionRelative
+  @media screen and (max-width: 1020px)
+    position: relative
+    width: 529.34px
+    margin-left: 70px
+    margin-right: 70px
+  @media screen and (max-width: 731px)
+    margin-left: 0px
+    margin-right: 0px
+  @media screen and (max-width: 414px)
+    width: 375px
+
+.backgroundImage
+  position: absolute
+  z-index: 0
+  filter: blur(1px)
+  top: 2%
+  right: 7%
+  width: 551.4px // **AT 0.76**   Hence we times by (.538 / .76) = .708
+  @media screen and (max-width: 1199px)
+    // times everything by 0.96
+    width: 529.34px
+    right: 5%
+  @media screen and (max-width: 1100px)
+    right: 4%
+  @media screen and (max-width: 1020px)
+    top: 0
+    right: 0
+  @media screen and (max-width: 414px)
+    width: 375px
+
+.backgroundImageContainer
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 2%
+  right: 7%
+  box-shadow: 0px 4px 16px 2.5px rgba(0, 0, 0, 0.44)
+  width: 551.4px
+  @media screen and (max-width: 1199px)
+    width: 529.34px
+    right: 5%
+  @media screen and (max-width: 1100px)
+    right: 4%
+  @media screen and (max-width: 1020px)
+    top: 0
+    right: 0
+  @media screen and (max-width: 414px)
+    width: 375px
+  
+.backgroundTweet
+  width: 560px
+  padding: 30px 40px
+  background: white
+  border-radius: 10px
+  position: relative
+  transform: scale(0.76, 0.76)
+  @media screen and (max-width: 1199px)
+    transform: scale(0.73, 0.73)
+  @media screen and (max-width: 414px)
+    transform: scale(0.5109, 0.5109)
+
+// FOLLOW THIS FORMULA TO THE LETTER. TO THE LETTER
+
+// NOTE 640 and 342 are the inner width and height respectively at s = 1. Can be seen on 'computed' on local host.
+// For Specified width of 375px (on positionRelative) with margin of 48px all the way around -  Example
+// m = 48 and w = 375
+// 640s + m = w
+// 640s + 48 = 375
+// s = 0.5109
+
+// Now Calc Height for 0.5109 transform
+// Actual rendered height of background tweet = (342) * 0.5109 = 174.73
+// We want 48px total margin so total height = 174.73 + 48 = 222.7
+// Packaged with three lines. So calculate the height of a line (32*.5109) = 16.35
+// And times that by 3 (16.35*3) = 49
+// Then take that off (222.7 - 49) = 173.7
+// var heightBIC = (173.7 + (16.35)*this.props.textReducer.lines)
+
+
+
+

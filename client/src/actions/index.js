@@ -36,3 +36,11 @@ export const saveYeState = (ye) => async dispatch => {
 	}
 	dispatch({type: 'ET_REDUCER', payload: obj})
 };
+
+export const saveSizeAndPrice = (size, price) => async dispatch => {
+	const obj = {
+		size,
+		price,
+	}
+	dispatch({type: 'SIZE_REDUCER', payload: obj})
+};

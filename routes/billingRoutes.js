@@ -7,13 +7,15 @@ const mail = require('../mail/mailHandler');
 module.exports = app => {
   app.post('/api/stripe', async (req, res) => {
    const charge = await stripe.charges.create({
-      amount: 3000,
-      currency: 'usd',
+      amount: req.body.stripePrice,
+      currency: 'GBP',
       description: '$5 for 5 credits',
       source: req.body.id
     });
   await mail.send({
     emailTo: req.body.stripeEmail,
+    emailPrice: req.body.emailPrice,
+    emailSize: req.body.size,
     filename: 'emailPug',
     emailDate: req.body.emailDate,
     nameB: req.body.stripeBillingName,

@@ -1,0 +1,164 @@
+.page3Wrapper
+  height: 60vh
+  position: relative
+  @media screen and (max-width: 1020px)
+  	display: flex
+  	justify-content: center
+  	flex-wrap: wrap
+  	height: auto
+
+.headerForiPad
+	display: none
+	@media screen and (max-width: 1020px)
+		display: block
+		color: #34434b
+		width: 410px
+		height: 52px
+		margin-top: 85px
+		margin-bottom: 55px
+		margin-left: 40px
+		margin-right: 40px
+	@media screen and (max-width: 414px)
+		margin-top: 18px
+		margin-bottom: 18px
+		margin-left: 0
+		margin-right: 0
+		display: flex
+		justify-content: center
+
+.bodyContainerp3
+	position: relative
+	top: 0px
+	left: 7%
+	width: 410px
+	height: 334px
+	z-index: 2
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 34.20vw
+		height: 27.86vw
+		left: 5% 
+	@media screen and (max-width: 1020px)
+		left: 0
+		padding-top: 35px
+		padding-bottom: 35px
+		width: auto
+		height: auto
+
+.headerTextp3
+	color: #34434b
+	width: 410px
+	height: 52px
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 34.20vw
+		height: 4.34vw 
+	@media screen and (max-width: 1020px)
+		display: none
+
+.instructionp3
+	color: #34434b
+	width: 390px
+	height: 92px
+	margin-top: 35px
+	margin-bottom: 42px
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 32.53vw
+		height: 7.67vw
+		margin-top: 2.92vw
+		margin-bottom: 3.50vw
+	@media screen and (max-width: 1020px)
+		display: none
+
+// buttonSection
+
+.buttonSectionp3
+	width: 379px
+	height: 110px
+	display: flex
+	align-content: space-between
+	// justify-content: center
+	flex-wrap: wrap
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 31.6vw
+		height: 9.17vw
+	@media screen and (max-width: 414px)
+		height: 89px
+		width: 305px
+
+
+// sizeButton
+.blueBorderButton
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06)
+	border-radius: 4px
+	border: 2px solid #2c76d1
+	background: #FFFFFF
+	display: flex
+	height: 38px
+	&:focus
+		border: none !important 
+	&:visited
+		border: none !important
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		height: 3.17vw
+	@media screen and (max-width: 414px)
+		height: 31px
+
+
+.sizeButton
+	width: 230px
+	margin-right: 33px
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		transform: translateY(-0.5px)
+		cursor: pointer !important
+		box-shadow: 0 6px 11px rgba(50,50,93,.08), 0 2px 7px rgba(0,0,0,.06)
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 19.18vw
+		margin-right: 2.75vw
+	@media screen and (max-width: 414px)
+		width: 193px
+		margin-right: 14px
+
+// priceButton
+.priceDiv
+	width: 114px
+	color: #2c76d1
+	font-family: Gotham-Medium
+	font-size: 14px
+	letter-spacing: -0.2px
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 9.51vw
+		font-size: 1.17vw
+	@media screen and (max-width: 414px)
+		width: 97px
+		font-size: 13px
+
+// paymentButton
+.paymentButton
+	width: 379px
+	height: 55px
+	box-shadow: 0 4px 6px 1px rgba(50, 50, 93, 0.23), 0 1px 3px 1px rgba(0, 0, 0, 0.18)
+	border-radius: 4px
+	background-image: linear-gradient(180deg, #41aae6 0%, #4173e6 100%)
+	color: #FFFFFF
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+	font-family: Gotham-Bold
+	font-size: 22px
+	letter-spacing: -0.2px
+	border: none
+	&:hover
+		transform: translateY(-1px)
+		cursor: pointer
+		box-shadow: 0 7px 18px 1px rgba(50,50,93,.23), 0 3px 10px 1px rgba(0,0,0,.18)
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		width: 30.94vw
+		height: 4.59vw
+		font-size: 1.83vw
+	@media screen and (max-width: 414px)
+		width: 305px
+		height: 44px
+		font-size: 20px

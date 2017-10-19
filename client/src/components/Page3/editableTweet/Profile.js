@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../../actions/index';
 
 class Profile extends Component {
 	constructor(props) {
@@ -42,7 +42,7 @@ class Profile extends Component {
 							</form>
 						</div>
 						<div className="follorBar">
-							<button>Following</button>
+							<button className="followingButton">Following</button>
 						</div>
 						<div className="profileTweetAction">
 							<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/downarrow.png" className="twitterDownArrow" alt="" />

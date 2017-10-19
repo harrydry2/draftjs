@@ -15,6 +15,10 @@ class PaymentBlock extends Component {
 		const timeOfPurchase = '23'
 		// const emailDate = moment().format('L');
 		const emailDate = '23'
+		// manipulating price
+		const {size, price} = this.props.sizeReducer;
+		const emailPrice = `${price}.00`
+		const stripePrice = parseFloat(`${price}00`)
 		const toPost = {
 			username,
 			tweetDate: dateAndTime,
@@ -39,11 +43,16 @@ class PaymentBlock extends Component {
 			stripeShippingAddressState: address.shipping_address_state,
 			timeOfPurchase,
 			emailDate,
+			size,
+			emailPrice,
+			stripePrice,
 		}
   	const res = await axios.post('/api/stripe', toPost);
 	}
 
 	render() {
+		const {price} = this.props.sizeReducer;
+		const stripePrice = parseFloat(`${price}00`);
 		return (
 			<StripeCheckout
 			  name="140 Canvas"
@@ -51,11 +60,11 @@ class PaymentBlock extends Component {
 			  currency="GBP"
 			  shippingAddress
 			  billingAdress={true}
-			  amount={3000}
+			  amount={stripePrice}
 			  token={(token, address) => this.handleToken(token, address)}
 			  stripeKey="pk_test_9gCdD2DfM1XFS6Tdo6mtL4zq"
 			>
-			  <button>
+			  <button className="paymentButton">
 			    Buy Now
 			  </button>
 			</StripeCheckout>
@@ -63,8 +72,8 @@ class PaymentBlock extends Component {
 	}
 }
 
-function mapStateToProps({ infoObject, textReducer, statsReducer, footerReducer }) {
-  return { infoObject, textReducer, statsReducer, footerReducer };
+function mapStateToProps({ infoObject, textReducer, statsReducer, footerReducer, sizeReducer }) {
+  return { infoObject, textReducer, statsReducer, footerReducer, sizeReducer };
 }
 
 export default connect(mapStateToProps)(PaymentBlock);

@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import EditableTweet from './editableTweet/editableTweet';
-import NotEditableTweet from './notEditableTweet/notEditableTweet';
-import PaymentBlock from './PaymentBlock';
-import Page3 from './Page3';
-import Video from './Video';
-// import Levitate from './Levitate';
 import { connect } from 'react-redux';
-import scrollToComponent from 'react-scroll-to-component';
+import Page1 from './Page1/Page1';
+import Page2 from './Page2/Page2';
+import Page3 from './Page3/Page3';
 
 class App extends Component {
 	constructor(props) {
@@ -41,18 +37,8 @@ class App extends Component {
 		return (
 			<div onMouseMove={(e) => this.mousePosition(e)} style={body}>
 				<div className="cursor" style={cursor} />
-				<div className="page1Wrapper">
-					<div className="page1WrapperBackground" />
-					<NotEditableTweet />
-					{/*<Video />*/}
-				</div>
-				<div 
-					className="page2Wrapper"
-					ref={(element) => { this.page2Wrapper = element; }}
-				>
-					<EditableTweet />
-					<PaymentBlock />
-				</div>
+				<Page1 />
+				<Page2 />
 				<Page3 />
 			</div>
 		);

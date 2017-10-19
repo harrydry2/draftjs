@@ -38,6 +38,11 @@ const initialYe = {
 	ye: false
 }
 
+const initialSize = {
+	size: 'Size: A1 (594 x 841 mm)',
+	price: '24'
+}
+
 const infoObject = (state = initialInfoObject, action) => {
 	switch(action.type) {
 		case 'FETCH_USER':
@@ -83,10 +88,20 @@ const etReducer = (state = initialYe, action) => {
 	}
 }
 
+const sizeReducer = (state = initialSize, action) => {
+	switch(action.type) {
+		case 'SIZE_REDUCER':
+			return action.payload || false;
+		default: 
+			return state;
+	}
+}
+
 module.exports = {
 	infoObject,
 	textReducer,
 	statsReducer,
 	footerReducer,
 	etReducer,
+	sizeReducer,
 }

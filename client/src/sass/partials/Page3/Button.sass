@@ -1,0 +1,72 @@
+// overwriting default styles SIZE BUTTON SIZE BUTTON 
+.Select-value
+	transform: translateX(11px) !important
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		transform: translateX(0.92vw) !important
+	@media screen and (max-width: 414px)
+		transform: translateX(0px) !important
+
+
+.Select-control
+	background-color: rgba(0,0,0,0) !important
+	border: none !important
+	background-color: none !important
+	border-color: none !important
+	box-shadow: none !important
+	&:focus
+		border: none !important
+	&:visited
+		border: none !important 
+	&:hover
+		cursor: pointer !important
+
+.Select-value-label
+	color: #2c76d1 !important
+	font-family: Gotham-Medium !important
+	font-size: 14px !important
+	letter-spacing: -0.2px !important
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		font-size: 1.17vw !important
+	@media screen and (max-width: 414px)
+		font-size: 13px !important
+
+
+// arrow
+.Select-arrow
+	border-color: #2c76d1 transparent transparent !important
+	transform: translateX(-6px)
+	@media screen and (max-width: 414px)
+		transform: translateX(0)
+
+
+.is-open > .Select-control .Select-arrow
+	border-color: transparent transparent #2c76d1 !important
+	top: -3px !important
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		transform: translateX(-0.50vw) !important
+		top: -0.25vw !important
+	@media screen and (max-width: 414px)
+		transform: translateX(0)
+
+
+// menuOuterColour
+.Select-menu-outer *
+	color: rgba(44, 118, 209, 0.87) !important
+
+.Select-menu-outer
+	font-family: Gotham-Medium !important
+	font-size: 14px !important
+	letter-spacing: -0.2px !important
+	border: none !important
+	width: 86.0% !important
+	transform: translate(-6.2px, 1px)
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.13) !important
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		font-size: 1.17vw !important
+		transform: translate(-.52vw, 0.08vw) !important
+		letter-spacing: -0.017vw !important
+	@media screen and (max-width: 414px)
+		font-size: 13px !important
+		width: 94% !important
+		transform: translate(-3px, 1px)
+// END END END

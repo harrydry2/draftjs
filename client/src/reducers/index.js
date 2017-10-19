@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {infoObject, textReducer, statsReducer, footerReducer, etReducer} from './infoObject';
+import {infoObject, textReducer, statsReducer, footerReducer, etReducer, sizeReducer} from './infoObject';
 
 export default combineReducers({
 	infoObject,
@@ -7,4 +7,5 @@ export default combineReducers({
 	statsReducer,
 	footerReducer,
 	etReducer,
+	sizeReducer,
 });

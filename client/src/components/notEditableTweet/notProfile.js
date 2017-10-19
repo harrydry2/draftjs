@@ -28,7 +28,7 @@ class notProfile extends Component {
 	  		verified: verified[index],
 	  		username: username[index],
 	  	})
-	  }, 2800);
+	  }, 4800);
 	}
 
 	render() {

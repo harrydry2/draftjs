@@ -29,6 +29,10 @@ module.exports = {
 				use: ['style-loader', 'css-loader'],
 			},
 			{
+			  test: /\.css$/,
+			  loaders: ['style-loader', 'css-loader']
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
@@ -45,7 +49,7 @@ module.exports = {
 		new ExtractTextPlugin('bundle.css'),
 
 		// minify
-		new BundleAnalyzerPlugin(),
+		// new BundleAnalyzerPlugin(),
 		new CompressionPlugin({
 		  asset: "[path].gz[query]",
 		  algorithm: "gzip",
