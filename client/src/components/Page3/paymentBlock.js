@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
-// import moment from 'moment'
+import format from 'date-fns/format'
 
 class PaymentBlock extends Component {
 	async handleToken(token, address){
@@ -11,10 +11,8 @@ class PaymentBlock extends Component {
 		const {insideRetweets, insideLikes, favouritesArray} = this.props.statsReducer;
 		const {insideReplies} = this.props.footerReducer;
 		const eachFavourite = favouritesArray.map((favourite) => favourite[1]);
-		// const timeOfPurchase = moment().format('llll');
-		const timeOfPurchase = '23'
-		// const emailDate = moment().format('L');
-		const emailDate = '23'
+		const timeOfPurchase = format(new Date(),'h:mm A - D MMM YYYY');
+		const emailDate = format(new Date(),'MM/DD/YYYY');
 		// manipulating price
 		const {size, price} = this.props.sizeReducer;
 		const emailPrice = `${price}.00`

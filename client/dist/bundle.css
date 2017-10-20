@@ -371,9 +371,9 @@ input, .tweetTextSize {
   box-sizing: content-box; }
 
 .cursor {
-  background-image: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fingerUp1.png");
-  width: 37px;
-  height: 76px;
+  background-image: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/pointingFingerNMV4.png");
+  width: 36px;
+  height: 55px;
   position: fixed;
   top: 0;
   left: 0;
@@ -397,6 +397,10 @@ input, .tweetTextSize {
       font-size: 34px;
       line-height: 45px;
       letter-spacing: -0.78px; } }
+  @media screen and (max-width: 375px) {
+    .gothamRM {
+      font-size: 32px;
+      line-height: 42px; } }
 
 .gothamBook {
   font-family: Gotham-Book;
@@ -413,6 +417,10 @@ input, .tweetTextSize {
       font-size: 18px;
       line-height: 27px;
       letter-spacing: -0.78px; } }
+  @media screen and (max-width: 375px) {
+    .gothamBook {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .page1Wrapper {
   height: 100vh; }
@@ -867,6 +875,9 @@ input, .tweetTextSize {
       margin-top: 40px;
       width: 404px;
       height: auto; } }
+  @media screen and (max-width: 375px) {
+    .headerTextp2 {
+      width: 98.67vw; } }
 
 .actionCheckContainer {
   width: 100%;
@@ -878,6 +889,9 @@ input, .tweetTextSize {
   @media screen and (max-width: 414px) {
     .actionCheckContainer {
       width: 344px; } }
+  @media screen and (max-width: 375px) {
+    .actionCheckContainer {
+      width: 83vw; } }
 
 .checkmarkOutline {
   width: 25px;
@@ -957,7 +971,7 @@ input, .tweetTextSize {
 .obamaVideo {
   position: absolute;
   top: 10%;
-  left: 17.4%;
+  left: 12.4%;
   width: 78%; }
   @media screen and (max-width: 414px) {
     .obamaVideo {
@@ -967,7 +981,7 @@ input, .tweetTextSize {
       left: 0%; } }
 
 .isLoading .obamaVideo {
-  display: none; }
+  visibility: hidden; }
 
 .positionSpinner {
   position: absolute;
@@ -1341,7 +1355,19 @@ input, .tweetTextSize {
 
 @media screen and (max-width: 414px) {
   .positionRelative {
-    width: 375px; } }
+    width: 398px; } }
+
+@media screen and (max-width: 375px) {
+  .positionRelative {
+    width: 359px; } }
+
+@media screen and (max-width: 370px) {
+  .positionRelative {
+    width: 344px; } }
+
+@media screen and (max-width: 359px) {
+  .positionRelative {
+    width: 304px; } }
 
 .backgroundImage {
   position: absolute;
@@ -1363,7 +1389,16 @@ input, .tweetTextSize {
       right: 0; } }
   @media screen and (max-width: 414px) {
     .backgroundImage {
-      width: 375px; } }
+      width: 398px; } }
+  @media screen and (max-width: 375px) {
+    .backgroundImage {
+      width: 359px; } }
+  @media screen and (max-width: 370px) {
+    .backgroundImage {
+      width: 344px; } }
+  @media screen and (max-width: 359px) {
+    .backgroundImage {
+      width: 304px; } }
 
 .backgroundImageContainer {
   display: flex;
@@ -1387,7 +1422,16 @@ input, .tweetTextSize {
       right: 0; } }
   @media screen and (max-width: 414px) {
     .backgroundImageContainer {
-      width: 375px; } }
+      width: 398px; } }
+  @media screen and (max-width: 375px) {
+    .backgroundImageContainer {
+      width: 359px; } }
+  @media screen and (max-width: 370px) {
+    .backgroundImageContainer {
+      width: 344px; } }
+  @media screen and (max-width: 359px) {
+    .backgroundImageContainer {
+      width: 304px; } }
 
 .backgroundTweet {
   width: 560px;
@@ -1401,7 +1445,16 @@ input, .tweetTextSize {
       transform: scale(0.73, 0.73); } }
   @media screen and (max-width: 414px) {
     .backgroundTweet {
-      transform: scale(0.5109, 0.5109); } }
+      transform: scale(0.55625, 0.55625); } }
+  @media screen and (max-width: 375px) {
+    .backgroundTweet {
+      transform: scale(0.51094, 0.51094); } }
+  @media screen and (max-width: 370px) {
+    .backgroundTweet {
+      transform: scale(0.4875, 0.4875); } }
+  @media screen and (max-width: 359px) {
+    .backgroundTweet {
+      transform: scale(0.425, 0.425); } }
 
 .clearFix {
   margin-left: 58px;

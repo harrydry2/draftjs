@@ -31,7 +31,7 @@ class Page2 extends Component {
 						<div className="instruction gothamBook">Hand pick your favourites. Enter your retweets and likes and you’re away!</div>
 					</div>
 				</div>
-				<Video />
+				<Video scrolledAmount={this.props.scrolledAmount} />
 			</div>
 		)
 	}

@@ -3,7 +3,7 @@ import Editor, { createEditorStateWithText } from 'draft-js-plugins-editor';
 import { EditorState, CompositeDecorator } from 'draft-js';
 // import createEmojiPlugin from 'draft-js-emoji-plugin';
 // import 'draft-js-emoji-plugin/lib/plugin.css';
-// import moment from 'moment';
+import format from 'date-fns/format'
 import { connect } from 'react-redux';
 import * as actions from '../../../actions/index';
 const text = '@140_Canvas This is an editable tweet. Add your tweet here, Throw in an emoji or two and youre good to go #simple 🚀🔥 ';
@@ -54,8 +54,7 @@ class Text extends Component {
 		super(props);
 		this.state = {
 			editorState: createEditorStateWithText(text),
-			// dateAndTime: moment().format('h:mm A - D MMM YYYY'),
-			dateAndTime: '3:14 PM —',
+			dateAndTime: format(new Date(),'h:mm A - D MMM YYYY'),
 			lines: 3,
 		};
 		this.onChange = (editorState) => {

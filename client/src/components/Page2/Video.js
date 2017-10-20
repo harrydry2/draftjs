@@ -8,14 +8,17 @@ class Video extends Component {
 		}
 	}
 	imgLoaded(e){
+		console.log('imgLoadedFired')
 		this.setState({isLoading: true})
 	}
 
-	vidLoaded(e){
-		setTimeout(() => {
-			this.video.play();
-			this.setState({isLoading: false})
-		}, 1000)
+	componentWillUpdate() {
+		if ((this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0) {
+			setTimeout(() => {
+				this.video.play();
+				this.setState({isLoading: false})
+			},900)
+		}
 	}
 
 	render() {
@@ -24,8 +27,7 @@ class Video extends Component {
 			<div className={`videoWrapper ${isLoading ? 'isLoading' : ''}`}>
 				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/latestMacbookTrans.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
 				<video 
-					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4" 
-					onCanPlayThrough={(e) => this.vidLoaded(e)} 
+					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4"  
 					muted playsInline loop className="obamaVideo"
 					ref={(element) => { this.video = element; }}
 					onClick={(e) => this.video.paused ? this.video.play() : this.video.pause()} 
