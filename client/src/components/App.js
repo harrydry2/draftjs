@@ -7,8 +7,10 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.updateDimensions = this.updateDimensions.bind(this);
+		this.scrolledAmount = this.scrolledAmount.bind(this);
 		this.state = {
-			width: window.innerWidth
+			width: window.innerWidth,
+			scrolledAmount: window.scrollY
 		}
 	}
 
@@ -19,6 +21,8 @@ class App extends Component {
 	}
 	componentDidMount() {
 		window.addEventListener("resize", this.updateDimensions);
+		// pass in dynamic props so cwu runs in video
+		window.addEventListener("scroll", this.scrolledAmount);
 	}
 
 	updateDimensions(){
@@ -26,7 +30,10 @@ class App extends Component {
 		this.setState({width});
 	}
 
-// getting mouse position
+	scrolledAmount(){
+		const scrolledAmount = window.scrollY;
+		this.setState({scrolledAmount});
+	}
 
 	render() {
 		return (

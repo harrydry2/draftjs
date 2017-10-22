@@ -42622,8 +42622,10 @@ class App extends _react.Component {
 	constructor(props) {
 		super(props);
 		this.updateDimensions = this.updateDimensions.bind(this);
+		this.scrolledAmount = this.scrolledAmount.bind(this);
 		this.state = {
-			width: window.innerWidth
+			width: window.innerWidth,
+			scrolledAmount: window.scrollY
 		};
 	}
 
@@ -42634,6 +42636,8 @@ class App extends _react.Component {
 	}
 	componentDidMount() {
 		window.addEventListener("resize", this.updateDimensions);
+		// pass in dynamic props so cwu runs in video
+		window.addEventListener("scroll", this.scrolledAmount);
 	}
 
 	updateDimensions() {
@@ -42641,7 +42645,10 @@ class App extends _react.Component {
 		this.setState({ width });
 	}
 
-	// getting mouse position
+	scrolledAmount() {
+		const scrolledAmount = window.scrollY;
+		this.setState({ scrolledAmount });
+	}
 
 	render() {
 		return _react2.default.createElement(
@@ -43082,6 +43089,7 @@ class Video extends _react.Component {
 	}
 
 	componentWillUpdate() {
+		console.log(this.video.getBoundingClientRect().top + 100 - window.innerHeight);
 		if (this.video.getBoundingClientRect().top + 100 - window.innerHeight < 0) {
 			setTimeout(() => {
 				this.video.play();

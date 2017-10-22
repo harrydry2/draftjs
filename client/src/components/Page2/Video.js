@@ -13,6 +13,7 @@ class Video extends Component {
 	}
 
 	componentWillUpdate() {
+		console.log((this.video.getBoundingClientRect().top + 100 - window.innerHeight))
 		if ((this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0) {
 			setTimeout(() => {
 				this.video.play();
