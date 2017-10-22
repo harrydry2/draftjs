@@ -34,10 +34,6 @@ const initialReplies = {
 	insideReplies: "180",
 }
 
-const initialYe = {
-	ye: false
-}
-
 const initialSize = {
 	size: 'Size: A1 (594 x 841 mm)',
 	price: '24'
@@ -79,15 +75,6 @@ const footerReducer = (state = initialReplies, action) => {
 	}
 }
 
-const etReducer = (state = initialYe, action) => {
-	switch(action.type) {
-		case 'ET_REDUCER':
-			return action.payload || false;
-		default: 
-			return state;
-	}
-}
-
 const sizeReducer = (state = initialSize, action) => {
 	switch(action.type) {
 		case 'SIZE_REDUCER':
@@ -102,6 +89,5 @@ module.exports = {
 	textReducer,
 	statsReducer,
 	footerReducer,
-	etReducer,
 	sizeReducer,
 }

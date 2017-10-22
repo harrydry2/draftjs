@@ -352,7 +352,6 @@ body, html {
   outline: none !important; }
 
 input, .tweetTextSize {
-  cursor: none !important;
   outline: none;
   border: none;
   margin: 0px;
@@ -360,18 +359,6 @@ input, .tweetTextSize {
 
 .borderBox {
   box-sizing: content-box; }
-
-.cursor {
-  background-image: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/pointingFingerNMV4.png");
-  width: 36px;
-  height: 55px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .3s ease;
-  z-index: 9999; }
 
 .gothamRM {
   font-family: GothamRounded-Medium;

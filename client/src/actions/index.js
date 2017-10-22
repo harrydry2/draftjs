@@ -30,13 +30,6 @@ export const saveFooterDetails = (insideReplies) => async dispatch => {
 	dispatch({type: 'FOOTER_REDUCER', payload: obj})
 };
 
-export const saveYeState = (ye) => async dispatch => {
-	const obj = {
-		ye,
-	}
-	dispatch({type: 'ET_REDUCER', payload: obj})
-};
-
 export const saveSizeAndPrice = (size, price) => async dispatch => {
 	const obj = {
 		size,

@@ -4,25 +4,10 @@ import Text from './Text';
 import Stats from './Stats';
 import Footer from './Footer';
 import { connect } from 'react-redux';
-import * as actions from '../../../actions/index';
 
 class editableTweet extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			ye: false,
-		}
-	}
-	
-	yeOn(){
-		this.setState({ye: true})
-	}
-	yeOff(){
-		this.setState({ye: false})
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-	  this.props.saveYeState(this.state.ye)
 	}
 
 	render() {
@@ -80,7 +65,7 @@ class editableTweet extends Component {
 			<div className="borderBox positionRelative" style={positionRelative}>	
 					<div className="backgroundImage" style={backgroundImageStyle}/>
 					<div className="backgroundImageContainer" style={backgroundImageContainer}>
-						<div className="backgroundTweet" style={backgroundTweet}  onMouseOver={(e) => this.yeOn(e)} onMouseLeave={(e) => this.yeOff(e)}>
+						<div className="backgroundTweet" style={backgroundTweet}>
 							<Profile />
 							<Text />
 							<Stats />
@@ -95,4 +80,4 @@ function mapStateToProps({ infoObject, textReducer }) {
   return { infoObject, textReducer };
 }
 
-export default connect(mapStateToProps, actions)(editableTweet);
+export default connect(mapStateToProps)(editableTweet);
