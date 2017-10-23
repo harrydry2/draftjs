@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../../actions/index';
+import * as actions from '../../../../actions/index';
 import axios from 'axios';
-import {mathsville} from '../../../helpers'
+import {mathsville} from '../../../../helpers'
 
 class Stats extends Component {
 	constructor(props) {

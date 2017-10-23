@@ -5,7 +5,7 @@ import { EditorState, CompositeDecorator } from 'draft-js';
 // import 'draft-js-emoji-plugin/lib/plugin.css';
 import format from 'date-fns/format'
 import { connect } from 'react-redux';
-import * as actions from '../../../actions/index';
+import * as actions from '../../../../actions/index';
 const text = '@140_Canvas This is an editable tweet. Add your tweet here, Throw in an emoji or two and youre good to go #simple 🚀🔥 ';
 
 function findWithRegex(regex, contentBlock, callback) {

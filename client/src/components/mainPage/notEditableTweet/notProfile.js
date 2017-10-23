@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../../actions/index';
 
 const fullName = ['Barack Obama', 'J.K. Rowling', 'Lil Chano From 79th', 'Roger Federer', 'BEYONCÉ', 'Sky Sports 📺']
 const profileImage = ['https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg', 'https://pbs.twimg.com/profile_images/915594670272581633/obwjv8zn_400x400.jpg', 'https://pbs.twimg.com/profile_images/726486379484553216/nxNz44_J_400x400.jpg', 'https://pbs.twimg.com/profile_images/833104478328877056/8z-8v1Fw_400x400.jpg', 'https://pbs.twimg.com/profile_images/724054682579161088/3GgLeR65_400x400.jpg','https://pbs.twimg.com/profile_images/887155291284025344/nZUmdyu7_400x400.jpg' ]

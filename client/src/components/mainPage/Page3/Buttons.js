@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../../actions/index';
 import Select from 'react-select';
 import PaymentBlock from './paymentBlock';
-import '../../../node_modules/react-select/dist/react-select.css';
+import '../../../../node_modules/react-select/dist/react-select.css';
 
 class Buttons extends Component {
 	constructor(props) {

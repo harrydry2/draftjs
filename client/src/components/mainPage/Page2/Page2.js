@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import P2WrapperBackground from 'svg-react-loader?name=Icon!../../svg/backgroundP2.svg';
-import P2WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../svg/backgroundP2Tablet.svg';
-import P2WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../svg/backgroundP2TabletSmaller.svg';
-import P2WrapperBackgroundPhone from 'svg-react-loader?name=Icon!../../svg/backgroundP2Phone.svg';
+import P2WrapperBackground from 'svg-react-loader?name=Icon!../../../svg/backgroundP2.svg';
+import P2WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP2Tablet.svg';
+import P2WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP2TabletSmaller.svg';
+import P2WrapperBackgroundPhone from 'svg-react-loader?name=Icon!../../../svg/backgroundP2Phone.svg';
 import Video from './Video';
-import CheckmarkOutline from 'svg-react-loader?name=Icon!../../svg/checkmarkOutline.svg';
+import CheckmarkOutline from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline.svg';
 
 class Page2 extends Component {
 	constructor(props) {

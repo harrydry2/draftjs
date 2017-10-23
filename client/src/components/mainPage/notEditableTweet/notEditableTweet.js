@@ -4,7 +4,7 @@ import NotText from './notText';
 import NotStats from './notStats';
 import NotFooter from './notFooter';
 import {connect} from 'react-redux';
-import * as actions from '../../actions/index';
+import * as actions from '../../../actions/index';
 
 const backgroundImage = [`url("https://pbs.twimg.com/profile_banners/813286/1502508746")`, `url("https://pbs.twimg.com/profile_banners/62513246/1507128751")`, `url("https://pbs.twimg.com/profile_banners/181572333/1462042825")`, `url("https://pbs.twimg.com/profile_banners/1337785291/1487462562")`, `url("https://pbs.twimg.com/profile_banners/31239408/1461463043")`, `url("https://pbs.twimg.com/profile_banners/19230601/1500474389")`]
 let index = 0;

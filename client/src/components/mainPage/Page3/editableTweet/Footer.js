@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../../actions/index';
-import {repliesRando} from '../../../helpers'
+import * as actions from '../../../../actions/index';
+import {repliesRando} from '../../../../helpers'
 
 class Footer extends Component {
 	constructor(props) {
