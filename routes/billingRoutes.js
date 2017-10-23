@@ -30,6 +30,6 @@ module.exports = app => {
     countryS: req.body.stripeShippingAddressCountry,
   });
   const purchase = await (new Purchase(req.body)).save();
-  res.send('notCunt')
+  res.redirect('/success');
   });
 };

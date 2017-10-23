@@ -30,7 +30,7 @@ module.exports = {
 			},
 			{
 			  test: /\.css$/,
-			  loaders: ['style-loader', 'css-loader']
+			  loaders: ['style-loader', 'css-loader'],
 			},
 			{
 				test: /\.js$/,
@@ -39,6 +39,14 @@ module.exports = {
 					loader: 'babel-loader',
 				},
 			},
+			// {
+			//     test: /\.(woff)$/,
+			//     exclude: /node_modules/,
+			//     loader: 'file-loader',
+			//     options: {
+			//         name: '[path][name].[ext]'
+			//     }
+			// },
 		],
 	},
 	plugins: [

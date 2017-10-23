@@ -324,20 +324,8 @@ optgroup {
   font-weight: bold; }
 
 @font-face {
-  font-family: GothamRounded-Medium;
-  src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-RoundedMedium.woff") format("woff"); }
-
-@font-face {
   font-family: Gotham-Bold;
   src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Bold.woff") format("woff"); }
-
-@font-face {
-  font-family: Gotham-Book;
-  src: url("https://s3.eu-west-2.amazonaws.com/lifeishappening/fonts/Gotham-Book.woff") format("woff"); }
-
-@font-face {
-  font-family: Gotham-Medium;
-  src: url("https://www.yolt.com/assets/fonts/gotham/Gotham-Medium.woff") format("woff"); }
 
 body, html {
   font-family: 'Helvetica';

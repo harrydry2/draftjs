@@ -27709,23 +27709,33 @@ var _App = __webpack_require__(321);
 
 var _App2 = _interopRequireDefault(_App);
 
+var _ThankYou = __webpack_require__(498);
+
+var _ThankYou2 = _interopRequireDefault(_ThankYou);
+
 var _reactRedux = __webpack_require__(27);
 
 var _redux = __webpack_require__(93);
 
-var _reduxThunk = __webpack_require__(498);
+var _reduxThunk = __webpack_require__(499);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _index = __webpack_require__(499);
+var _index = __webpack_require__(500);
 
 var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(501);
+__webpack_require__(502);
 
 const store = (0, _redux.createStore)(_index2.default, {}, (0, _redux.applyMiddleware)(_reduxThunk2.default));
+
+const Dashboard = () => _react2.default.createElement(
+  'h2',
+  null,
+  ' Dashboard '
+);
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
@@ -27736,7 +27746,8 @@ _reactDom2.default.render(_react2.default.createElement(
     _react2.default.createElement(
       'div',
       null,
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _App2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _App2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/checkout', component: _ThankYou2.default })
     )
   )
 ), document.querySelector('#main'));
@@ -57186,6 +57197,43 @@ module.exports = function (css) {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class ThankYou extends _react.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Fuck Bitches Make Money'
+			)
+		);
+	}
+}
+
+exports.default = ThankYou;
+
+/***/ }),
+/* 499 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 exports.__esModule = true;
 function createThunkMiddleware(extraArgument) {
   return function (_ref) {
@@ -57209,7 +57257,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 exports['default'] = thunk;
 
 /***/ }),
-/* 499 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57221,7 +57269,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(93);
 
-var _infoObject = __webpack_require__(500);
+var _infoObject = __webpack_require__(501);
 
 exports.default = (0, _redux.combineReducers)({
 	infoObject: _infoObject.infoObject,
@@ -57232,7 +57280,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 500 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57323,7 +57371,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 501 */
+/* 502 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
