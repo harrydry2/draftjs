@@ -64,7 +64,7 @@ class Page1 extends Component {
 				<P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
 				<P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
 				<P1WrapperBackgroundPhone className='P1WrapperBackgroundPhone' />
-				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/preSavelogo1.png" className="canvasLogo" alt=""/>
+				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/finalLogoUnlessCompress.png" className="canvasLogo" alt=""/>
 				<div className="bodyContainer">
 					<div className={headerText}>Turn Custom Tweets into Canvas Prints</div>
 					<div className={bodyText}>We create Twitter style canvases from whoever, for whoever. Pick your tweet, sender, favourites and retweets and we’ll do the rest!</div>

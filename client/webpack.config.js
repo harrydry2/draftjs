@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // minify build
 const CompressionPlugin = require("compression-webpack-plugin")
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
 	entry: {
@@ -49,6 +50,7 @@ module.exports = {
 		new ExtractTextPlugin('bundle.css'),
 
 		// minify
+		new UglifyJSPlugin(),
 		// new BundleAnalyzerPlugin(),
 		new CompressionPlugin({
 		  asset: "[path].gz[query]",

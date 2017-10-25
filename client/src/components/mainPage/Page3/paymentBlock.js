@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+import {withRouter} from "react-router-dom";
 import format from 'date-fns/format'
 import * as actions from '../../../actions/index';
 
@@ -10,15 +10,13 @@ class PaymentBlock extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			redirect: false,
 			pInfo: {
 				date: null,
 				last4: null,
 				brand: null,
 				price: null,
 				size: null, 
-			},
-			mounted: null
+			}
 		}
 	}
 	async handleToken(token, address){
@@ -62,7 +60,7 @@ class PaymentBlock extends Component {
 			stripePrice,
 		}
   	const res = await axios.post('/api/stripe', toPost);
-  	if (res.status === 200 && this.state.mounted) {
+  	if (res.status === 200) {
   		this.setState({ 
   		pInfo: {
   			date: res.data.date,
@@ -71,26 +69,15 @@ class PaymentBlock extends Component {
   			price: res.data.price,
   			size: res.data.size,
   		},
-  		redirect: true
   	})
   		this.props.savePInfo(this.state.pInfo)
+  		this.props.history.push('/thankyou')
   	}
-  }
-
-  componentDidMount() {
-    this.setState({mounted: true})
-  }
-  componentWillUnmount() {
-    this.setState({mounted: false})
   }
 
 	render() {
 		const {price} = this.props.sizeReducer;
 		const stripePrice = parseFloat(`${price}00`);
-
-		if (this.state.redirect) {
-		  return <Redirect to='/thankyou'/>;
-		}
 
 		return (
 			<StripeCheckout
@@ -115,4 +102,4 @@ function mapStateToProps({ infoObject, textReducer, statsReducer, footerReducer,
   return { infoObject, textReducer, statsReducer, footerReducer, sizeReducer };
 }
 
-export default connect(mapStateToProps, actions)(PaymentBlock);
+export default withRouter(connect(mapStateToProps, actions)(PaymentBlock));
