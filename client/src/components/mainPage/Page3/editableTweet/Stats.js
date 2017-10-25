@@ -242,7 +242,7 @@ class Stats extends Component {
 	}
 }
 function mapStateToProps({ infoObject}) {
-  return { infoObject };
+  return { infoObject};
 }
 
 export default connect(mapStateToProps, actions)(Stats);

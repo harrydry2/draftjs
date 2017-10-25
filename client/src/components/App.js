@@ -4,17 +4,14 @@ import MainPage from './mainPage/MainPage';
 import ThankYou from './thankyouPage/ThankYou';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
 		return (
-			<div className="container">
+			<div>
 				<BrowserRouter>
 					<div>
-						<Route path="/" component={MainPage} />
-						<Route path="/thankyou" component={ThankYou} />
+						<Route exact path="/" component={MainPage} />
+						<Route exact path="/thankyou" component={ThankYou} />
 					</div>
 				</BrowserRouter>
 			</div>

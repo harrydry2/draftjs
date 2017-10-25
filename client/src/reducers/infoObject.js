@@ -39,6 +39,16 @@ const initialSize = {
 	price: '24'
 }
 
+const initialPInfo = {
+	pInfo: {
+		date: null,
+		last4: null,
+		brand: null,
+		price: null,
+		size: null, 
+	}
+}
+
 const infoObject = (state = initialInfoObject, action) => {
 	switch(action.type) {
 		case 'FETCH_USER':
@@ -84,10 +94,20 @@ const sizeReducer = (state = initialSize, action) => {
 	}
 }
 
+const pInfoReducer = (state = initialPInfo, action) => {
+	switch(action.type) {
+		case 'PINFO_REDUCER':
+			return action.payload || false;
+		default: 
+			return state;
+	}
+}
+
 module.exports = {
 	infoObject,
 	textReducer,
 	statsReducer,
 	footerReducer,
 	sizeReducer,
+	pInfoReducer,
 }

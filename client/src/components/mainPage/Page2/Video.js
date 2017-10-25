@@ -12,10 +12,11 @@ class Video extends Component {
 		this.setState({isLoading: true})
 	}
 
+
+	// timeout currently uncleared
 	componentWillUpdate() {
-		console.log((this.video.getBoundingClientRect().top + 100 - window.innerHeight))
-		if ((this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0) {
-			setTimeout(() => {
+		if ((this.video.currentTime === 0 && this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0) {
+			this.timeout = setTimeout(() => {
 				this.video.play();
 				this.setState({isLoading: false})
 			},900)

@@ -47,7 +47,7 @@ module.exports = app => {
           infoObject.verified = user[0].verified;
           infoObject.fullName = `${user[0].name}`;
           infoObject.username = req.params.username
-          res.send(infoObject)
+          res.json(infoObject)
         }
       });
   });

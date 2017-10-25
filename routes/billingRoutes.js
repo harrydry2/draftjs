@@ -12,6 +12,14 @@ module.exports = app => {
       description: '$5 for 5 credits',
       source: req.body.id
     });
+  const postToThankYouPage = {
+    date: req.body.emailDate,
+    last4: charge.source.last4,
+    brand: charge.source.brand,
+    price: req.body.emailPrice,
+    size: req.body.size,
+  }
+
   await mail.send({
     emailTo: req.body.stripeEmail,
     emailPrice: req.body.emailPrice,
@@ -30,6 +38,6 @@ module.exports = app => {
     countryS: req.body.stripeShippingAddressCountry,
   });
   const purchase = await (new Purchase(req.body)).save();
-  res.redirect('/success');
+  res.send(postToThankYouPage);
   });
 };

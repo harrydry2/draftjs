@@ -17,8 +17,6 @@ class Page1 extends Component {
 	}
 
 	componentDidMount() {
-		console.log(window.innerWidth)
-		console.log(window.innerHeight)
 	  window.addEventListener('scroll', this.handleScroll);
 	}
 

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const fetchUser = (twitterLookup) => async dispatch => {
 	const res = await axios.get(`/api/twitter/${twitterLookup}`)
+	console.log(res)
 	dispatch({type: 'FETCH_USER', payload: res.data})
 };
 
@@ -36,4 +37,11 @@ export const saveSizeAndPrice = (size, price) => async dispatch => {
 		price,
 	}
 	dispatch({type: 'SIZE_REDUCER', payload: obj})
+};
+
+export const savePInfo = (pInfo) => async dispatch => {
+	const obj = {
+		pInfo,
+	}
+	dispatch({type: 'PINFO_REDUCER', payload: obj})
 };

@@ -2,9 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 import format from 'date-fns/format'
+import * as actions from '../../../actions/index';
 
 class PaymentBlock extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			redirect: false,
+			pInfo: {
+				date: null,
+				last4: null,
+				brand: null,
+				price: null,
+				size: null, 
+			},
+			mounted: null
+		}
+	}
 	async handleToken(token, address){
 		const {username} = this.props.infoObject;
 		const {dateAndTime, editorState} = this.props.textReducer;
@@ -46,18 +62,43 @@ class PaymentBlock extends Component {
 			stripePrice,
 		}
   	const res = await axios.post('/api/stripe', toPost);
-	}
+  	if (res.status === 200 && this.state.mounted) {
+  		this.setState({ 
+  		pInfo: {
+  			date: res.data.date,
+  			last4: res.data.last4,
+  			brand: res.data.brand,
+  			price: res.data.price,
+  			size: res.data.size,
+  		},
+  		redirect: true
+  	})
+  		this.props.savePInfo(this.state.pInfo)
+  	}
+  }
+
+  componentDidMount() {
+    this.setState({mounted: true})
+  }
+  componentWillUnmount() {
+    this.setState({mounted: false})
+  }
 
 	render() {
 		const {price} = this.props.sizeReducer;
 		const stripePrice = parseFloat(`${price}00`);
+
+		if (this.state.redirect) {
+		  return <Redirect to='/thankyou'/>;
+		}
+
 		return (
 			<StripeCheckout
 			  name="140 Canvas"
 			  image="https://stripe.com/img/documentation/checkout/marketplace.png"
 			  currency="GBP"
 			  shippingAddress
-			  billingAdress={true}
+			  billingAddress={true}
 			  amount={stripePrice}
 			  token={(token, address) => this.handleToken(token, address)}
 			  stripeKey="pk_test_9gCdD2DfM1XFS6Tdo6mtL4zq"
@@ -74,4 +115,4 @@ function mapStateToProps({ infoObject, textReducer, statsReducer, footerReducer,
   return { infoObject, textReducer, statsReducer, footerReducer, sizeReducer };
 }
 
-export default connect(mapStateToProps)(PaymentBlock);
+export default connect(mapStateToProps, actions)(PaymentBlock);
