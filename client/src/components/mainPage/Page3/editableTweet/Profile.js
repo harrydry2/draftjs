@@ -5,6 +5,13 @@ import * as actions from '../../../../actions/index';
 class Profile extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			username: 'Edit This Username ✂️'
+		}
+	}
+
+	componentDidMount() {
+		this.usernameInput.value = this.state.username;
 	}
 
 	typeAhead (e) {
@@ -17,7 +24,7 @@ class Profile extends Component {
 		const {fullName, profileImage, verified} = this.props.infoObject;
 		let display;
 		if (!verified) {
-			display = "none";
+			display = "inline";
 		} else {
 			display = "inline"
 		}
@@ -38,14 +45,14 @@ class Profile extends Component {
 							</span>
 							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
 								<span className="username">@</span>
-								<input type="text" className="username" placeholder="" />
+								<input type="text" className="username" ref={(input) => { this.usernameInput = input; }} autoComplete="off" spellCheck="false" />
 							</form>
 						</div>
 						<div className="follorBar">
 							<button className="followingButton">Following</button>
 						</div>
 						<div className="profileTweetAction">
-							<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/downarrow.png" className="twitterDownArrow" alt="" />
+							<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/downArrowOct.png" className="twitterDownArrow" alt="" />
 						</div>
 					</div>
 				</div>

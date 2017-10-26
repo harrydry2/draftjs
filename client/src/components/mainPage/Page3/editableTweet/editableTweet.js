@@ -48,8 +48,14 @@ class editableTweet extends Component {
 	const positionRelative = {
 	  height: `${heightBICpositionRelative}px`
 	};
+
+	if (this.props.infoObject.backgroundImage !== `url('https://pbs.twimg.com/profile_banners/1337785291/1487462562')`) {
+		var backgroundImageNoRF = this.props.infoObject.backgroundImage;
+	} else {
+		var backgroundImageNoRF = `url("https://pbs.twimg.com/profile_banners/14123683/1402396225")`;
+	}
 	const backgroundImageStyle = {
-	  backgroundImage: this.props.infoObject.backgroundImage,
+	  backgroundImage: backgroundImageNoRF,
 	  height: `${heightBIC}px`
 	};
 	const backgroundImageContainer = {

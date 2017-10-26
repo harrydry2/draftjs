@@ -872,10 +872,10 @@ input, .tweetTextSize {
       width: 83vw; } }
 
 .checkmarkOutline {
-  width: 25px;
-  height: 25px;
+  width: 29px;
+  height: 29px;
   fill: #2c76d1;
-  margin-right: 19px; }
+  margin-right: 21px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .checkmarkOutline {
       width: 2.09vw;
@@ -883,8 +883,9 @@ input, .tweetTextSize {
       margin-right: 1.58vw; } }
   @media screen and (max-width: 414px) {
     .checkmarkOutline {
-      width: 22px;
-      height: 22px; } }
+      width: 24px;
+      height: 24px;
+      margin-right: 19px; } }
 
 .instruction {
   width: 361px;
@@ -898,7 +899,7 @@ input, .tweetTextSize {
       height: 6.17vw; } }
   @media screen and (max-width: 414px) {
     .instruction {
-      width: 304px; } }
+      width: 328px; } }
 
 .instruction1 {
   width: 312px; }
@@ -923,7 +924,8 @@ input, .tweetTextSize {
   width: 628px;
   height: 363px;
   top: 8vh;
-  left: 3%; }
+  left: 3%;
+  border: 2px solid; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .videoWrapper {
       width: 52.38vw;
@@ -939,27 +941,15 @@ input, .tweetTextSize {
       margin-top: 40px;
       height: 234px; } }
 
-.macBook {
-  width: 100%;
-  height: 100%; }
+.federerVideo {
+  position: relative;
+  width: 100%; }
   @media screen and (max-width: 414px) {
-    .macBook {
-      display: none; } }
-
-.obamaVideo {
-  position: absolute;
-  top: 10%;
-  left: 12.4%;
-  width: 78%; }
-  @media screen and (max-width: 414px) {
-    .obamaVideo {
+    .federerVideo {
       position: relative;
       width: 100%;
       top: 0%;
       left: 0%; } }
-
-.isLoading .obamaVideo {
-  visibility: hidden; }
 
 .positionSpinner {
   position: absolute;
@@ -1471,24 +1461,6 @@ input, .tweetTextSize {
   line-height: 19.25px;
   display: inline-block;
   transition: opacity 0.1s ease-out; }
-
-.usernameHover::-webkit-input-placeholder {
-  color: #657786; }
-
-.usernameHover:-moz-placeholder {
-  color: #657786; }
-
-.usernameHover::-moz-placeholder {
-  color: #657786; }
-
-.usernameHover:-ms-input-placeholder {
-  color: #657786; }
-
-.usernameHover:hover {
-  opacity: 0.85; }
-
-.usernameHover:focus {
-  opacity: 1; }
 
 .userBadges {
   position: relative;

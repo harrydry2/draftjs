@@ -23,19 +23,19 @@ class Video extends Component {
 		}
 	}
 
+	// <div className={`videoWrapper ${isLoading ? 'isLoading' : ''}`}>
+	// 	<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/latestMacbookTrans.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
+	// <div className="lds-css ng-scope positionSpinner">
+	// 				<div className="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 	render() {
-		const {isLoading} = this.state
 		return (
-			<div className={`videoWrapper ${isLoading ? 'isLoading' : ''}`}>
-				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/latestMacbookTrans.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
+				<div className="videoWrapper">
 				<video 
-					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/obama.mp4"  
-					muted playsInline loop className="obamaVideo"
+					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/140CanvasVideoV4Compressed.mp4"  
+					muted playsInline loop className="federerVideo"
 					ref={(element) => { this.video = element; }}
 					onClick={(e) => this.video.paused ? this.video.play() : this.video.pause()} 
 				/>
-				<div className="lds-css ng-scope positionSpinner">
-				<div className="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
 			</div>
 		);
 	}

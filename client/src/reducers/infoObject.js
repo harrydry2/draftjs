@@ -1,11 +1,11 @@
 // import moment from 'moment';
 	
 const initialInfoObject = {
-	backgroundImage: "url('https://pbs.twimg.com/profile_banners/45157016/1496254233')",
-	fullName: "Giles Gunning",
+	backgroundImage: "url('https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/140CanvasBackground.jpg')",
+	fullName: "140 Canvas 🎉",
 	username: "ghGunning",
-	profileImage: "https://pbs.twimg.com/profile_images/509793004073525249/iiNXPoz3_400x400.jpeg",
-	verified: false
+	profileImage: "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/140CanvasProfile.jpg",
+	verified: true
 }
 
 const initialTextObject = {

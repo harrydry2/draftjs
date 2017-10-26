@@ -6,7 +6,9 @@ import { EditorState, CompositeDecorator } from 'draft-js';
 import format from 'date-fns/format'
 import { connect } from 'react-redux';
 import * as actions from '../../../../actions/index';
-const text = '@140_Canvas This is an editable tweet. Add your tweet here, Throw in an emoji or two and youre good to go #simple 🚀🔥 ';
+const text = `1️⃣  Edit the username above 
+2️⃣  Type your tweet here 
+3️⃣  Hover over favourites to change them`;
 
 function findWithRegex(regex, contentBlock, callback) {
 	const text = contentBlock.getText();
@@ -55,7 +57,7 @@ class Text extends Component {
 		this.state = {
 			editorState: createEditorStateWithText(text),
 			dateAndTime: format(new Date(),'h:mm A - D MMM YYYY'),
-			lines: 3,
+			lines: 4,
 		};
 		this.onChange = (editorState) => {
 			this.setState({editorState})

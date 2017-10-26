@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+  <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+    <circle cx="12.5" cy="12.5" r="12.5" fill="#FFF" stroke="#2C76D1" stroke-width="2.4"/>
+    <text fill="#2C76D1" font-family="GothamRounded-Medium, Gotham Rounded" font-size="15" font-weight="400">
+      <tspan x="8.102" y="18">3</tspan>
+    </text>
+  </g>
+</svg>
