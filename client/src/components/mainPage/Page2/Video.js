@@ -19,7 +19,7 @@ class Video extends Component {
 			this.timeout = setTimeout(() => {
 				this.video.play();
 				this.setState({isLoading: false})
-			},900)
+			},1200)
 		}
 	}
 
@@ -27,16 +27,16 @@ class Video extends Component {
 	// 	<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/latestMacbookTrans.png" onLoad={(e) => this.imgLoaded(e)} className="macBook"/>
 	// <div className="lds-css ng-scope positionSpinner">
 	// 				<div className="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+				// <div className="videoWrapper">
+				// </div>
 	render() {
 		return (
-				<div className="videoWrapper">
 				<video 
-					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/140CanvasVideoV4Compressed.mp4"  
+					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/fuckingEndItCompressed.mp4"  
 					muted playsInline loop className="federerVideo"
 					ref={(element) => { this.video = element; }}
 					onClick={(e) => this.video.paused ? this.video.play() : this.video.pause()} 
 				/>
-			</div>
 		);
 	}
 }

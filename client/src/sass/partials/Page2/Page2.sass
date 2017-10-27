@@ -7,6 +7,22 @@
   	flex-wrap: wrap
   	height: auto
 
+.P2WrapperBackground
+	z-index: -2
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	transform: translateY(-380px)
+	@media screen and (max-width: 1170px)
+		transform: translateY(-310px)
+	@media screen and (max-width: 1090px)
+		transform: translateY(-270px)
+	@media screen and (max-width: 1050px)
+		transform: translateY(-240px)
+	@media screen and (max-width: 1020px)
+		display: none
+
 .P2WrapperBackgroundTablet
 	display: none
 	z-index: -2
@@ -81,6 +97,21 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+
+.federerVideo
+	position: relative
+	width: 560px
+	top: 8vh
+	left: 7%
+	@media screen and (max-width: 1199px) and (min-width: 1021px)
+		left: 5%
+	@media screen and (max-width: 1020px)
+		margin-top: 60px
+	@media screen and (max-width: 414px)
+		position: relative
+		margin-top: 40px
+		top: 0%
+		left: 0%
 
 .headerTextp2
 	width: 455px

@@ -15,6 +15,7 @@ class Page2 extends Component {
 	render() {
 		return (
 			<div className="page2Wrapper">
+				<P2WrapperBackground className='P2WrapperBackground' />
 				<P2WrapperBackgroundTablet className='P2WrapperBackgroundTablet' />
 				<P2WrapperBackgroundTabletSmaller className='P2WrapperBackgroundTabletSmaller' />
 				<P2WrapperBackgroundPhone className='P2WrapperBackgroundPhone' />
