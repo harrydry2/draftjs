@@ -6,7 +6,7 @@ class Profile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: 'Edit This Username ✂️'
+			username: 'Edit This Username And Press Enter ✂️ '
 		}
 	}
 
