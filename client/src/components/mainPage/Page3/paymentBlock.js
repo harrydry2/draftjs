@@ -82,7 +82,7 @@ class PaymentBlock extends Component {
 		return (
 			<StripeCheckout
 			  name="140 Canvas"
-			  image="https://stripe.com/img/documentation/checkout/marketplace.png"
+			  image="https://pbs.twimg.com/profile_images/923219014821785600/icObN1Ct_400x400.jpg"
 			  currency="GBP"
 			  shippingAddress
 			  billingAddress={true}

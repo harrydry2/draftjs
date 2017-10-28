@@ -13,6 +13,7 @@ class Page2 extends Component {
 		super(props);
 	}
 	render() {
+		console.log(window.innerWidth)
 		return (
 			<div className="page2Wrapper">
 				<P2WrapperBackground className='P2WrapperBackground' />

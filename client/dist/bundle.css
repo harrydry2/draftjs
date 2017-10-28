@@ -510,11 +510,13 @@ input, .tweetTextSize {
   margin-top: 42px;
   left: 7%;
   position: relative; }
+  @media screen and (max-width: 1230px) {
+    .canvasLogo {
+      left: 5%; } }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .canvasLogo {
       width: 19.77vw;
-      height: 5.34vw;
-      left: 5%; } }
+      height: 5.34vw; } }
   @media screen and (max-width: 1020px) {
     .canvasLogo {
       left: 0;
@@ -536,11 +538,13 @@ input, .tweetTextSize {
   width: 469px;
   height: 389px;
   z-index: 2; }
+  @media screen and (max-width: 1230px) {
+    .bodyContainer {
+      left: 5%; } }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .bodyContainer {
       width: 39.12vw;
-      height: 32.44vw;
-      left: 5%; } }
+      height: 32.44vw; } }
   @media screen and (max-width: 1020px) {
     .bodyContainer {
       display: flex;
@@ -569,8 +573,12 @@ input, .tweetTextSize {
       width: 335px;
       height: auto; } }
 
+.underpants {
+  width: 420px !important;
+  display: inline-block; }
+
 .bodyText {
-  width: 335px;
+  width: 340px;
   height: 122px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   color: #ffffff;
@@ -657,8 +665,8 @@ input, .tweetTextSize {
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .ctaMoney {
       font-size: 2.17vw;
-      padding-left: 1.25vw;
-      padding-right: 0.83vw; } }
+      padding-left: 1.251vw;
+      padding-right: 0.834vw; } }
   @media screen and (max-width: 414px) {
     .ctaMoney {
       font-size: 22px;
@@ -746,22 +754,25 @@ input, .tweetTextSize {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-525px); }
-  @media screen and (max-width: 1250px) {
+  transform: translateY(-520px); }
+  @media screen and (max-width: 1258px) {
     .P2WrapperBackground {
-      transform: translateY(-500px); } }
+      transform: translateY(-495px); } }
   @media screen and (max-width: 1230px) {
     .P2WrapperBackground {
-      transform: translateY(-475px); } }
-  @media screen and (max-width: 1999px) {
+      transform: translateY(-465px); } }
+  @media screen and (max-width: 1199px) {
     .P2WrapperBackground {
       transform: translateY(-455px); } }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1160px) {
     .P2WrapperBackground {
-      transform: translateY(-440px); } }
-  @media screen and (max-width: 1020px) {
+      transform: translateY(-425px); } }
+  @media screen and (max-width: 1130px) {
     .P2WrapperBackground {
-      display: none; } }
+      transform: translateY(-400px); } }
+  @media screen and (max-width: 1081px) {
+    .P2WrapperBackground {
+      transform: translateY(-380px); } }
 
 .P2WrapperBackgroundTablet {
   display: none;
@@ -840,9 +851,9 @@ input, .tweetTextSize {
   width: 455px;
   height: 341px;
   z-index: 2;
-  top: 6vh;
+  top: 8vh;
   right: 5%;
-  transform: translateY(-10px); }
+  transform: translateY(-9px); }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .bodyContainerp2 {
       width: 37.94vw;
@@ -860,11 +871,41 @@ input, .tweetTextSize {
 .federerVideo {
   position: relative;
   width: 560px;
-  top: 6vh;
-  left: 7%; }
-  @media screen and (max-width: 1199px) and (min-width: 1021px) {
+  top: 8vh;
+  left: 6.5%; }
+  @media screen and (max-width: 1260px) {
     .federerVideo {
-      left: 5%; } }
+      width: 540px;
+      transform: translateY(10px); } }
+  @media screen and (max-width: 1230px) {
+    .federerVideo {
+      left: 4.5%; } }
+  @media screen and (max-width: 1196px) {
+    .federerVideo {
+      transform: translateY(7px); } }
+  @media screen and (max-width: 1166px) {
+    .federerVideo {
+      transform: translateY(4px); } }
+  @media screen and (max-width: 1145px) {
+    .federerVideo {
+      transform: translateY(0px); } }
+  @media screen and (max-width: 1140px) {
+    .federerVideo {
+      transform: translateY(-2px); } }
+  @media screen and (max-width: 1130px) {
+    .federerVideo {
+      width: 530px;
+      transform: translateY(2px); } }
+  @media screen and (max-width: 1120px) {
+    .federerVideo {
+      transform: translateY(0px);
+      width: 522px; } }
+  @media screen and (max-width: 1090px) {
+    .federerVideo {
+      transform: translateY(-4px); } }
+  @media screen and (max-width: 1080px) {
+    .federerVideo {
+      width: 510px; } }
   @media screen and (max-width: 1020px) {
     .federerVideo {
       margin-top: 60px; } }
@@ -884,7 +925,7 @@ input, .tweetTextSize {
     .headerTextp2 {
       width: 37.94vw;
       height: 9.34vw;
-      margin-bottom: 0.83vw; } }
+      margin-bottom: 0.667vw; } }
   @media screen and (max-width: 1020px) {
     .headerTextp2 {
       text-align: center;
@@ -919,9 +960,9 @@ input, .tweetTextSize {
   margin-right: 21px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .checkmarkOutline {
-      width: 2.09vw;
-      height: 2.09vw;
-      margin-right: 1.58vw; } }
+      width: 2.42vw;
+      height: 2.42vw;
+      margin-right: 1.75vw; } }
   @media screen and (max-width: 414px) {
     .checkmarkOutline {
       width: 24px;
@@ -1019,11 +1060,13 @@ input, .tweetTextSize {
   width: 410px;
   height: 334px;
   z-index: 2; }
+  @media screen and (max-width: 1230px) {
+    .bodyContainerp3 {
+      left: 5%; } }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .bodyContainerp3 {
       width: 34.20vw;
-      height: 27.86vw;
-      left: 5%; } }
+      height: 27.86vw; } }
   @media screen and (max-width: 1020px) {
     .bodyContainerp3 {
       left: 0;
@@ -1048,8 +1091,8 @@ input, .tweetTextSize {
   color: #34434b;
   width: 390px;
   height: 92px;
-  margin-top: 35px;
-  margin-bottom: 42px; }
+  margin-top: 30px;
+  margin-bottom: 38px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .instructionp3 {
       width: 32.53vw;
@@ -1061,15 +1104,15 @@ input, .tweetTextSize {
       display: none; } }
 
 .buttonSectionp3 {
-  width: 379px;
-  height: 110px;
+  width: 416.9px;
+  height: 121px;
   display: flex;
   align-content: space-between;
   flex-wrap: wrap; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .buttonSectionp3 {
       width: 31.6vw;
-      height: 9.17vw; } }
+      height: 9.174vw; } }
   @media screen and (max-width: 414px) {
     .buttonSectionp3 {
       height: 89px;
@@ -1077,11 +1120,11 @@ input, .tweetTextSize {
 
 .blueBorderButton {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
-  border: 2px solid #2c76d1;
+  border-radius: 4.4px;
+  border: 2.2px solid #2c76d1;
   background: #FFFFFF;
   display: flex;
-  height: 38px; }
+  height: 41.8px; }
   .blueBorderButton:focus {
     border: none !important; }
   .blueBorderButton:visited {
@@ -1094,8 +1137,8 @@ input, .tweetTextSize {
       height: 31px; } }
 
 .sizeButton {
-  width: 230px;
-  margin-right: 33px;
+  width: 253px;
+  margin-right: 36.3px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1113,17 +1156,17 @@ input, .tweetTextSize {
       margin-right: 14px; } }
 
 .priceDiv {
-  width: 114px;
+  width: 127.6px;
   color: #2c76d1;
   font-family: Gotham-Medium;
-  font-size: 14px;
+  font-size: 15.4px;
   letter-spacing: -0.2px;
   display: flex;
   align-items: center;
   justify-content: center; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .priceDiv {
-      width: 9.51vw;
+      width: 9.67vw;
       font-size: 1.17vw; } }
   @media screen and (max-width: 414px) {
     .priceDiv {
@@ -1131,15 +1174,15 @@ input, .tweetTextSize {
       font-size: 13px; } }
 
 .paymentButton {
-  width: 379px;
-  height: 55px;
+  width: 416.9px;
+  height: 60.5px;
   box-shadow: 0 4px 6px 1px rgba(50, 50, 93, 0.23), 0 1px 3px 1px rgba(0, 0, 0, 0.18);
-  border-radius: 4px;
+  border-radius: 4.4px;
   background-image: linear-gradient(180deg, #41aae6 0%, #4173e6 100%);
   color: #FFFFFF;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   font-family: Gotham-Bold;
-  font-size: 22px;
+  font-size: 24.2px;
   letter-spacing: -0.2px;
   border: none; }
   .paymentButton:hover {
@@ -1148,7 +1191,7 @@ input, .tweetTextSize {
     box-shadow: 0 7px 18px 1px rgba(50, 50, 93, 0.23), 0 3px 10px 1px rgba(0, 0, 0, 0.18); }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .paymentButton {
-      width: 30.94vw;
+      width: 31.6vw;
       height: 4.59vw;
       font-size: 1.83vw; } }
   @media screen and (max-width: 414px) {
@@ -1158,7 +1201,7 @@ input, .tweetTextSize {
       font-size: 20px; } }
 
 .Select-value {
-  transform: translateX(11px) !important; }
+  transform: translateX(12.1px) !important; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .Select-value {
       transform: translateX(0.92vw) !important; } }
@@ -1182,7 +1225,7 @@ input, .tweetTextSize {
 .Select-value-label {
   color: #2c76d1 !important;
   font-family: Gotham-Medium !important;
-  font-size: 14px !important;
+  font-size: 15.4px !important;
   letter-spacing: -0.2px !important; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .Select-value-label {
@@ -1193,14 +1236,14 @@ input, .tweetTextSize {
 
 .Select-arrow {
   border-color: #2c76d1 transparent transparent !important;
-  transform: translateX(-6px); }
+  transform: translateX(-6.6px); }
   @media screen and (max-width: 414px) {
     .Select-arrow {
       transform: translateX(0); } }
 
 .is-open > .Select-control .Select-arrow {
   border-color: transparent transparent #2c76d1 !important;
-  top: -3px !important; }
+  top: -3.3px !important; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .is-open > .Select-control .Select-arrow {
       transform: translateX(-0.5vw) !important;
@@ -1214,7 +1257,7 @@ input, .tweetTextSize {
 
 .Select-menu-outer {
   font-family: Gotham-Medium !important;
-  font-size: 14px !important;
+  font-size: 15.4px !important;
   letter-spacing: -0.2px !important;
   border: none !important;
   width: 86.0% !important;
@@ -1264,7 +1307,7 @@ input, .tweetTextSize {
   z-index: 0;
   filter: blur(1px);
   top: 2%;
-  right: 7%;
+  right: 5%;
   width: 551.4px; }
   @media screen and (max-width: 1199px) {
     .backgroundImage {
@@ -1296,12 +1339,12 @@ input, .tweetTextSize {
   align-items: center;
   position: absolute;
   top: 2%;
-  right: 7%;
+  right: 5%;
+  box-shadow: 0px 4px 16px 2.5px rgba(0, 0, 0, 0.44);
   width: 551.4px; }
   @media screen and (max-width: 1199px) {
     .backgroundImageContainer {
-      width: 529.34px;
-      right: 5%; } }
+      width: 529.34px; } }
   @media screen and (max-width: 1100px) {
     .backgroundImageContainer {
       right: 4%; } }
