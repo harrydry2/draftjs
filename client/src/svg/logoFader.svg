@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418 168">
-  <defs>
-    <linearGradient id="logofade-a" x1="6.661%" x2="69.891%" y1="-13.105%" y2="100%">
-      <stop offset="0%" stop-color="#0047E0"/>
-      <stop offset="100%" stop-color="#6A8CEB" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <polygon fill="url(#logofade-a)" fill-rule="evenodd" points="3 0 438 1 438 97 3 169" transform="translate(-4 -1)"/>
-</svg>
