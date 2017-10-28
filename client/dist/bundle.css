@@ -418,8 +418,7 @@ input, .tweetTextSize {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  transform: translateY(0px); }
+  height: 100vh; }
   @media screen and (max-width: 1020px) {
     .P1WrapperBackground {
       display: none; } }
@@ -748,7 +747,7 @@ input, .tweetTextSize {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  border: 2px solid gold;
   transform: translateY(-670px); }
   @media screen and (max-width: 1170px) {
     .P2WrapperBackground {

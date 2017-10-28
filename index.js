@@ -12,12 +12,12 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(function(req, res, next) {
-  if(!req.secure) {
-    return res.redirect(['https://', req.get('Host'), req.url].join(''));
-  }
-  next();
-});
+// app.use(function(req, res, next) {
+//   if(!req.secure) {
+//     return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//   }
+//   next();
+// });
 
 require('./routes/twitterRoutes')(app);
 require('./routes/billingRoutes')(app);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import P1WrapperBackground from 'svg-react-loader?name=Icon!../../../svg/backgroundP1.svg';
+import P1WrapperBackground from 'svg-react-loader?name=Icon!../../../svg/backgroundP1100VH.svg';
 import P1WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP1Tablet.svg';
 import P1WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP1TabletSmaller.svg';
 import P1WrapperBackgroundPhone from 'svg-react-loader?name=Icon!../../../svg/backgroundP1Phone.svg';
