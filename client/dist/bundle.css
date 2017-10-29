@@ -342,10 +342,14 @@ optgroup {
 body, html {
   font-family: 'Helvetica';
   max-width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.fuSafari {
+  overflow-x: hidden;
+  position: relative; }
 
 *, *:before, *:after {
   box-sizing: inherit;
