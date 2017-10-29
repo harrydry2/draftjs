@@ -32,7 +32,7 @@ class Page2 extends Component {
 					</div>
 					<div className="actionCheckContainer">
 						<CheckmarkOutline3 className='checkmarkOutline' />
-						<div className="instruction gothamBook">Edit your Retweets & Likes. Then input a twitter handle to change favourites</div>
+						<div className="instruction gothamBook">Edit your Retweets & likes. Then input a twitter handle to change favourites</div>
 					</div>
 				</div>
 				<Video scrolledAmount={this.props.scrolledAmount} />
