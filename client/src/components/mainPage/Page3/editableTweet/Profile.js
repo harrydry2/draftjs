@@ -45,7 +45,7 @@ class Profile extends Component {
 							</span>
 							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
 								<span className="username">@</span>
-								<input type="text" className="username" ref={(input) => { this.usernameInput = input; }} autoComplete="off" spellCheck="false" />
+								<input type="text" className="username usernameInput" ref={(input) => { this.usernameInput = input; }} autoComplete="off" spellCheck="false" />
 							</form>
 						</div>
 						<div className="follorBar">

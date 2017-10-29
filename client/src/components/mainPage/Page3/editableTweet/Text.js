@@ -57,7 +57,7 @@ class Text extends Component {
 		this.state = {
 			editorState: createEditorStateWithText(text),
 			dateAndTime: format(new Date(),'h:mm A - D MMM YYYY'),
-			lines: 4,
+			lines: 3,
 		};
 		this.onChange = (editorState) => {
 			this.setState({editorState})
@@ -90,9 +90,6 @@ class Text extends Component {
 	  	if (height === 128 && this.state.lines !== 4) {
 	  		this.setState({lines: 4})
 	  	}
-	  	if (height === 160 && this.state.lines !== 5) {
-	  		this.setState({lines: 5})
-	  	} 
 	  }
 	  this.props.saveTweetDetails(contentState1, this.state.dateAndTime, this.state.lines);
 	}

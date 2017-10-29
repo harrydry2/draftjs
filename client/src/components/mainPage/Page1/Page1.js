@@ -19,7 +19,7 @@ class Page1 extends Component {
 				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/finalLogoUnlessCompress.png" className="canvasLogo" alt=""/>
 				<div className="bodyContainer">
 					<div className="headerText gothamRM animatedHeader">Turn Custom Tweets into Canvas Prints</div>
-					<div className="bodyText gothamBook animatedBody"><div className="underpants">Tired of buying underpants?</div>Give a unique gift this Christmas.<br/> Order before the 15th December for free delivery 🎁</div>
+					<div className="bodyText gothamBook animatedBody"><div className="underpants">Tired of buying underpants?</div>Give a unique gift this Christmas.<br/> Order your custom canvas before the 15th December for free delivery 🎁</div>
 					<div className="animatedBody">
 						<div className="ctaSectionGlitch">
 							<div className="ctaMoney">£24</div>

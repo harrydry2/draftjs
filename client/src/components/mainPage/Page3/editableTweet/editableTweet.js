@@ -13,9 +13,9 @@ class editableTweet extends Component {
 	render() {
 		const {width} = this.props
 	// give height to actual container
-	if (width > 1199) {
+	if (width > 1175) {
 		var heightBIC = (251.96 + (24.32)*this.props.textReducer.lines)
-	} else if(width < 1199 && width > 414) {
+	} else if(width <= 1175 && width > 414) {
 		var heightBIC = (241.88 + (23.35)*this.props.textReducer.lines)
 
 		// phones

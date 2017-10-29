@@ -379,6 +379,10 @@ input, .tweetTextSize {
     .gothamRM {
       font-size: 32px;
       line-height: 42px; } }
+  @media screen and (max-width: 355px) {
+    .gothamRM {
+      font-size: 9.01vw;
+      line-height: 11.83vw; } }
 
 .gothamBook {
   font-family: Gotham-Book;
@@ -399,20 +403,24 @@ input, .tweetTextSize {
     .gothamBook {
       font-size: 16px;
       line-height: 24px; } }
+  @media screen and (max-width: 355px) {
+    .gothamBook {
+      font-size: 4.51vw;
+      line-height: 6.76vw; } }
 
 .page1Wrapper {
   height: 100vh;
   width: 100vw; }
   @media screen and (max-width: 1020px) {
     .page1Wrapper {
-      display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       height: 1024px;
       align-content: flex-start; } }
   @media screen and (max-width: 414px) {
     .page1Wrapper {
-      height: auto; } }
+      height: auto;
+      justify-content: center;
+      display: flex; } }
 
 .P1WrapperBackground {
   position: absolute;
@@ -505,8 +513,8 @@ input, .tweetTextSize {
       transform: skewY(-27deg); } }
 
 .canvasLogo {
-  width: 237px;
-  height: 64px;
+  width: 213.3px;
+  height: 57.6px;
   margin-top: 42px;
   left: 7%;
   position: relative; }
@@ -515,9 +523,9 @@ input, .tweetTextSize {
       left: 5%; } }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .canvasLogo {
-      width: 19.77vw;
-      height: 5.34vw; } }
-  @media screen and (max-width: 1020px) {
+      width: 17.79vw;
+      height: 4.80vw; } }
+  @media screen and (max-width: 1020px) and (min-width: 415px) {
     .canvasLogo {
       left: 0;
       margin-left: 30vw;
@@ -526,10 +534,11 @@ input, .tweetTextSize {
       margin-bottom: 55px; } }
   @media screen and (max-width: 414px) {
     .canvasLogo {
-      width: 215px;
-      height: 58px;
+      width: 181.3px;
+      height: 48.96px;
       margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      left: 0; } }
 
 .bodyContainer {
   position: relative;
@@ -552,8 +561,7 @@ input, .tweetTextSize {
       justify-content: center;
       top: 0;
       left: 0;
-      height: auto;
-      border: 4px solid green; } }
+      height: auto; } }
 
 .headerText {
   width: 464px;
@@ -573,12 +581,13 @@ input, .tweetTextSize {
       width: 335px;
       height: auto; } }
 
-.underpants {
-  width: 420px !important;
-  display: inline-block; }
+@media screen and (max-width: 2000px) and (min-width: 415px) {
+  .underpants {
+    width: 420px !important;
+    display: inline-block; } }
 
 .bodyText {
-  width: 340px;
+  width: 365px;
   height: 122px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   color: #ffffff;
@@ -587,7 +596,7 @@ input, .tweetTextSize {
   opacity: 0; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .bodyText {
-      width: 27.94vw;
+      width: 30.44vw;
       height: 10.18vw;
       margin-top: 2.50vw;
       margin-bottom: 4.00vw; } }
@@ -599,8 +608,15 @@ input, .tweetTextSize {
   @media screen and (max-width: 414px) {
     .bodyText {
       margin-top: 30px;
-      margin-bottom: 30px;
-      width: 290px; } }
+      margin-bottom: 47px;
+      width: 310px;
+      height: auto; } }
+  @media screen and (max-width: 375px) {
+    .bodyText {
+      width: 298px; } }
+  @media screen and (max-width: 355px) {
+    .bodyText {
+      width: 83.94vw; } }
 
 .examplePhoto {
   position: absolute;
@@ -648,6 +664,10 @@ input, .tweetTextSize {
     .ctaSectionGlitch {
       width: 293px;
       height: 56px; } }
+  @media screen and (max-width: 355px) {
+    .ctaSectionGlitch {
+      width: 234.4px;
+      height: 44.8px; } }
 
 .ctaMoney {
   width: 25%;
@@ -670,6 +690,10 @@ input, .tweetTextSize {
   @media screen and (max-width: 414px) {
     .ctaMoney {
       font-size: 22px;
+      height: 65%; } }
+  @media screen and (max-width: 355px) {
+    .ctaMoney {
+      font-size: 17.6px;
       height: 65%; } }
 
 .boldBookWrapper {
@@ -696,6 +720,10 @@ input, .tweetTextSize {
     .ctaBold {
       font-size: 20px;
       height: 22px; } }
+  @media screen and (max-width: 355px) {
+    .ctaBold {
+      font-size: 16px;
+      height: 17.6px; } }
 
 .ctaBook {
   width: 100%;
@@ -716,27 +744,31 @@ input, .tweetTextSize {
     .ctaBook {
       font-size: 12px;
       height: 12px; } }
+  @media screen and (max-width: 355px) {
+    .ctaBook {
+      font-size: 9.6px;
+      height: 9.6px; } }
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(350px); }
-  50% {
+    transform: translateY(450px); }
+  40% {
     opacity: 0.3; }
   100% {
     opacity: 1;
     transform: translateY(0); } }
 
 .animatedHeader {
-  animation: 0.6s ease-in 0s 1 fadeInUp;
+  animation: 0.75s cubic-bezier(0.16, 0.4, 0.19, 0.99) 0s 1 fadeInUp;
   animation-fill-mode: both; }
 
 .animatedBody {
-  animation: 0.6s ease-in 0.05s 1 fadeInUp;
+  animation: 0.82s cubic-bezier(0.16, 0.4, 0.19, 0.99) 0.1s 1 fadeInUp;
   animation-fill-mode: both; }
 
 .animatedImg {
-  animation: 0.5s ease-in 0.35s 1 fadeInUp;
+  animation: 0.7s cubic-bezier(0.16, 0.4, 0.19, 0.99) 0.45s 1 fadeInUp;
   animation-fill-mode: both; }
 
 .page2Wrapper {
@@ -844,20 +876,18 @@ input, .tweetTextSize {
   @media screen and (max-width: 414px) {
     .P2WrapperBackgroundPhone {
       display: block;
-      transform: translateY(-400px); } }
+      transform: translateY(-260px); } }
 
 .bodyContainerp2 {
   position: absolute;
   width: 455px;
-  height: 341px;
   z-index: 2;
   top: 8vh;
   right: 5%;
   transform: translateY(-9px); }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .bodyContainerp2 {
-      width: 37.94vw;
-      height: 28.44vw; } }
+      width: 37.94vw; } }
   @media screen and (max-width: 1020px) {
     .bodyContainerp2 {
       position: static;
@@ -908,24 +938,35 @@ input, .tweetTextSize {
       width: 510px; } }
   @media screen and (max-width: 1020px) {
     .federerVideo {
-      margin-top: 60px; } }
+      margin-top: 60px;
+      width: 540px; } }
   @media screen and (max-width: 414px) {
     .federerVideo {
-      position: relative;
-      margin-top: 40px;
-      top: 0%;
-      left: 0%; } }
+      width: 360px;
+      height: 202.5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      top: 0;
+      left: 0; } }
+  @media screen and (max-width: 375px) {
+    .federerVideo {
+      width: 325px;
+      height: 182.81px; } }
+  @media screen and (max-width: 360px) {
+    .federerVideo {
+      width: 310px;
+      height: 174.38px; } }
 
 .headerTextp2 {
   width: 455px;
   height: 112px;
   color: #34434b;
-  margin-bottom: 8px; }
+  margin-bottom: 14px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .headerTextp2 {
       width: 37.94vw;
       height: 9.34vw;
-      margin-bottom: 0.667vw; } }
+      margin-bottom: 1.17vw; } }
   @media screen and (max-width: 1020px) {
     .headerTextp2 {
       text-align: center;
@@ -942,22 +983,28 @@ input, .tweetTextSize {
 .actionCheckContainer {
   width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 15px; }
   @media screen and (max-width: 1020px) {
     .actionCheckContainer {
       width: 90%; } }
   @media screen and (max-width: 414px) {
     .actionCheckContainer {
-      width: 344px; } }
+      width: 320px; } }
   @media screen and (max-width: 375px) {
     .actionCheckContainer {
-      width: 83vw; } }
+      width: 77.29vw; } }
+  @media screen and (max-width: 340px) {
+    .actionCheckContainer {
+      width: 280px; } }
 
 .checkmarkOutline {
   width: 29px;
   height: 29px;
   fill: #2c76d1;
-  margin-right: 21px; }
+  margin-right: 21px;
+  align-self: flex-start;
+  transform: translateY(2px); }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .checkmarkOutline {
       width: 2.42vw;
@@ -965,41 +1012,59 @@ input, .tweetTextSize {
       margin-right: 1.75vw; } }
   @media screen and (max-width: 414px) {
     .checkmarkOutline {
-      width: 24px;
-      height: 24px;
-      margin-right: 19px; } }
+      width: 24px !important;
+      height: 24px !important;
+      margin-right: 17px; } }
 
 .instruction {
-  width: 361px;
-  height: 74px;
-  color: #28333a;
-  display: flex;
-  align-items: center; }
+  width: 380px;
+  color: #28333a; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .instruction {
-      width: 30.11vw;
-      height: 6.17vw; } }
+      width: 31.69vw; } }
   @media screen and (max-width: 414px) {
     .instruction {
-      width: 328px; } }
+      width: 272px; } }
+  @media screen and (max-width: 375px) {
+    .instruction {
+      width: 250px; } }
+  @media screen and (max-width: 360px) {
+    .instruction {
+      width: 256px; } }
 
 .instruction1 {
-  width: 312px; }
+  width: 370px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .instruction1 {
-      width: 26.02vw; } }
+      width: 30.86vw; } }
   @media screen and (max-width: 414px) {
     .instruction1 {
-      width: 267px; } }
+      width: 272px; } }
+  @media screen and (max-width: 375px) {
+    .instruction1 {
+      width: 250px; } }
+  @media screen and (max-width: 360px) {
+    .instruction1 {
+      width: 256px; } }
 
 .instruction2 {
-  width: 308px; }
+  width: 330px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .instruction2 {
-      width: 25.69vw; } }
+      width: 27.52vw; } }
   @media screen and (max-width: 414px) {
     .instruction2 {
-      width: 277px; } }
+      width: 272px; } }
+  @media screen and (max-width: 375px) {
+    .instruction2 {
+      width: 250px; } }
+  @media screen and (max-width: 360px) {
+    .instruction2 {
+      width: 256px; } }
+
+.rfHandle {
+  display: inline-block;
+  color: #55acee; }
 
 .videoWrapper {
   position: relative;
@@ -1091,8 +1156,8 @@ input, .tweetTextSize {
   color: #34434b;
   width: 390px;
   height: 92px;
-  margin-top: 30px;
-  margin-bottom: 38px; }
+  margin-top: 32px;
+  margin-bottom: 40px; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .instructionp3 {
       width: 32.53vw;
@@ -1104,8 +1169,8 @@ input, .tweetTextSize {
       display: none; } }
 
 .buttonSectionp3 {
-  width: 416.9px;
-  height: 121px;
+  width: 410px;
+  height: 119px;
   display: flex;
   align-content: space-between;
   flex-wrap: wrap; }
@@ -1124,7 +1189,7 @@ input, .tweetTextSize {
   border: 2.2px solid #2c76d1;
   background: #FFFFFF;
   display: flex;
-  height: 41.8px; }
+  height: 41.11px; }
   .blueBorderButton:focus {
     border: none !important; }
   .blueBorderButton:visited {
@@ -1137,8 +1202,8 @@ input, .tweetTextSize {
       height: 31px; } }
 
 .sizeButton {
-  width: 253px;
-  margin-right: 36.3px;
+  width: 248.81px;
+  margin-right: 35.7px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1156,10 +1221,10 @@ input, .tweetTextSize {
       margin-right: 14px; } }
 
 .priceDiv {
-  width: 127.6px;
+  width: 125.49px;
   color: #2c76d1;
   font-family: Gotham-Medium;
-  font-size: 15.4px;
+  font-size: 15.15px;
   letter-spacing: -0.2px;
   display: flex;
   align-items: center;
@@ -1174,15 +1239,15 @@ input, .tweetTextSize {
       font-size: 13px; } }
 
 .paymentButton {
-  width: 416.9px;
-  height: 60.5px;
+  width: 410px;
+  height: 59.5px;
   box-shadow: 0 4px 6px 1px rgba(50, 50, 93, 0.23), 0 1px 3px 1px rgba(0, 0, 0, 0.18);
   border-radius: 4.4px;
   background-image: linear-gradient(180deg, #41aae6 0%, #4173e6 100%);
   color: #FFFFFF;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   font-family: Gotham-Bold;
-  font-size: 24.2px;
+  font-size: 23.8px;
   letter-spacing: -0.2px;
   border: none; }
   .paymentButton:hover {
@@ -1201,7 +1266,7 @@ input, .tweetTextSize {
       font-size: 20px; } }
 
 .Select-value {
-  transform: translateX(12.1px) !important; }
+  transform: translateX(11.9px) !important; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .Select-value {
       transform: translateX(0.92vw) !important; } }
@@ -1225,7 +1290,7 @@ input, .tweetTextSize {
 .Select-value-label {
   color: #2c76d1 !important;
   font-family: Gotham-Medium !important;
-  font-size: 15.4px !important;
+  font-size: 15.15px !important;
   letter-spacing: -0.2px !important; }
   @media screen and (max-width: 1199px) and (min-width: 1021px) {
     .Select-value-label {
@@ -1236,7 +1301,7 @@ input, .tweetTextSize {
 
 .Select-arrow {
   border-color: #2c76d1 transparent transparent !important;
-  transform: translateX(-6.6px); }
+  transform: translateX(-6.49px); }
   @media screen and (max-width: 414px) {
     .Select-arrow {
       transform: translateX(0); } }
@@ -1257,7 +1322,7 @@ input, .tweetTextSize {
 
 .Select-menu-outer {
   font-family: Gotham-Medium !important;
-  font-size: 15.4px !important;
+  font-size: 15.15px !important;
   letter-spacing: -0.2px !important;
   border: none !important;
   width: 86.0% !important;
@@ -1309,13 +1374,32 @@ input, .tweetTextSize {
   top: 2%;
   right: 5%;
   width: 551.4px; }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1190px) {
+    .backgroundImage {
+      transform: translateY(-4px); } }
+  @media screen and (max-width: 1190px) {
+    .backgroundImage {
+      transform: translateY(-7px); } }
+  @media screen and (max-width: 1175px) {
     .backgroundImage {
       width: 529.34px;
-      right: 5%; } }
+      right: 5%;
+      transform: translateY(0px); } }
+  @media screen and (max-width: 1150px) {
+    .backgroundImage {
+      transform: translateY(-3px); } }
+  @media screen and (max-width: 1125px) {
+    .backgroundImage {
+      transform: translateY(-7px); } }
+  @media screen and (max-width: 1110px) {
+    .backgroundImage {
+      transform: translateY(-11px); } }
   @media screen and (max-width: 1100px) {
     .backgroundImage {
       right: 4%; } }
+  @media screen and (max-width: 1085px) {
+    .backgroundImage {
+      transform: translateY(-14px); } }
   @media screen and (max-width: 1020px) {
     .backgroundImage {
       top: 0;
@@ -1342,9 +1426,28 @@ input, .tweetTextSize {
   right: 5%;
   box-shadow: 0px 4px 16px 2.5px rgba(0, 0, 0, 0.44);
   width: 551.4px; }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1190px) {
     .backgroundImageContainer {
-      width: 529.34px; } }
+      transform: translateY(-3px); } }
+  @media screen and (max-width: 1190px) {
+    .backgroundImageContainer {
+      transform: translateY(-7px); } }
+  @media screen and (max-width: 1175px) {
+    .backgroundImageContainer {
+      width: 529.34px;
+      transform: translateY(0px); } }
+  @media screen and (max-width: 1150px) {
+    .backgroundImageContainer {
+      transform: translateY(-3px); } }
+  @media screen and (max-width: 1125px) {
+    .backgroundImageContainer {
+      transform: translateY(-7px); } }
+  @media screen and (max-width: 1110px) {
+    .backgroundImageContainer {
+      transform: translateY(-11px); } }
+  @media screen and (max-width: 1085px) {
+    .backgroundImageContainer {
+      transform: translateY(-14px); } }
   @media screen and (max-width: 1100px) {
     .backgroundImageContainer {
       right: 4%; } }
@@ -1372,7 +1475,7 @@ input, .tweetTextSize {
   border-radius: 10px;
   position: relative;
   transform: scale(0.76, 0.76); }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1175px) {
     .backgroundTweet {
       transform: scale(0.73, 0.73); } }
   @media screen and (max-width: 414px) {
@@ -1426,6 +1529,9 @@ input, .tweetTextSize {
   display: inline-block;
   transition: opacity 0.1s ease-out; }
 
+.usernameInput {
+  width: 260px; }
+
 .userBadges {
   position: relative;
   top: 1px; }
@@ -1475,7 +1581,7 @@ input, .tweetTextSize {
   overflow: hidden;
   width: 100%;
   min-height: 10px;
-  max-height: 160px; }
+  max-height: 128px; }
 
 .handle {
   color: #0084B4; }
@@ -1823,7 +1929,7 @@ input, .tweetTextSize {
   justify-content: center; }
 
 .thankYouCTA {
-  width: 83%;
+  width: 86%;
   line-height: 20px;
   text-align: center; }
   @media screen and (max-width: 451px) {

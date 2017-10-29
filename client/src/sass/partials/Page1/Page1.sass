@@ -2,13 +2,13 @@
 	height: 100vh
 	width: 100vw
 	@media screen and (max-width: 1020px)
-		display: flex
-		justify-content: center
 		flex-wrap: wrap
 		height: 1024px
 		align-content: flex-start
 	@media screen and (max-width: 414px)
 		height: auto
+		justify-content: center
+		display: flex
 
 .P1WrapperBackground
 	position: absolute
@@ -86,27 +86,29 @@
 // Header
 
 .canvasLogo
-	width: 237px
-	height: 64px
+	width: 213.3px
+	height: 57.6px
 	margin-top: 42px
 	left: 7%
 	position: relative
 	@media screen and (max-width: 1230px)
 		left: 5%
 	@media screen and (max-width: 1199px) and (min-width: 1021px)
-		width: 19.77vw
-		height: 5.34vw
-	@media screen and (max-width: 1020px)
+		width: 17.79vw
+		height: 4.80vw
+	@media screen and (max-width: 1020px) and (min-width: 415px)
 		left: 0
 		margin-left: 30vw
 		margin-right: 30vw
 		margin-top: 55px
 		margin-bottom: 55px
 	@media screen and (max-width: 414px)
-		width: 215px
-		height: 58px
+		width: 181.3px
+		height: 48.96px
 		margin-top: 40px
 		margin-bottom: 40px
+		left: 0
+
 
 .bodyContainer
 	position: relative
@@ -127,7 +129,6 @@
 		top: 0
 		left: 0
 		height: auto
-		border: 4px solid green
 
 .headerText
 	width: 464px
@@ -145,11 +146,12 @@
 		height: auto
 
 .underpants
-	width: 420px !important
-	display: inline-block
+	@media screen and (max-width: 2000px) and (min-width: 415px)
+		width: 420px !important
+		display: inline-block
 
 .bodyText
-	width: 340px
+	width: 365px
 	height: 122px
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
 	color: #ffffff
@@ -157,7 +159,7 @@
 	margin-bottom: 48px
 	opacity: 0
 	@media screen and (max-width: 1199px) and (min-width: 1021px)
-		width: 27.94vw
+		width: 30.44vw
 		height: 10.18vw
 		margin-top: 2.50vw
 		margin-bottom: 4.00vw
@@ -167,11 +169,13 @@
 		margin-bottom: 65px
 	@media screen and (max-width: 414px)
 		margin-top: 30px
-		margin-bottom: 30px
-		width: 290px
-
-// .orderBefore
-// 	width: 350px
+		margin-bottom: 47px
+		width: 310px
+		height: auto
+	@media screen and (max-width: 375px)
+		width: 298px
+	@media screen and (max-width: 355px)
+		width: 83.94vw
 
 // examplePhoto
 .examplePhoto
@@ -192,8 +196,6 @@
 		width: 355px
 		height: 223px
 		margin-top: 40px
-
-
 
 // call to Action Button
 
@@ -218,6 +220,9 @@
 	@media screen and (max-width: 414px)
 		width: 293px
 		height: 56px
+	@media screen and (max-width: 355px)
+		width: 234.4px
+		height: 44.8px
 
 .ctaMoney
 	width: 25%
@@ -238,6 +243,9 @@
 		padding-right: 0.834vw
 	@media screen and (max-width: 414px)
 		font-size: 22px
+		height: 65%
+	@media screen and (max-width: 355px)
+		font-size: 17.6px
 		height: 65%
 
 .boldBookWrapper
@@ -262,6 +270,9 @@
 	@media screen and (max-width: 414px)
 		font-size: 20px
 		height: 22px
+	@media screen and (max-width: 355px)
+		font-size: 16px
+		height: 17.6px
 
 .ctaBook
 	width: 100%
@@ -280,30 +291,32 @@
 	@media screen and (max-width: 414px)
 		font-size: 12px
 		height: 12px
-
+	@media screen and (max-width: 355px)
+		font-size: 9.6px
+		height: 9.6px
 
 // animations
 
 @keyframes fadeInUp
 	0%
 		opacity: 0
-		transform: translateY(350px)
-	50%
+		transform: translateY(450px)
+	40%
 		opacity: 0.3
 	100%
 		opacity: 1
 		transform: translateY(0)
 
 .animatedHeader
-	animation: 0.6s ease-in 0s 1 fadeInUp
+	animation: 0.75s cubic-bezier(.16,.4,.19,.99) 0s 1 fadeInUp
 	animation-fill-mode: both
 
 .animatedBody
-	animation: 0.6s ease-in 0.05s 1 fadeInUp
+	animation: 0.82s cubic-bezier(.16,.4,.19,.99) 0.1s 1 fadeInUp
 	animation-fill-mode: both
 
 .animatedImg
-	animation: 0.5s ease-in 0.35s 1 fadeInUp
+	animation: 0.7s cubic-bezier(.16,.4,.19,.99) 0.45s 1 fadeInUp
 	animation-fill-mode: both
 
 

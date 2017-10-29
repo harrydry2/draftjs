@@ -24,15 +24,15 @@ class Page2 extends Component {
 					<div className="headerTextp2 gothamRM"> Make your canvas in three simple steps </div>
 					<div className="actionCheckContainer">
 						<CheckmarkOutline1 className='checkmarkOutline' />
-						<div className="instruction gothamBook instruction1">Enter a unique twitter username and press enter</div>
+						<div className="instruction gothamBook instruction1">Input a unique twitter handle and press enter. e.g. <div className="rfHandle">@RogerFederer</div></div>
 					</div>
 					<div className="actionCheckContainer">
 						<CheckmarkOutline2 className='checkmarkOutline' />
-						<div className="instruction gothamBook instruction2">Write up your tweet and throw in an emoji or two 😃🚀</div>
+						<div className="instruction gothamBook instruction2">Write up your tweet and throw in an emoji or two 😃 🚀</div>
 					</div>
 					<div className="actionCheckContainer">
 						<CheckmarkOutline3 className='checkmarkOutline' />
-						<div className="instruction gothamBook">Hand pick your favourites. Enter your retweets and likes and you’re away!</div>
+						<div className="instruction gothamBook">Edit your Retweets & Likes. Then input a twitter handle to change favourites</div>
 					</div>
 				</div>
 				<Video scrolledAmount={this.props.scrolledAmount} />

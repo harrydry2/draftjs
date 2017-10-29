@@ -16,7 +16,7 @@ class Page3 extends Component {
 			<EditableTweet width={this.props.width} />
 			<div className="bodyContainerp3">
 				<div className="headerTextp3 gothamRM"> Design Yours Now</div>
-				<div className="instructionp3 gothamBook">Edit the Tweet opposite and press Buy Now. Your canvas will be in the post within two working days.</div>
+				<div className="instructionp3 gothamBook">Edit the Tweet opposite and press Buy Now. Your canvas will be in the post within three working days.</div>
 				<Buttons />
 			</div>
 		</div>

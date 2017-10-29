@@ -19,7 +19,7 @@ class ThankYou extends Component {
 					<div className="section1">
 						<div className="section1Text">
 							<div className="thankYouBook">You just bought</div>
-							<div className="oneFortyCanvasText thankYouRounded">140 Canvas</div>
+							<div className="oneFortyCanvasText thankYouRounded">A custom canvas from 140 Canvas</div>
 							<div className="thankYouBook">{size}</div>
 						</div>
 						<PaymentIcon className='paymentIcon' />
@@ -39,7 +39,7 @@ class ThankYou extends Component {
 					</div>
 					<div className="section3">
 						<div className="thankYouRounded thankYouCTA">
-							When your canvas arrives send a picture to <span className="blueThankYouCTA">@140_canvas</span> and we’ll send a box of chocolates to your address. <span className="blueThankYouCTA">WOW!</span> 💝
+							When your canvas arrives send a tweet with a photo to <span className="blueThankYouCTA">@140_Canvas</span> and we’ll send a box of chocolates to your address<span className="blueThankYouCTA"></span> 💝
 						</div>
 					</div>
 					<div className="section4">
