@@ -5,7 +5,6 @@ const promisify = require('es6-promisify');
 const juice = require('juice');
 const keys = require('../config/keys');
 
-
 const transport = nodemailer.createTransport({
 	host: keys.mailHost,
 	port: keys.mailPort,
@@ -28,9 +27,9 @@ exports.send = async (options) => {
 	const text = htmlToText.fromString(html);
 
 	const mailOptions = {
-		from: 'Harry Dry <harrydry1996@gmail.com>', // sender address
-		to: options.emailTo, // list of receivers
-		subject: 'Testing', // Subject line
+		from: '140 Canvas <team@140canvas.com>', // sender address
+		to: `${options.emailTo}, team@140canvas.com`, // list of receivers
+		subject: 'Order Confirmed', // Subject line
 		html, // html body
 		text, // plain text body
 	};

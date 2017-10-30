@@ -21,6 +21,7 @@
     "juice": "^4.1.1",
     "mongoose": "^4.11.12",
     "nodemailer": "^4.1.0",
+    "postmark": "^1.4.1",
     "promisify": "0.0.3",
     "pug": "^2.0.0-rc.4",
     "stripe": "^5.0.0",
