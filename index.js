@@ -38,8 +38,8 @@ require('./routes/billingRoutes')(app);
 
 app.use("/", expressStaticGzip("client/dist"));
 
-app.get('/.well-known/acme-challenge/25Epz702gmpLxvQY_vhh0wFfOFWkQzieNve-BEJS8Hs', function(req, res) {
-  res.send('SIRnSQbGta9htuQqEEYb6IkHENqYSXUA4p_covYKNdo.ySvRCyz5X1vWf6gd6f64mxvZ3OzaXyluhZRwpDEy03M')
+app.get('/.well-known/acme-challenge/DLBNHe726UrDunbKeXoNHqD7vcwHbkErhtnqtFz1AyE', function(req, res) {
+  res.send('DLBNHe726UrDunbKeXoNHqD7vcwHbkErhtnqtFz1AyE.ySvRCyz5X1vWf6gd6f64mxvZ3OzaXyluhZRwpDEy03M')
 })
 
 app.get('*', (req, res) => {
