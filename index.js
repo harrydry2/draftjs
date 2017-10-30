@@ -37,6 +37,11 @@ require('./routes/billingRoutes')(app);
 // building the project each time 
 
 app.use("/", expressStaticGzip("client/dist"));
+
+app.get('/.well-known/acme-challenge/SIRnSQbGta9htuQqEEYb6IkHENqYSXUA4p_covYKNdo', function(req, res) {
+  res.send('SIRnSQbGta9htuQqEEYb6IkHENqYSXUA4p_covYKNdo.ySvRCyz5X1vWf6gd6f64mxvZ3OzaXyluhZRwpDEy03M')
+})
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/dist/index.html'));
 });
