@@ -12,6 +12,13 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// app.use(function(req, res, next) {
+//   if(!req.secure) {
+//     return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//   }
+//   next();
+// });
+
 require('./routes/twitterRoutes')(app);
 require('./routes/billingRoutes')(app);
 
@@ -29,10 +36,10 @@ require('./routes/billingRoutes')(app);
 
 // building the project each time 
 
-// app.use("/", expressStaticGzip("client/dist"));
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/dist/index.html'));
-// });
+app.use("/", expressStaticGzip("client/dist"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log('listening'));
