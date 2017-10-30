@@ -11,11 +11,11 @@ class Buttons extends Component {
 		this.state = {
 			options: [
 				{ value: 'Size: A0 (841 x 1189 mm)', label: 'Size: A0 (841 x 1189 mm)', priceOption: '30', clearable: false, searchable: false },
-				{ value: 'Size: A1 (594 x 841 mm)', label: 'Size: A1 (594 x 841 mm)', priceOption: '24', clearable: false, searchable: false },
+				{ value: 'Size: A1 (594 x 841 mm)', label: 'Size: A1 (594 x 841 mm)', priceOption: '1', clearable: false, searchable: false },
 				{ value: 'Size: A4 (210 × 297 mm)', label: 'Size: A4 (210 × 297 mm)', priceOption: '20', clearable: false, searchable: false },
 			],
 			value: 'Size: A1 (594 x 841 mm)',
-			price: '24',
+			price: '1',
 		}
 	}
 
