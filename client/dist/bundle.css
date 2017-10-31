@@ -343,7 +343,11 @@ body, html {
   font-family: 'Helvetica';
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -408,7 +412,7 @@ input, .tweetTextSize {
 
 .page1Wrapper {
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
   border: 5px solid green;
   position: relative; }
   @media screen and (max-width: 1020px) {
