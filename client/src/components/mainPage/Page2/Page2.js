@@ -12,12 +12,12 @@ class Page2 extends Component {
 	constructor(props) {
 		super(props);
 	}
-				// <P2WrapperBackground className='P2WrapperBackground' />
 				// <P2WrapperBackgroundTablet className='P2WrapperBackgroundTablet' />
 				// <P2WrapperBackgroundTabletSmaller className='P2WrapperBackgroundTabletSmaller' />
 	render() {
 		return (
 			<div className="page2Wrapper">
+				<P2WrapperBackground className='P2WrapperBackground' />
 				<div className="P2WrapperBackgroundPhoneNotSvg" />
 				<div className="bodyContainerp2">
 					<div className="headerTextp2 gothamRM"> Make your canvas in three simple steps </div>
