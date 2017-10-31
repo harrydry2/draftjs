@@ -341,7 +341,6 @@ optgroup {
 
 body, html {
   font-family: 'Helvetica';
-  max-width: 100%;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -410,6 +409,7 @@ input, .tweetTextSize {
 .page1Wrapper {
   height: 100vh;
   max-width: 100%;
+  border: 5px solid green;
   position: relative; }
   @media screen and (max-width: 1020px) {
     .page1Wrapper {
