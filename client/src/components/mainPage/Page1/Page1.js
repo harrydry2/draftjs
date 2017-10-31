@@ -15,7 +15,7 @@ class Page1 extends Component {
 				<P1WrapperBackground className='P1WrapperBackground' />
 				<P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
 				<P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
-				<P1WrapperBackgroundPhone className='P1WrapperBackgroundPhone' />
+				<div className="P1WrapperBackgroundPhoneNotSvg" />
 				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/finalLogoUnlessCompress.png" className="canvasLogo" alt=""/>
 				<div className="bodyContainer">
 					<div className="headerText gothamRM animatedHeader">Turn Custom Tweets into Canvas Prints</div>

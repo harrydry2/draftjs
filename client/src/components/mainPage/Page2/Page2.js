@@ -19,7 +19,7 @@ class Page2 extends Component {
 				<P2WrapperBackground className='P2WrapperBackground' />
 				<P2WrapperBackgroundTablet className='P2WrapperBackgroundTablet' />
 				<P2WrapperBackgroundTabletSmaller className='P2WrapperBackgroundTabletSmaller' />
-				<P2WrapperBackgroundPhone className='P2WrapperBackgroundPhone' />
+				<div className="P2WrapperBackgroundPhoneNotSvg" />
 				<div className="bodyContainerp2">
 					<div className="headerTextp2 gothamRM"> Make your canvas in three simple steps </div>
 					<div className="actionCheckContainer">

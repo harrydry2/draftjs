@@ -414,7 +414,8 @@ input, .tweetTextSize {
 
 .page1Wrapper {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  position: relative; }
   @media screen and (max-width: 1020px) {
     .page1Wrapper {
       flex-wrap: wrap;
@@ -515,6 +516,14 @@ input, .tweetTextSize {
     .page1WrapperBackground {
       min-height: 960px;
       transform: skewY(-27deg); } }
+
+@media screen and (max-width: 414px) {
+  .P1WrapperBackgroundPhoneNotSvg {
+    width: 100%;
+      width-height: 100%;
+      width-background-color: blue;
+      width-position: absolute;
+      width-transform: skewY(-15deg) translateY(-55px); } }
 
 .canvasLogo {
   width: 213.3px;
@@ -872,24 +881,14 @@ input, .tweetTextSize {
     .P2WrapperBackgroundTabletSmaller {
       display: none; } }
 
-.P2WrapperBackgroundPhone {
-  display: none;
-  width: 100%;
-  position: absolute;
-  z-index: -2; }
-  @media screen and (max-width: 414px) {
-    .P2WrapperBackgroundPhone {
-      display: block;
-      transform: translateY(-260px); } }
-  @media screen and (max-width: 375px) {
-    .P2WrapperBackgroundPhone {
-      transform: translateY(-220px); } }
-  @media screen and (max-width: 360px) {
-    .P2WrapperBackgroundPhone {
-      transform: translateY(-190px); } }
-  @media screen and (max-width: 350px) {
-    .P2WrapperBackgroundPhone {
-      transform: translateY(-160px); } }
+@media screen and (max-width: 414px) {
+  .P2WrapperBackgroundPhoneNotSvg {
+    background-color: #F7FAFC;
+    height: 119%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    transform: skewY(17deg) translateY(-70px); } }
 
 .bodyContainerp2 {
   position: absolute;
