@@ -248,7 +248,9 @@ input, .tweetTextSize {
     background-color: blue;
     position: absolute;
     transform: skewY(-15deg) translateY(-55px);
-    width: 100%; } }
+    width: 100%;
+    top: 0;
+    left: 0; } }
 
 .canvasLogo {
   width: 213.3px;
