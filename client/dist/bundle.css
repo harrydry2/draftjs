@@ -828,7 +828,7 @@ input, .tweetTextSize {
 .page3Wrapper {
   height: 60vh;
   position: relative;
-  max-width: 100%; }
+  width: 100%; }
   @media screen and (max-width: 1020px) {
     .page3Wrapper {
       display: flex;

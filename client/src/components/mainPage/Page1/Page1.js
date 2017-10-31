@@ -9,12 +9,13 @@ class Page1 extends Component {
 		super(props);
 	}
 
+				// <P1WrapperBackground className='P1WrapperBackground' />
+				// <P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
+				// <P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
+				// <img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/exampleTweet.png" className="examplePhoto animatedImg" alt=""/>
 	render() {
 		return (
 			<div className="page1Wrapper">
-				<P1WrapperBackground className='P1WrapperBackground' />
-				<P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
-				<P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
 				<div className="P1WrapperBackgroundPhoneNotSvg" />
 				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/finalLogoUnlessCompress.png" className="canvasLogo" alt=""/>
 				<div className="bodyContainer">
@@ -30,7 +31,6 @@ class Page1 extends Component {
 						</div>
 					</div>
 				</div>
-				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/exampleTweet.png" className="examplePhoto animatedImg" alt=""/>
 			</div>
 		)
 	}
