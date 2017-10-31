@@ -19,7 +19,8 @@ class ThankYou extends Component {
 					<div className="section1">
 						<div className="section1Text">
 							<div className="thankYouBook">You just bought</div>
-							<div className="oneFortyCanvasText thankYouRounded">A custom canvas from 140 Canvas</div>
+							<div className="oneFortyCanvasText thankYouRounded bigScreenThankYou">A custom canvas from 140 Canvas</div>
+							<div className="oneFortyCanvasText thankYouRounded smallScreenThankYou">A custom canvas</div>
 							<div className="thankYouBook">{size}</div>
 						</div>
 						<PaymentIcon className='paymentIcon' />
@@ -44,7 +45,7 @@ class ThankYou extends Component {
 					</div>
 					<div className="section4">
 						<div className="thankYouBook thankYouCTA extraWidth">
-							We’ve sent a copy of this receipt via email, so don’t worry about losing it.
+							We’ve sent confirmation of your order via email. If nothing arrives please check your junk mail.
 						</div>
 					</div>
 				</div>

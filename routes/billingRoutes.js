@@ -9,7 +9,7 @@ module.exports = app => {
    const charge = await stripe.charges.create({
       amount: req.body.stripePrice,
       currency: 'GBP',
-      description: '$5 for 5 credits',
+      description: 'A Canvas from 140 Canvas',
       source: req.body.id
     });
   const postToThankYouPage = {
@@ -24,7 +24,7 @@ module.exports = app => {
     emailTo: req.body.stripeEmail,
     emailPrice: req.body.emailPrice,
     emailSize: req.body.size,
-    filename: 'emailPug',
+    filename: 'emailPug1',
     emailDate: req.body.emailDate,
     nameB: req.body.stripeBillingName,
     line1B: req.body.stripeBillingAddressLine1,

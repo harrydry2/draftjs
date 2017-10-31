@@ -28,7 +28,7 @@ exports.send = async (options) => {
 
 	const mailOptions = {
 		from: '140 Canvas <team@140canvas.com>', // sender address
-		to: `${options.emailTo}, team@140canvas.com`, // list of receivers
+		to: options.emailTo, // list of receivers
 		subject: 'Order Confirmed', // Subject line
 		html, // html body
 		text, // plain text body
