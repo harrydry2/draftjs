@@ -1361,8 +1361,7 @@ input, .tweetTextSize {
 
 .iPadHack {
   min-width: 560px;
-  display: inline-block;
-  border: 8px solid pink; }
+  display: inline-block; }
 
 .clearFix {
   margin-left: 58px;
@@ -1403,7 +1402,7 @@ input, .tweetTextSize {
   transition: opacity 0.1s ease-out; }
 
 .usernameInput {
-  width: 260px; }
+  width: 0px; }
 
 .userBadges {
   position: relative;
