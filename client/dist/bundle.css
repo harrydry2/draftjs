@@ -1368,7 +1368,7 @@ input, .tweetTextSize {
 
 .iPadHack {
   width: 560px !important;
-  border: 2px solid gold; }
+  display: inline-block; }
 
 .clearFix {
   margin-left: 58px;
