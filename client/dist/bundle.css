@@ -1340,9 +1340,8 @@ input, .tweetTextSize {
   background: white !important;
   box-sizing: content-box !important;
   border-radius: 10px !important;
-  position: relative !important;
-  transform: scale(0.76, 0.76) !important; }
-  @media screen and (max-width: 1175px) {
+  position: relative !important; }
+  @media screen and (max-width: 1175px) and (min-width: 415px) {
     .backgroundTweet {
       transform: scale(0.73, 0.73) !important; } }
   @media screen and (max-width: 414px) {
