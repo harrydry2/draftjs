@@ -1376,7 +1376,8 @@ input, .tweetTextSize {
   margin-bottom: 15px;
   display: flex;
   line-height: 20px;
-  align-items: center; }
+  align-items: center;
+  border: 2px solid green; }
 
 .accountGroup {
   flex: 1 1 0; }
@@ -1506,7 +1507,7 @@ input, .tweetTextSize {
   display: inline-block; }
   .stats li {
     display: block;
-    float: right; }
+    float: left; }
 
 .retweets {
   margin-right: 10px;
@@ -1532,7 +1533,7 @@ input, .tweetTextSize {
 
 .retweetAndLikeNumber {
   color: #000;
-  display: inline-block;
+  display: inline;
   font-size: 14px;
   font-weight: bold;
   line-height: 20px; }
