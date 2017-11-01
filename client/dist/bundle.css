@@ -356,7 +356,9 @@ input, .tweetTextSize {
   padding: 0px; }
 
 .borderBox {
-  box-sizing: content-box !important; }
+  box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important; }
 
 .gothamRM {
   font-family: GothamRounded-Medium;
@@ -1335,12 +1337,15 @@ input, .tweetTextSize {
       width: 304px; } }
 
 .backgroundTweet {
-  width: 560px !important;
-  padding: 30px 40px !important;
-  background: white !important;
+  width: 660px;
+  padding: 30px 40px;
+  background: white;
   box-sizing: content-box !important;
-  border-radius: 10px !important;
-  position: relative !important; }
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  border-radius: 10px;
+  position: relative;
+  transform: scale(0.76, 0.76); }
   @media screen and (max-width: 1175px) and (min-width: 415px) {
     .backgroundTweet {
       transform: scale(0.73, 0.73) !important; } }
@@ -1454,22 +1459,6 @@ input, .tweetTextSize {
 
 .hashtag {
   color: #0084B4; }
-
-.draftJsEmojiPlugin__emojiSelectButton__1hHuM {
-  background: no-repeat center/30% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emoji.png") !important;
-  position: absolute;
-  bottom: 35%;
-  right: 2%;
-  border: none !important; }
-  .draftJsEmojiPlugin__emojiSelectButton__1hHuM:hover {
-    background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important; }
-
-.draftJsEmojiPlugin__emojiSelectButtonPressed__3sOeC {
-  background: no-repeat center/25.5% url("https://s3.eu-west-2.amazonaws.com/lifeishappening/emojiActive.png") !important;
-  border: none !important;
-  position: absolute;
-  bottom: 35%;
-  right: 2%; }
 
 .clientAndActions {
   clear: both;
