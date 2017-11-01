@@ -1,5 +1,5 @@
 .page1Wrapper
-	height: 100vh
+	height: 100%
 	width: 100%
 	position: relative
 	@media screen and (max-width: 1020px)
@@ -9,14 +9,6 @@
 		justify-content: center
 		flex-wrap: wrap
 		height: auto
-
-.P1WrapperBackground
-	position: absolute
-	top: 0
-	left: 0
-	height: 100vh
-	@media screen and (max-width: 1020px)
-		display: none
 
 // BACKGROUNDS
 .P1WrapperBackgroundTablet
@@ -61,37 +53,16 @@
 	@media screen and (max-width: 630px)
 		display: none
 
-.P1WrapperBackgroundPhone
-	display: none
-	width: 100%
-	position: absolute
-	@media screen and (max-width: 414px)
-		display: block
-
-.page1WrapperBackground
-	overflow: auto
-	position: absolute
-	top: 0
-	left: 0
-	transform-origin: 0
-	width: 100%
-	min-height: 812px
-	height: 60vw
-	background: linear-gradient(165deg, #335aff 15%, #05d5ff 100%)
-	transform: skewY(-20deg) translateY(-100px)
-	@media screen and (max-width: 1020px)
-		min-height: 960px
-		transform: skewY(-27deg)
-
-.P1WrapperBackgroundPhoneNotSvg
-	@media screen and (max-width: 414px)
+.P1WrapperBackground
 		height: 100%
+		width: 100%
 		background-color: blue
 		position: absolute
-		transform: skewY(-15deg) translateY(-55px)
-		width: 100%
 		top: 0
 		left: 0
+		transform: skewY(-15deg) translateY(-26%)
+		@media screen and (max-width: 414px)
+			transform: skewY(-15deg) translateY(-55px)
 
 // Header
 

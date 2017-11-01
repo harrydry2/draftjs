@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import P1WrapperBackground from 'svg-react-loader?name=Icon!../../../svg/backgroundP1100VH.svg';
 import P1WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP1Tablet.svg';
 import P1WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP1TabletSmaller.svg';
-import P1WrapperBackgroundPhone from 'svg-react-loader?name=Icon!../../../svg/backgroundP1Phone.svg';
 
 class Page1 extends Component {
 	constructor(props) {
 		super(props);
 	}
-
 				// <P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
 				// <P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
 	render() {
 		return (
 			<div className="page1Wrapper">
-				<P1WrapperBackground className='P1WrapperBackground' />
-				<div className="P1WrapperBackgroundPhoneNotSvg" />
+				<div className="P1WrapperBackground" />
 				<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/finalLogoUnlessCompress.png" className="canvasLogo" alt=""/>
 				<div className="bodyContainer">
 					<div className="headerText gothamRM animatedHeader">Turn Custom Tweets into Canvas Prints</div>

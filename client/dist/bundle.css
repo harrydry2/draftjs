@@ -343,8 +343,7 @@ body, html {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden; }
+  padding: 0; }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -408,7 +407,7 @@ input, .tweetTextSize {
       line-height: 6.76vw; } }
 
 .page1Wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative; }
   @media screen and (max-width: 1020px) {
@@ -420,15 +419,6 @@ input, .tweetTextSize {
       justify-content: center;
       flex-wrap: wrap;
       height: auto; } }
-
-.P1WrapperBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh; }
-  @media screen and (max-width: 1020px) {
-    .P1WrapperBackground {
-      display: none; } }
 
 .P1WrapperBackgroundTablet {
   display: none; }
@@ -487,39 +477,17 @@ input, .tweetTextSize {
     .P1WrapperBackgroundTabletSmaller {
       display: none; } }
 
-.P1WrapperBackgroundPhone {
-  display: none;
+.P1WrapperBackground {
+  height: 100%;
   width: 100%;
-  position: absolute; }
-  @media screen and (max-width: 414px) {
-    .P1WrapperBackgroundPhone {
-      display: block; } }
-
-.page1WrapperBackground {
-  overflow: auto;
+  background-color: blue;
   position: absolute;
   top: 0;
   left: 0;
-  transform-origin: 0;
-  width: 100%;
-  min-height: 812px;
-  height: 60vw;
-  background: linear-gradient(165deg, #335aff 15%, #05d5ff 100%);
-  transform: skewY(-20deg) translateY(-100px); }
-  @media screen and (max-width: 1020px) {
-    .page1WrapperBackground {
-      min-height: 960px;
-      transform: skewY(-27deg); } }
-
-@media screen and (max-width: 414px) {
-  .P1WrapperBackgroundPhoneNotSvg {
-    height: 100%;
-    background-color: blue;
-    position: absolute;
-    transform: skewY(-15deg) translateY(-55px);
-    width: 100%;
-    top: 0;
-    left: 0; } }
+  transform: skewY(-15deg) translateY(-26%); }
+  @media screen and (max-width: 414px) {
+    .P1WrapperBackground {
+      transform: skewY(-15deg) translateY(-55px); } }
 
 .canvasLogo {
   width: 213.3px;
@@ -781,8 +749,8 @@ input, .tweetTextSize {
   animation-fill-mode: both; }
 
 .page2Wrapper {
-  height: 76vh;
-  max-width: 100%;
+  height: 76%;
+  width: 100%;
   position: relative; }
   @media screen and (max-width: 1020px) {
     .page2Wrapper {
@@ -790,31 +758,6 @@ input, .tweetTextSize {
       justify-content: center;
       flex-wrap: wrap;
       height: auto; } }
-
-.P2WrapperBackground {
-  z-index: -2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-520px); }
-  @media screen and (max-width: 1258px) {
-    .P2WrapperBackground {
-      transform: translateY(-495px); } }
-  @media screen and (max-width: 1230px) {
-    .P2WrapperBackground {
-      transform: translateY(-465px); } }
-  @media screen and (max-width: 1199px) {
-    .P2WrapperBackground {
-      transform: translateY(-455px); } }
-  @media screen and (max-width: 1160px) {
-    .P2WrapperBackground {
-      transform: translateY(-425px); } }
-  @media screen and (max-width: 1130px) {
-    .P2WrapperBackground {
-      transform: translateY(-400px); } }
-  @media screen and (max-width: 1081px) {
-    .P2WrapperBackground {
-      transform: translateY(-380px); } }
 
 .P2WrapperBackgroundTablet {
   display: none;
@@ -878,14 +821,19 @@ input, .tweetTextSize {
     .P2WrapperBackgroundTabletSmaller {
       display: none; } }
 
-@media screen and (max-width: 414px) {
-  .P2WrapperBackgroundPhoneNotSvg {
-    background-color: #F7FAFC;
-    height: 119%;
-    width: 100%;
-    position: absolute;
-    z-index: -2;
-    transform: skewY(17deg) translateY(-70px); } }
+.P2WrapperBackground {
+  background-color: #F7FAFC;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  height: 215%;
+  transform: skewY(17deg) translateY(-50%);
+  top: 0;
+  left: 0; }
+  @media screen and (max-width: 414px) {
+    .P2WrapperBackground {
+      height: 119%;
+      transform: skewY(17deg) translateY(-70px); } }
 
 .bodyContainerp2 {
   position: absolute;

@@ -11,7 +11,7 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
   <Provider store={store}>
-  	<div className="fuSafari">
+  	<div>
 			<App />
   	</div>
   </Provider>,

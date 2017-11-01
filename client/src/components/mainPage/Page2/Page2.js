@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import P2WrapperBackground from 'svg-react-loader?name=Icon!../../../svg/backgroundP2.svg';
 import P2WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP2Tablet.svg';
 import P2WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP2TabletSmaller.svg';
-import P2WrapperBackgroundPhone from 'svg-react-loader?name=Icon!../../../svg/backgroundP2Phone.svg';
 import Video from './Video';
 import CheckmarkOutline1 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline1.svg';
 import CheckmarkOutline2 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline2.svg';
@@ -17,8 +15,7 @@ class Page2 extends Component {
 	render() {
 		return (
 			<div className="page2Wrapper">
-				<P2WrapperBackground className='P2WrapperBackground' />
-				<div className="P2WrapperBackgroundPhoneNotSvg" />
+				<div className="P2WrapperBackground" />
 				<div className="bodyContainerp2">
 					<div className="headerTextp2 gothamRM"> Make your canvas in three simple steps </div>
 					<div className="actionCheckContainer">
