@@ -1338,6 +1338,7 @@ input, .tweetTextSize {
   width: 560px;
   padding: 30px 40px;
   background: white;
+  box-sizing: content-box !important;
   border-radius: 10px;
   position: relative;
   transform: scale(0.76, 0.76); }
