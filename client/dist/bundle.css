@@ -1367,7 +1367,8 @@ input, .tweetTextSize {
       transform: scale(0.425, 0.425); } }
 
 .iPadHack {
-  width: 560px !important; }
+  width: 560px !important;
+  border: 2px solid gold; }
 
 .clearFix {
   margin-left: 58px;
