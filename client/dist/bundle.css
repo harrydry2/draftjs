@@ -1366,10 +1366,12 @@ input, .tweetTextSize {
     .backgroundTweet {
       transform: scale(0.425, 0.425); } }
 
+.iPadHack {
+  width: 560px !important; }
+
 .clearFix {
   margin-left: 58px;
-  display: block;
-  width: 502px; }
+  display: block; }
 
 .permalinkHeader {
   height: 48px;
@@ -1377,8 +1379,7 @@ input, .tweetTextSize {
   margin-bottom: 15px;
   display: flex;
   line-height: 20px;
-  align-items: center;
-  border: 2px solid green; }
+  align-items: center; }
 
 .accountGroup {
   flex: 1 1 0; }
