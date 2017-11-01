@@ -168,74 +168,72 @@ class Stats extends Component {
 		  width: `${widthIL}px`
 		};
 		return (
-			<div>
-				<div className="statsContainer">
-					<div className="stats">
-						<li className="retweets">
-							<div className="insideRetweets">
+			<div className="statsContainer">
+				<div className="stats">
+					<li className="retweets">
+						<div className="insideRetweets">
+							<input 
+								type="text" 
+								maxLength="9" 
+								value={insideRetweets} 
+								onChange={(e) => this.onChangeRetweets(e)} 
+								className="retweetAndLikeNumber inputRetweets" 
+								style={inputRetweets} 
+								ref={(element) => { this.rtRef = element; }} 
+							/>
+						Retweets
+						</div>
+					</li>
+
+					<li className="likes">
+						<div className="insideLikes">
+							<input type="text" maxLength="9" value={insideLikes} onChange={(e) => this.onChangeLikes(e)} className="retweetAndLikeNumber inputLikes" style={inputLikes} ref={(element) => { this.likesRef = element; }} />
+						Likes
+						</div>
+					</li>
+
+					<li className="avatarRow">
+						<div className="avatarImageOuter">
+							<img src={favourites[0][0]} alt="" data-inner="1" onMouseOver={(e) => this.animateFavourites(e, 0)} onMouseLeave={(e) => this.hoverOut(e, 0)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[1][0]} alt="" data-inner="2" onMouseOver={(e) => this.animateFavourites(e, 1)} onMouseLeave={(e) => this.hoverOut(e, 1)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[2][0]} alt="" data-inner="3" onMouseOver={(e) => this.animateFavourites(e, 2)} onMouseLeave={(e) => this.hoverOut(e, 2)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[3][0]} alt="" data-inner="4" onMouseOver={(e) => this.animateFavourites(e, 3)} onMouseLeave={(e) => this.hoverOut(e, 3)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[4][0]} alt="" data-inner="5" onMouseOver={(e) => this.animateFavourites(e, 4)} onMouseLeave={(e) => this.hoverOut(e, 4)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[5][0]} alt="" data-inner="6" onMouseOver={(e) => this.animateFavourites(e, 5)} onMouseLeave={(e) => this.hoverOut(e, 5)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[6][0]} alt="" data-inner="7" onMouseOver={(e) => this.animateFavourites(e, 6)} onMouseLeave={(e) => this.hoverOut(e, 6)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[7][0]} alt="" data-inner="8" onMouseOver={(e) => this.animateFavourites(e, 7)} onMouseLeave={(e) => this.hoverOut(e, 7)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<div className="avatarImageOuter">
+							<img src={favourites[8][0]} alt="" data-inner="9" onMouseOver={(e) => this.animateFavourites(e, 8)} onMouseLeave={(e) => this.hoverOut(e, 8)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
+						</div>
+						<form className={this.state.hover ? "favouriteSearchBox open" : "favouriteSearchBox"}
+							ref={(input) => { this.formSubmit = input; }}
+							onSubmit={(e) => this.changeFavourites(e)}
+						>
+							<span className="favouriteUsername">@</span>
 								<input 
 									type="text" 
-									maxLength="9" 
-									value={insideRetweets} 
-									onChange={(e) => this.onChangeRetweets(e)} 
-									className="retweetAndLikeNumber inputRetweets" 
-									style={inputRetweets} 
-									ref={(element) => { this.rtRef = element; }} 
+									className="favouriteUsername favouriteUsernameHover"
+									ref={(input) => { this.favouriteInput = input; }}
+									autoComplete="off"
+									spellCheck="false"
 								/>
-							Retweets
-							</div>
-						</li>
-
-						<li className="likes">
-							<div className="insideLikes">
-								<input type="text" maxLength="9" value={insideLikes} onChange={(e) => this.onChangeLikes(e)} className="retweetAndLikeNumber inputLikes" style={inputLikes} ref={(element) => { this.likesRef = element; }} />
-							Likes
-							</div>
-						</li>
-
-						<li className="avatarRow">
-							<div className="avatarImageOuter">
-								<img src={favourites[0][0]} alt="" data-inner="1" onMouseOver={(e) => this.animateFavourites(e, 0)} onMouseLeave={(e) => this.hoverOut(e, 0)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[1][0]} alt="" data-inner="2" onMouseOver={(e) => this.animateFavourites(e, 1)} onMouseLeave={(e) => this.hoverOut(e, 1)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[2][0]} alt="" data-inner="3" onMouseOver={(e) => this.animateFavourites(e, 2)} onMouseLeave={(e) => this.hoverOut(e, 2)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[3][0]} alt="" data-inner="4" onMouseOver={(e) => this.animateFavourites(e, 3)} onMouseLeave={(e) => this.hoverOut(e, 3)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[4][0]} alt="" data-inner="5" onMouseOver={(e) => this.animateFavourites(e, 4)} onMouseLeave={(e) => this.hoverOut(e, 4)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[5][0]} alt="" data-inner="6" onMouseOver={(e) => this.animateFavourites(e, 5)} onMouseLeave={(e) => this.hoverOut(e, 5)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[6][0]} alt="" data-inner="7" onMouseOver={(e) => this.animateFavourites(e, 6)} onMouseLeave={(e) => this.hoverOut(e, 6)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[7][0]} alt="" data-inner="8" onMouseOver={(e) => this.animateFavourites(e, 7)} onMouseLeave={(e) => this.hoverOut(e, 7)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<div className="avatarImageOuter">
-								<img src={favourites[8][0]} alt="" data-inner="9" onMouseOver={(e) => this.animateFavourites(e, 8)} onMouseLeave={(e) => this.hoverOut(e, 8)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
-							</div>
-							<form className={this.state.hover ? "favouriteSearchBox open" : "favouriteSearchBox"}
-								ref={(input) => { this.formSubmit = input; }}
-								onSubmit={(e) => this.changeFavourites(e)}
-							>
-								<span className="favouriteUsername">@</span>
-									<input 
-										type="text" 
-										className="favouriteUsername favouriteUsernameHover"
-										ref={(input) => { this.favouriteInput = input; }}
-										autoComplete="off"
-										spellCheck="false"
-									/>
-							</form>
-						</li>
-					</div>
+						</form>
+					</li>
 				</div>
 			</div>
 		);
