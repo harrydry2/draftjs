@@ -1368,7 +1368,7 @@ input, .tweetTextSize {
 
 .clearFix {
   margin-left: 58px;
-  display: block; }
+  display: inline-block; }
 
 .permalinkHeader {
   height: 48px;
@@ -1613,7 +1613,9 @@ input, .tweetTextSize {
 .streamItemFooter {
   font-size: 12px;
   padding-top: 1px;
-  transform: translateY(10px); }
+  transform: translateY(10px);
+  width: 650px;
+  border: 2px solid green; }
   .streamItemFooter .tweetActionList {
     font-size: 0;
     height: 18px;
