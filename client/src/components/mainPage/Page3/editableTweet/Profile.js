@@ -32,28 +32,26 @@ class Profile extends Component {
 		  display: `${display}`
 		};
 		return (
-			<div>
-				<div className="clearFix">
-					<div className="permalinkHeader">
-						<div className="accountGroup">
-							<img src={profileImage} className="profileImage" alt="" />
-							<span className="fullNameGroup">
-								<strong className="fullName">{fullName}</strong>
-								<span className="userBadges" style={userBadges}>
-									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/verification.png" className="verificationIcon" alt="" />
-								</span>
+			<div className="clearFix">
+				<div className="permalinkHeader">
+					<div className="accountGroup">
+						<img src={profileImage} className="profileImage" alt="" />
+						<span className="fullNameGroup">
+							<strong className="fullName">{fullName}</strong>
+							<span className="userBadges" style={userBadges}>
+								<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/verification.png" className="verificationIcon" alt="" />
 							</span>
-							<form className="search" onSubmit={(e) => this.typeAhead(e)}>
-								<span className="username">@</span>
-								<input type="text" className="username usernameInput" ref={(input) => { this.usernameInput = input; }} autoComplete="off" spellCheck="false" />
-							</form>
-						</div>
-						<div className="follorBar">
-							<button className="followingButton">Following</button>
-						</div>
-						<div className="profileTweetAction">
-							<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/downArrowOct.png" className="twitterDownArrow" alt="" />
-						</div>
+						</span>
+						<form className="search" onSubmit={(e) => this.typeAhead(e)}>
+							<span className="username">@</span>
+							<input type="text" className="username usernameInput" ref={(input) => { this.usernameInput = input; }} autoComplete="off" spellCheck="false" />
+						</form>
+					</div>
+					<div className="follorBar">
+						<button className="followingButton">Following</button>
+					</div>
+					<div className="profileTweetAction">
+						<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/downArrowOct.png" className="twitterDownArrow" alt="" />
 					</div>
 				</div>
 			</div>
