@@ -337,7 +337,6 @@ optgroup {
 
 body, html {
   font-family: 'Helvetica';
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
@@ -346,7 +345,6 @@ body, html {
   padding: 0; }
 
 *, *:before, *:after {
-  box-sizing: inherit;
   outline: none !important; }
 
 input, .tweetTextSize {
