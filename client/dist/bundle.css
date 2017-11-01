@@ -1368,11 +1368,12 @@ input, .tweetTextSize {
 
 .clearFix {
   margin-left: 58px;
-  display: block; }
+  display: block;
+  width: 502px; }
 
 .permalinkHeader {
   height: 48px;
-  width: 702px;
+  width: 502px;
   margin-bottom: 15px;
   display: flex;
   line-height: 20px;
