@@ -1372,7 +1372,7 @@ input, .tweetTextSize {
 
 .permalinkHeader {
   height: 48px;
-  width: 502px;
+  width: 702px;
   margin-bottom: 15px;
   display: flex;
   line-height: 20px;
@@ -1432,7 +1432,6 @@ input, .tweetTextSize {
   background-color: #329CC3;
   color: white;
   font-family: 'Helvetica Neue';
-  background-clip: border-box;
   font-weight: bold; }
 
 .profileTweetAction {
