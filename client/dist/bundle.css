@@ -1363,8 +1363,9 @@ input, .tweetTextSize {
       transform: scale(0.425, 0.425); } }
 
 .iPadHack {
-  min-width: 560px !important;
-  display: inline-block; }
+  min-width: 560px;
+  display: inline-block;
+  border: 2px solid pink; }
 
 .clearFix {
   margin-left: 58px;
@@ -1613,9 +1614,7 @@ input, .tweetTextSize {
 .streamItemFooter {
   font-size: 12px;
   padding-top: 1px;
-  transform: translateY(10px);
-  width: 650px;
-  border: 2px solid green; }
+  transform: translateY(10px); }
   .streamItemFooter .tweetActionList {
     font-size: 0;
     height: 18px;
