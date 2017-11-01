@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import P1WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP1Tablet.svg';
-import P1WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP1TabletSmaller.svg';
 
 class Page1 extends Component {
 	constructor(props) {
 		super(props);
 	}
-				// <P1WrapperBackgroundTablet className='P1WrapperBackgroundTablet' />
-				// <P1WrapperBackgroundTabletSmaller className='P1WrapperBackgroundTabletSmaller' />
 	render() {
 		return (
 			<div className="page1Wrapper">

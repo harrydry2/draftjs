@@ -2,57 +2,11 @@
   height: 76%
   width: 100%
   position: relative
-  @media screen and (max-width: 1020px)
+  @media screen and (max-width: 1060px)
   	display: flex
   	justify-content: center
   	flex-wrap: wrap
   	height: auto
-
-.P2WrapperBackgroundTablet
-	display: none
-	z-index: -2
-	@media screen and (max-width: 1020px)
-		position: absolute
-		width: 100%
-		transform: translateY(-930px)
-		display: block
-	@media screen and (max-width: 995px)
-		transform: translateY(-670px)
-	@media screen and (max-width: 972px)
-		transform: translateY(-620px)
-	@media screen and (max-width: 930px)
-		transform: translateY(-565px)
-	@media screen and (max-width: 883px)
-		transform: translateY(-510px)
-	@media screen and (max-width: 850px)
-		transform: translateY(-470px)
-	@media screen and (max-width: 810px)
-		transform: translateY(-435px)
-	@media screen and (max-width: 768px)
-		transform: translateY(-400px)
-	@media screen and (max-width: 740px)
-		display: none
-
-.P2WrapperBackgroundTabletSmaller
-	display: none
-	z-index: -2
-	@media screen and (max-width: 740px)
-		display: block
-		width: 100%
-		position: absolute
-		transform: translateY(-880px)
-	@media screen and (max-width: 720px)
-		transform: translateY(-840px)
-	@media screen and (max-width: 705px)
-		transform: translateY(-810px)
-	@media screen and (max-width: 690px)
-		transform: translateY(-770px)
-	@media screen and (max-width: 668px)
-		transform: translateY(-710px)
-	@media screen and (max-width: 636px)
-		transform: translateY(-680px)
-	@media screen and (max-width: 630px)
-		display: none
 
 .P2WrapperBackground
 	background-color: #F7FAFC
@@ -71,12 +25,12 @@
 	position: absolute
 	width: 455px
 	z-index: 2
-	top: 8vh
+	top: 8%
 	right: 5%
 	transform: translateY(-9px)
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 37.94vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		position: static
 		right: 0
 		top: 0
@@ -84,6 +38,8 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+		margin-left: 16vw
+		margin-right: 16vw
 
 .federerVideo
 	position: relative
@@ -113,9 +69,12 @@
 		transform: translateY(-4px)
 	@media screen and (max-width: 1080px)
 		width: 510px
-	@media screen and (max-width: 1020px)
-		margin-top: 60px
+	@media screen and (max-width: 1060px)
+		margin-top: 35px
+		margin-bottom: 50px
 		width: 540px
+		height: 303.75px
+		position: static
 	@media screen and (max-width: 414px)
 		width: 340px
 		height: 191.25px
@@ -135,11 +94,11 @@
 	height: 112px
 	color: #34434b
 	margin-bottom: 14px
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 37.94vw
 		height: 9.34vw
 		margin-bottom: 1.17vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		text-align: center
 		margin-bottom: 30px
 	@media screen and (max-width: 414px)
@@ -153,9 +112,9 @@
 	width: 100%
 	display: flex
 	align-items: center
-	margin-bottom: 15px
-	@media screen and (max-width: 1020px)
-		width: 90%
+	margin-bottom: 22px
+	@media screen and (max-width: 1060px)
+		width: 83%
 	@media screen and (max-width: 414px)
 		width: 320px
 	@media screen and (max-width: 375px)
@@ -171,7 +130,7 @@
 	margin-right: 21px
 	align-self: flex-start
 	transform: translateY(2px)
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 2.42vw
 		height: 2.42vw
 		margin-right: 1.75vw
@@ -183,8 +142,10 @@
 .instruction
 	width: 380px
 	color: #28333a
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 31.69vw
+	@media screen and (max-width: 1060px)
+		width: 330px
 	@media screen and (max-width: 414px)
 		width: 272px
 	@media screen and (max-width: 375px)
@@ -194,8 +155,10 @@
 
 .instruction1
 	width: 370px
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 30.86vw
+	@media screen and (max-width: 1060px)
+		width: 330px
 	@media screen and (max-width: 414px)
 		width: 272px
 	@media screen and (max-width: 375px)
@@ -205,8 +168,10 @@
 
 .instruction2
 	width: 330px
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 27.52vw
+	@media screen and (max-width: 1060px)
+		width: 330px
 	@media screen and (max-width: 414px)
 		width: 272px
 	@media screen and (max-width: 375px)

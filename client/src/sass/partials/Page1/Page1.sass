@@ -2,57 +2,13 @@
 	height: 100%
 	width: 100%
 	position: relative
-	@media screen and (max-width: 1020px)
-		height: 1024px
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 1060px)
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
 		height: auto
 
 // BACKGROUNDS
-.P1WrapperBackgroundTablet
-	display: none
-	@media screen and (max-width: 1020px)
-		position: absolute
-		width: 100%
-		transform: translateY(-307px)
-		display: block 
-	@media screen and (max-width: 980px)
-		transform: translateY(-285px)
-	@media screen and (max-width: 950px)
-		transform: translateY(-265px)
-	@media screen and (max-width: 930px)
-		transform: translateY(-210px)
-	@media screen and (max-width: 885px)
-		transform: translateY(-155px)
-	@media screen and (max-width: 849px)
-		transform: translateY(-120px)
-	@media screen and (max-width: 814px)
-		transform: translateY(-85px)
-	@media screen and (max-width: 788px)
-		transform: translateY(-20px)
-	@media screen and (max-width: 768px)
-		transform: translateY(0px)
-	@media screen and (max-width: 740px)
-		display: none
-
-.P1WrapperBackgroundTabletSmaller
-	display: none
-	@media screen and (max-width: 740px)
-		display: block
-		width: 100%
-		transform: translateY(-170px)
-		position: absolute
-	@media screen and (max-width: 710px)
-		transform: translateY(-120px)
-	@media screen and (max-width: 685px)
-		transform: translateY(-85px)
-	@media screen and (max-width: 660px)
-		transform: translateY(-50px)
-	@media screen and (max-width: 630px)
-		display: none
-
 .P1WrapperBackground
 		height: 100%
 		width: 100%
@@ -61,6 +17,8 @@
 		top: 0
 		left: 0
 		transform: skewY(-15deg) translateY(-26%)
+		@media screen and (max-width: 1060px)
+			transform: skewY(-15deg) translateY(-17%)
 		@media screen and (max-width: 414px)
 			transform: skewY(-15deg) translateY(-55px)
 
@@ -74,10 +32,10 @@
 	position: relative
 	@media screen and (max-width: 1230px)
 		left: 5%
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 17.79vw
 		height: 4.80vw
-	@media screen and (max-width: 1020px) and (min-width: 415px)
+	@media screen and (max-width: 1060px) and (min-width: 415px)
 		left: 0
 		margin-left: 30vw
 		margin-right: 30vw
@@ -92,59 +50,52 @@
 
 
 .bodyContainer
-	position: relative
-	top: 73px
+	position: absolute
+	top: 27%
 	left: 7%
 	width: 469px
-	height: 389px
 	z-index: 2
 	@media screen and (max-width: 1230px)
 		left: 5%
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 39.12vw
-		height: 32.44vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+		position: static
 		top: 0
 		left: 0
-		height: auto
+		margin-left: 6vw
+		margin-right: 6vw
 
 .headerText
-	width: 464px
-	height: 110px
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
 	color: #ffffff
 	opacity: 0
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
-		width: 38.70vw
-		height: 9.17vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		text-align: center
 	@media screen and (max-width: 414px)
 		width: 335px
 		height: auto
 
 .underpants
-	@media screen and (max-width: 2000px) and (min-width: 415px)
+	@media screen and (max-width: 2000px) and (min-width: 1061px)
 		width: 420px !important
 		display: inline-block
 
 .bodyText
 	width: 365px
-	height: 122px
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
 	color: #ffffff
 	margin-top: 30px
 	margin-bottom: 48px
 	opacity: 0
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 30.44vw
-		height: 10.18vw
 		margin-top: 2.50vw
 		margin-bottom: 4.00vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		text-align: center
 		margin-top: 49px
 		margin-bottom: 65px
@@ -152,7 +103,6 @@
 		margin-top: 30px
 		margin-bottom: 47px
 		width: 310px
-		height: auto
 	@media screen and (max-width: 375px)
 		width: 298px
 	@media screen and (max-width: 355px)
@@ -164,15 +114,16 @@
 	width: 558px
 	height: 350px
 	z-index: 2
-	top: 29.16vh
+	top: 29.16%
 	right: 5%
 	box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2)
 	opacity: 0
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 46.54vw
 		height: 29.12vw
-	@media screen and (max-width: 1020px)
+	@media screen and (max-width: 1060px)
 		position: static
+		margin-bottom: 75px
 	@media screen and (max-width: 414px)
 		width: 355px
 		height: 223px
@@ -193,10 +144,10 @@
 		cursor: pointer
 		box-shadow: 0 7px 18px 5px rgba(50,50,93,.33), 0 3px 10px 1px rgba(0,0,0,.35)
 		transform: translateY(-1px)
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 26.52vw
 		height: 5.75vw
-	@media screen and (max-width: 1020px) and (min-width: 415px)
+	@media screen and (max-width: 1060px) and (min-width: 415px)
 		display: none
 	@media screen and (max-width: 414px)
 		width: 293px
@@ -218,7 +169,7 @@
 	border-right: 2px solid rgba(44,118,209,100)
 	padding-left: 15px
 	padding-right: 10px
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		font-size: 2.17vw
 		padding-left: 1.251vw
 		padding-right: 0.834vw
@@ -244,7 +195,7 @@
 	font-size: 22px
 	letter-spacing: -0.2px
 	text-align: center
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		height: 1.83vw
 		font-size: 1.83vw
 		letter-spacing: -0.017vw
@@ -264,7 +215,7 @@
 	letter-spacing: -0.2px
 	text-align: center
 	transform: translateY(2px)
-	@media screen and (max-width: 1199px) and (min-width: 1021px)
+	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		height: 1.17vw
 		font-size: 1.17vw
 		letter-spacing: -0.017vw

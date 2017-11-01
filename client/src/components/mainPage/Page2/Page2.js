@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import P2WrapperBackgroundTablet from 'svg-react-loader?name=Icon!../../../svg/backgroundP2Tablet.svg';
-import P2WrapperBackgroundTabletSmaller from 'svg-react-loader?name=Icon!../../../svg/backgroundP2TabletSmaller.svg';
 import Video from './Video';
 import CheckmarkOutline1 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline1.svg';
 import CheckmarkOutline2 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline2.svg';
@@ -10,8 +8,6 @@ class Page2 extends Component {
 	constructor(props) {
 		super(props);
 	}
-				// <P2WrapperBackgroundTablet className='P2WrapperBackgroundTablet' />
-				// <P2WrapperBackgroundTabletSmaller className='P2WrapperBackgroundTabletSmaller' />
 	render() {
 		return (
 			<div className="page2Wrapper">

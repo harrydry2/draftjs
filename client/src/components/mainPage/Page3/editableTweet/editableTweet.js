@@ -29,7 +29,7 @@ class editableTweet extends Component {
 			var heightBIC = (136.55 + (13.6)*this.props.textReducer.lines) // m=32
 	}
 	// give height to relative container
-	if (width <= 1020 && width > 414) {
+	if (width <= 1060 && width > 414) {
 		var heightBICpositionRelative = (241.88 + (23.35)*this.props.textReducer.lines)
 
 		// phones
