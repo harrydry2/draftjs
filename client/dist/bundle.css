@@ -1345,7 +1345,6 @@ input, .tweetTextSize {
   border-radius: 10px;
   position: relative;
   display: inline-block;
-  overflow: auto;
   transform: scale(0.76, 0.76); }
   @media screen and (max-width: 1175px) and (min-width: 415px) {
     .backgroundTweet {
@@ -1364,7 +1363,7 @@ input, .tweetTextSize {
       transform: scale(0.425, 0.425); } }
 
 .iPadHack {
-  width: 560px !important;
+  min-width: 560px !important;
   display: inline-block; }
 
 .clearFix {
