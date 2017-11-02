@@ -239,7 +239,6 @@ class Stats extends Component {
 		);
 	}
 }
-
 function mapStateToProps({ infoObject}) {
   return { infoObject};
 }

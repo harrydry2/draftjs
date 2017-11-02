@@ -1362,10 +1362,6 @@ input, .tweetTextSize {
     .backgroundTweet {
       transform: scale(0.425, 0.425); } }
 
-.iPadHack {
-  width: 560px;
-  display: inline-block; }
-
 .clearFix {
   margin-left: 58px;
   display: inline-block; }
@@ -1561,11 +1557,14 @@ input, .tweetTextSize {
 .avatarRow {
   position: relative; }
 
-.avatarRow .avatarImageOuter:nth-child(1) {
+.avatarRow .avatarImageOuter {
   padding: 11px 0;
-  padding-left: 12px;
-  border-left: 1px solid #e6ecf0;
   float: left; }
+  .avatarRow .avatarImageOuter:nth-child(1) {
+    padding: 11px 0;
+    padding-left: 12px;
+    border-left: 1px solid #e6ecf0;
+    float: left; }
 
 .avatarImageInner {
   float: left;
