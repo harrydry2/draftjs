@@ -220,7 +220,7 @@ class Stats extends Component {
 						<div className="avatarImageOuter">
 							<img src={favourites[8][0]} alt="" data-inner="9" onMouseOver={(e) => this.animateFavourites(e, 8)} onMouseLeave={(e) => this.hoverOut(e, 8)} onClick={(e) => this.onClick(e)} className="avatarImageInner" />
 						</div>
-						<form className={this.state.hover ? "favouriteSearchBox open" : "favouriteSearchBox"}
+						<form className={"favouriteSearchBox open"}
 							ref={(input) => { this.formSubmit = input; }}
 							onSubmit={(e) => this.changeFavourites(e)}
 						>
