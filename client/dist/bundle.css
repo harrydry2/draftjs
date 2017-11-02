@@ -1362,6 +1362,10 @@ input, .tweetTextSize {
     .backgroundTweet {
       transform: scale(0.425, 0.425); } }
 
+.iPadHack {
+  width: 560px;
+  display: inline-block; }
+
 .clearFix {
   margin-left: 58px;
   display: inline-block; }
