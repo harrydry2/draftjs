@@ -1592,8 +1592,7 @@ input, .tweetTextSize {
   font-size: 14px;
   line-height: 19.25px;
   transition: opacity 0.1s ease-out;
-  width: 10px;
-  display: inline-block; }
+  width: 10px; }
 
 .favouriteUsernameHover {
   width: 110px; }
