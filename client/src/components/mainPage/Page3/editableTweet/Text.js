@@ -4,9 +4,9 @@ import { EditorState, CompositeDecorator } from 'draft-js';
 import format from 'date-fns/format'
 import { connect } from 'react-redux';
 import * as actions from '../../../../actions/index';
-const text = `1️⃣  Edit the username above 
-2️⃣  Type your tweet here 
-3️⃣  Hover over favourites to change them`;
+const text = `1⃣️ Edit the username above
+2⃣️ Type your tweet here
+3⃣️ Hover over favourites to change them`;
 
 function findWithRegex(regex, contentBlock, callback) {
 	const text = contentBlock.getText();

@@ -12,7 +12,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-
 require('./routes/twitterRoutes')(app);
 require('./routes/billingRoutes')(app);
 

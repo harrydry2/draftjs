@@ -34,7 +34,7 @@ class Video extends Component {
 				<video 
 					source src="https://s3.eu-west-2.amazonaws.com/lifeishappening/fuckingEndItCompressed.mp4" type="video/mp4"
 					muted playsInline loop className="federerVideo"
-					poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/posterDraftJS1.jpg"
+					poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/posterDraftJS3.jpg"
 					ref={(element) => { this.video = element; }}
 					onClick={(e) => this.video.paused ? this.video.play() : this.video.pause()} 
 				/>
