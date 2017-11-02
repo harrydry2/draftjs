@@ -10,23 +10,21 @@
 
 // BACKGROUNDS
 .P1WrapperBackground
-		height: 100%
-		width: 100%
-		background-color: blue
-		position: absolute
-		top: 0
-		left: 0
-		transform: skewY(-15deg) translateY(-26%)
-		@media screen and (max-width: 1060px)
-			transform: skewY(-15deg) translateY(-17%)
-		@media screen and (max-width: 414px)
-			transform: skewY(-15deg) translateY(-55px)
+	height: 100%
+	width: 100%
+	background-image: linear-gradient(155deg, #243BED 32%, #3B79FF 93%)
+	position: absolute
+	top: 0
+	left: 0
+	transform: skewY(-15deg) translateY(-26%)
+	box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.30)
+	@media screen and (max-width: 1060px)
+		transform: skewY(-15deg) translateY(-17%)
 
 // Header
-
 .canvasLogo
-	width: 213.3px
-	height: 57.6px
+	width: 228.44px
+	height: 61.6896px
 	margin-top: 42px
 	left: 7%
 	position: relative
@@ -35,13 +33,13 @@
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 17.79vw
 		height: 4.80vw
-	@media screen and (max-width: 1060px) and (min-width: 415px)
+	@media screen and (max-width: 1060px) and (min-width: 551px)
 		left: 0
 		margin-left: 30vw
 		margin-right: 30vw
 		margin-top: 55px
 		margin-bottom: 55px
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		width: 181.3px
 		height: 48.96px
 		margin-top: 40px
@@ -75,7 +73,7 @@
 	opacity: 0
 	@media screen and (max-width: 1060px)
 		text-align: center
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		width: 335px
 		height: auto
 
@@ -99,7 +97,7 @@
 		text-align: center
 		margin-top: 49px
 		margin-bottom: 65px
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		margin-top: 30px
 		margin-bottom: 47px
 		width: 310px
@@ -124,10 +122,11 @@
 	@media screen and (max-width: 1060px)
 		position: static
 		margin-bottom: 75px
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		width: 355px
 		height: 223px
 		margin-top: 40px
+		margin-bottom: 10px
 
 // call to Action Button
 
@@ -147,9 +146,9 @@
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		width: 26.52vw
 		height: 5.75vw
-	@media screen and (max-width: 1060px) and (min-width: 415px)
+	@media screen and (max-width: 1060px) and (min-width: 551px)
 		display: none
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		width: 293px
 		height: 56px
 	@media screen and (max-width: 355px)
@@ -166,14 +165,14 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	border-right: 2px solid rgba(44,118,209,100)
+	border-right: 2px solid #235fc6
 	padding-left: 15px
 	padding-right: 10px
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		font-size: 2.17vw
 		padding-left: 1.251vw
 		padding-right: 0.834vw
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		font-size: 22px
 		height: 65%
 	@media screen and (max-width: 355px)
@@ -199,7 +198,7 @@
 		height: 1.83vw
 		font-size: 1.83vw
 		letter-spacing: -0.017vw
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		font-size: 20px
 		height: 22px
 	@media screen and (max-width: 355px)
@@ -220,7 +219,7 @@
 		font-size: 1.17vw
 		letter-spacing: -0.017vw
 		transform: translateY(0.167vw)
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 550px)
 		font-size: 12px
 		height: 12px
 	@media screen and (max-width: 355px)
@@ -232,7 +231,7 @@
 @keyframes fadeInUp
 	0%
 		opacity: 0
-		transform: translateY(450px)
+		transform: translateY(519px)
 	40%
 		opacity: 0.3
 	100%

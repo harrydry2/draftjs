@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Editor, { createEditorStateWithText } from 'draft-js-plugins-editor';
 import { EditorState, CompositeDecorator } from 'draft-js';
-// import createEmojiPlugin from 'draft-js-emoji-plugin';
-// import 'draft-js-emoji-plugin/lib/plugin.css';
 import format from 'date-fns/format'
 import { connect } from 'react-redux';
 import * as actions from '../../../../actions/index';
