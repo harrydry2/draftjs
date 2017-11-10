@@ -8,7 +8,7 @@ class Profile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: '@140_Canvas',
+			username: '140_Canvas',
 			popover: true,
 			i: 0,
 			favImgCounter: 0,
