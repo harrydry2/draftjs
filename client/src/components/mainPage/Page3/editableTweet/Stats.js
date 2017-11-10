@@ -118,6 +118,14 @@ class Stats extends Component {
 		e.preventDefault()
 		const twitterLookup = e.target[0].value;
 		const res = await axios.get(`/api/twitterfavourites/${twitterLookup}`)
+		if (res.data[0] === 'https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png') {
+			this.props.fetchLastClicked('FAVCHANGEDFAIL');
+		} else if(res.data[0] === 'https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png') {
+			this.props.fetchLastClicked('favNoImg');
+		}
+		else {
+			this.props.fetchLastClicked('FAVCHANGED');
+		}
 		let favourites = this.state.favourites
 		favourites[this.state.lastHovered] = res.data
 		this.setState(favourites)
@@ -134,11 +142,22 @@ class Stats extends Component {
 		this.favouriteInput.focus();
 		this.favouriteInput.value = this.state.favourites[i][1];
 		this.favouriteInput.placeholder = '';
+		this.props.fetchLastClicked('FAVIMG');
 	}
 
 	onClick(e) {
 		e.preventDefault();
 		this.favouriteInput.focus();
+	}
+
+	lastClickedFAV(e){
+		this.props.fetchLastClicked('FAV')
+		this.likesRef.focus();
+	}
+
+	lastClickedRT(e){
+		this.props.fetchLastClicked('RT');
+		this.rtRef.focus();
 	}
 
 	render() {
@@ -170,7 +189,7 @@ class Stats extends Component {
 		return (
 			<div className="statsContainer">
 				<div className="stats">
-					<li className="retweets">
+					<li className="retweets" onClick={(e) => this.lastClickedRT(e)}>
 						<div className="insideRetweets">
 							<input 
 								type="text" 
@@ -185,7 +204,7 @@ class Stats extends Component {
 						</div>
 					</li>
 
-					<li className="likes">
+					<li className="likes" onClick={(e) => this.lastClickedFAV(e)}>
 						<div className="insideLikes">
 							<input type="text" maxLength="9" value={insideLikes} onChange={(e) => this.onChangeLikes(e)} className="retweetAndLikeNumber inputLikes" style={inputLikes} ref={(element) => { this.likesRef = element; }} />
 						Likes

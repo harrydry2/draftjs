@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {infoObject, textReducer, statsReducer, footerReducer, sizeReducer, pInfoReducer} from './infoObject';
+import {infoObject, textReducer, statsReducer, footerReducer, sizeReducer, pInfoReducer, lastClickedReducer} from './infoObject';
 
 export default combineReducers({
 	infoObject,
@@ -8,4 +8,5 @@ export default combineReducers({
 	footerReducer,
 	sizeReducer,
 	pInfoReducer,
+	lastClickedReducer,
 });

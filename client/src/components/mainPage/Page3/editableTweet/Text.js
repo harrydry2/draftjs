@@ -44,11 +44,6 @@ const HashtagSpan = (props) => {
 	);
 };
 
-// const emojiPlugin = createEmojiPlugin({
-// 	selectButtonContent: '',
-// });
-// const { EmojiSuggestions, EmojiSelect } = emojiPlugin;
-
 class Text extends Component {
 	constructor(props) {
 		super(props);
@@ -70,6 +65,14 @@ class Text extends Component {
 		this.setState({
 			dateAndTime: e.target.value
 		})
+	}
+
+	lastClickedText(e){
+		this.props.fetchLastClicked('textBox');
+	}
+
+	lastClickedDate(e){
+		this.props.fetchLastClicked('date');
 	}
 
 	componentDidUpdate() {
@@ -96,7 +99,7 @@ class Text extends Component {
 		const {editorState, dateAndTime} = this.state;
 		return (
 			<div>
-				<div className="textContainer">
+				<div className="textContainer" onClick={(e) => this.lastClickedText(e)}>
 					<div 
 						className="tweetTextSize" 
 						onClick={() => this.focus()}
@@ -117,9 +120,15 @@ class Text extends Component {
 						/>
 					</div>
 				</div>
-				<div className="clientAndActions">
+				<div className="clientAndActions" onClick={(e) => this.lastClickedDate(e)}>
 					<div className="metadata">
-						<input type="text" className="tweetDate" value={dateAndTime} onChange={(e) => this.onChangeDate(e)} />
+						<input 
+							type="text" 
+							className="tweetDate" 
+							value={dateAndTime} 
+							onChange={(e) => this.onChangeDate(e)}
+							onClick={(e) => this.lastClickedDate(e)}
+						/>
 					</div>
 				</div>
 			</div>
@@ -127,4 +136,8 @@ class Text extends Component {
 	}
 }
 
-export default connect(null, actions)(Text);
+function mapStateToProps({ lastClickedReducer}) {
+  return { lastClickedReducer};
+}
+
+export default connect(mapStateToProps, actions)(Text);

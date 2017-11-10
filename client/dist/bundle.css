@@ -1420,9 +1420,50 @@ input, .tweetTextSize {
     .backgroundTweet {
       transform: translate(-50%, -50%) scale(0.425, 0.425); } }
 
+.popoverOuter {
+  position: absolute;
+  transition: all 0.5s; }
+
+.popover {
+  background-color: #fcf4b2;
+  border-radius: 4px;
+  padding: 15px 20px;
+  width: 380px;
+  font-size: 15px;
+  font-family: Gotham-Book;
+  color: #32325d;
+  line-height: 21px;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.15), 0 3px 6px rgba(0, 0, 0, 0.15); }
+
+.popover::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  border-radius: 0 0 4px 0;
+  background-color: inherit;
+  box-shadow: 3px 3px 5px rgba(82, 95, 127, 0.15); }
+
+.popoverClose {
+  display: inline-block;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 10px;
+  height: 10px;
+  color: #32325d;
+  transform: rotate(45deg); }
+  .popoverClose:hover {
+    opacity: 0.8;
+    cursor: pointer; }
+
 .clearFix {
   margin-left: 58px;
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 
 .permalinkHeader {
   height: 48px;
@@ -1457,9 +1498,12 @@ input, .tweetTextSize {
   line-height: 19.25px;
   display: inline-block;
   transition: opacity 0.1s ease-out; }
+  .username:hover {
+    color: rgba(101, 119, 134, 0.7); }
 
 .usernameInput {
-  width: 260px; }
+  width: 260px;
+  caret-color: black; }
 
 .userBadges {
   position: relative;

@@ -49,6 +49,10 @@ const initialPInfo = {
 	}
 }
 
+const initialLastClicked = {
+	lastClicked: 'apples',
+}
+
 const infoObject = (state = initialInfoObject, action) => {
 	switch(action.type) {
 		case 'FETCH_USER':
@@ -103,6 +107,15 @@ const pInfoReducer = (state = initialPInfo, action) => {
 	}
 }
 
+const lastClickedReducer = (state = initialLastClicked, action) => {
+	switch(action.type) {
+		case 'LASTCLICKED_REDUCER':
+			return action.payload || false;
+		default: 
+			return state;
+	}
+}
+
 module.exports = {
 	infoObject,
 	textReducer,
@@ -110,4 +123,5 @@ module.exports = {
 	footerReducer,
 	sizeReducer,
 	pInfoReducer,
+	lastClickedReducer,
 }

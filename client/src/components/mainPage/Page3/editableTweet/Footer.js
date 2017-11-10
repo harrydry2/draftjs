@@ -21,6 +21,19 @@ class Footer extends Component {
 	  this.props.saveFooterDetails(this.state.insideReplies)
 	}
 
+	lastClickedReplies(){
+		this.props.fetchLastClicked('FREP')
+		this.repliesRef.focus();
+	}
+
+	lastClickedRetweets(){
+		this.props.fetchLastClicked('FRET')
+	}
+
+	lastClickedLikes(){
+		this.props.fetchLastClicked('FLIK')
+	}
+
 	render() {
 		const {insideReplies} = this.state;
 		const {footerRetweets, footerLikes} = this.props.statsReducer;
@@ -30,7 +43,7 @@ class Footer extends Component {
 					<div className="tweetActionList">
 						
 						<div className="footerOuter">
-							<div className="actionButton">
+							<div className="actionButton" onClick={(e) => this.lastClickedReplies(e)}>
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/replyfaint.png" alt="" className="replyIcon" />
 								</div>
@@ -40,12 +53,13 @@ class Footer extends Component {
 									onChange={(e) => this.onChangeReplies(e)} 
 									className="actionCount inputReplies" 
 									maxLength="4"
+									ref={(element) => { this.repliesRef = element; }} 
 								/>
 							</div>
 						</div>
 
 						<div className="footerOuter">
-							<div className="actionButton">
+							<div className="actionButton" onClick={(e) => this.lastClickedRetweets(e)}>
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/retweetfaint.png" alt="" className="retweetIcon" />
 								</div>
@@ -54,7 +68,7 @@ class Footer extends Component {
 						</div>
 
 						<div className="footerOuter">
-							<div className="actionButton">
+							<div className="actionButton" onClick={(e) => this.lastClickedLikes(e)}>
 								<div className="iconContainer">
 									<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/favouritefaint.png" alt="" className="favouriteIcon" />
 								</div>

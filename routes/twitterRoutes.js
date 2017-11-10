@@ -49,7 +49,17 @@ module.exports = app => {
           infoObject.username = req.params.username
           res.json(infoObject)
         }
-      });
+      })
+      .catch(err => {
+        if (err) {
+          infoObject.profileImage = 'https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png';
+          infoObject.backgroundImage = `url('https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png')`;
+          infoObject.verified = false;
+          infoObject.fullName = `Woops!!`;
+          infoObject.username = req.params.username
+          res.json(infoObject)
+        }
+      })
   });
 
 const favArray = []
@@ -62,6 +72,13 @@ const favArray = []
           favArray[1] = req.params.username;
         }
         res.send(favArray)
-      });
+      })
+      .catch(err => {
+        if (err) {
+          favArray[0] = 'https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png';
+          favArray[1] = req.params.username;
+        }
+        res.send(favArray)
+      })
   })
 }

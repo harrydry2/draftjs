@@ -45,3 +45,11 @@ export const savePInfo = (pInfo) => async dispatch => {
 	}
 	dispatch({type: 'PINFO_REDUCER', payload: obj})
 };
+
+export const fetchLastClicked = (lastClicked) => async dispatch => {
+	const obj = {
+		lastClicked,
+	}
+	console.log(lastClicked, 'in Action Creator')
+	dispatch({type: 'LASTCLICKED_REDUCER', payload: obj})
+};
