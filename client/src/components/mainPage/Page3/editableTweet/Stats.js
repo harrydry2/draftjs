@@ -1,82 +1,82 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "../../../../actions/index";
-import axios from "axios";
-import { mathsville } from "../../../../helpers";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../../../actions/index';
+import axios from 'axios';
+import { mathsville } from '../../../../helpers';
 
 class Stats extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      insideRetweets: "1,670,390",
-      insideLikes: "3,844,290",
-      footerRetweets: "1.7M",
-      footerLikes: "3.8M",
+      insideRetweets: '1,670,390',
+      insideLikes: '3,844,290',
+      footerRetweets: '1.7M',
+      footerLikes: '5.8M',
       favourites: [
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/adele.jpg",
-          "French Motana"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/adele.jpg',
+          'French Motana',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/leoDiCaprio.jpg",
-          "LeoDiCaprio"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/leoDiCaprio.jpg',
+          'LeoDiCaprio',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/edSheeran.jpg",
-          "edsheeran"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/edSheeran.jpg',
+          'edsheeran',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/theRock.jpg",
-          "TheRock"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/theRock.jpg',
+          'TheRock',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/rihanna.jpg",
-          "rihanna"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/rihanna.jpg',
+          'rihanna',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/barackObama.jpg",
-          "BarackObama"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/barackObama.jpg',
+          'BarackObama',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/chanceTheRapper.jpg",
-          "chancetherapper"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/chanceTheRapper.jpg',
+          'chancetherapper',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/elonMusk.jpg",
-          "elonmusk"
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/elonMusk.jpg',
+          'elonmusk',
         ],
         [
-          "https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/beyonce.jpg",
-          "Beyonce"
-        ]
+          'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/beyonce.jpg',
+          'Beyonce',
+        ],
       ],
       lastHovered: 0,
       hover: false,
       rtLength: 9,
-      favLength: 9
+      favLength: 9,
     };
   }
   onChangeRetweets(e) {
-    const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+    const justNumbers = e.target.value.replace(/[^0-9]/g, '');
     const retweetsForFooter = mathsville(justNumbers);
     this.setState({
-      footerRetweets: retweetsForFooter
+      footerRetweets: retweetsForFooter,
     });
     const commasInserted = new Intl.NumberFormat().format(justNumbers);
     this.setState({
-      insideRetweets: commasInserted
+      insideRetweets: commasInserted,
     });
   }
 
   onChangeLikes(e) {
-    const justNumbers = e.target.value.replace(/[^0-9]/g, "");
+    const justNumbers = e.target.value.replace(/[^0-9]/g, '');
     const likesForFooter = mathsville(justNumbers);
     this.setState({
-      footerLikes: likesForFooter
+      footerLikes: likesForFooter,
     });
     const commasInserted = new Intl.NumberFormat().format(justNumbers);
     this.setState({
-      insideLikes: commasInserted
+      insideLikes: commasInserted,
     });
   }
 
@@ -84,10 +84,10 @@ class Stats extends Component {
     this.props.saveStatsDetails(
       this.state.footerRetweets,
       this.state.footerLikes,
-      this.state.favourites
+      this.state.favourites,
     );
     if (this.rtRef.value) {
-      let rtLength = this.rtRef.value.length;
+      const rtLength = this.rtRef.value.length;
       if (rtLength === 1 && this.state.rtLength !== 1) {
         this.setState({ rtLength: 1 });
       }
@@ -111,7 +111,7 @@ class Stats extends Component {
       }
     }
     if (this.likesRef.value) {
-      let favLength = this.likesRef.value.length;
+      const favLength = this.likesRef.value.length;
       if (favLength === 1 && this.state.favLength !== 1) {
         this.setState({ favLength: 1 });
       }
@@ -140,7 +140,7 @@ class Stats extends Component {
     let hoverState = this.state.hover;
     hoverState = false;
     this.setState({
-      hover: hoverState
+      hover: hoverState,
     });
   }
 
@@ -150,18 +150,18 @@ class Stats extends Component {
     const res = await axios.get(`/api/twitterfavourites/${twitterLookup}`);
     if (
       res.data[0] ===
-      "https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png"
+      'https://s3.eu-west-2.amazonaws.com/lifeishappening/close.png'
     ) {
-      this.props.fetchLastClicked("FAVCHANGEDFAIL");
+      this.props.fetchLastClicked('FAVCHANGEDFAIL');
     } else if (
       res.data[0] ===
-      "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"
+      'https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png'
     ) {
-      this.props.fetchLastClicked("favNoImg");
+      this.props.fetchLastClicked('favNoImg');
     } else {
-      this.props.fetchLastClicked("FAVCHANGED");
+      this.props.fetchLastClicked('FAVCHANGED');
     }
-    let favourites = this.state.favourites;
+    const favourites = this.state.favourites;
     favourites[this.state.lastHovered] = res.data;
     this.setState(favourites);
   }
@@ -172,12 +172,12 @@ class Stats extends Component {
     // change lastHovered state
     this.setState({
       lastHovered: i,
-      hover: true
+      hover: true,
     });
     this.favouriteInput.focus();
     this.favouriteInput.value = this.state.favourites[i][1];
-    this.favouriteInput.placeholder = "";
-    this.props.fetchLastClicked("FAVIMG");
+    this.favouriteInput.placeholder = '';
+    this.props.fetchLastClicked('FAVIMG');
   }
 
   onClick(e) {
@@ -186,19 +186,19 @@ class Stats extends Component {
   }
 
   lastClickedFAV(e) {
-    this.props.fetchLastClicked("FAV");
+    this.props.fetchLastClicked('FAV');
     this.likesRef.focus();
   }
 
   lastClickedRT(e) {
-    this.props.fetchLastClicked("RT");
+    this.props.fetchLastClicked('RT');
     this.rtRef.focus();
   }
 
   render() {
     const { insideRetweets, insideLikes } = this.state;
     const { favourites } = this.state;
-    let { rtLength, favLength } = this.state;
+    const { rtLength, favLength } = this.state;
     let widthIR;
     if (rtLength === 1) widthIR = 10;
     if (rtLength === 2) widthIR = 18;
@@ -208,7 +208,7 @@ class Stats extends Component {
     if (rtLength === 7) widthIR = 53;
     if (rtLength === 9) widthIR = 64.5;
     const inputRetweets = {
-      width: `${widthIR}px`
+      width: `${widthIR}px`,
     };
     let widthIL;
     if (favLength === 1) widthIL = 10;
@@ -219,7 +219,7 @@ class Stats extends Component {
     if (favLength === 7) widthIL = 53;
     if (favLength === 9) widthIL = 64.5;
     const inputLikes = {
-      width: `${widthIL}px`
+      width: `${widthIL}px`,
     };
     return (
       <div className="statsContainer">
@@ -233,7 +233,7 @@ class Stats extends Component {
                 onChange={e => this.onChangeRetweets(e)}
                 className="retweetAndLikeNumber inputRetweets"
                 style={inputRetweets}
-                ref={element => {
+                ref={(element) => {
                   this.rtRef = element;
                 }}
               />
@@ -250,7 +250,7 @@ class Stats extends Component {
                 onChange={e => this.onChangeLikes(e)}
                 className="retweetAndLikeNumber inputLikes"
                 style={inputLikes}
-                ref={element => {
+                ref={(element) => {
                   this.likesRef = element;
                 }}
               />
@@ -361,10 +361,10 @@ class Stats extends Component {
             <form
               className={
                 this.state.hover
-                  ? "favouriteSearchBox open"
-                  : "favouriteSearchBox"
+                  ? 'favouriteSearchBox open'
+                  : 'favouriteSearchBox'
               }
-              ref={input => {
+              ref={(input) => {
                 this.formSubmit = input;
               }}
               onSubmit={e => this.changeFavourites(e)}
@@ -373,7 +373,7 @@ class Stats extends Component {
               <input
                 type="text"
                 className="favouriteUsername favouriteUsernameHover"
-                ref={input => {
+                ref={(input) => {
                   this.favouriteInput = input;
                 }}
                 autoComplete="off"
