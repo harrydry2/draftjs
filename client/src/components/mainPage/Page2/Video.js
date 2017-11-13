@@ -16,7 +16,7 @@ class Video extends Component {
     return (
       <video
         source
-        src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
+        src="./promVideo.mp4"
         type="video/mp4"
         muted
         playsInline
