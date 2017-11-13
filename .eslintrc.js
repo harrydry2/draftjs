@@ -10,5 +10,6 @@ module.exports = {
     'react/prop-types': 0,
     'react/no-did-update-set-state': 0,
     'react/sort-comp': 0,
+    'jsx-a11y/media-has-caption': 0,
   },
 };
