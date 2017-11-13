@@ -736,7 +736,8 @@ input, .tweetTextSize {
   width: 560px;
   height: 315px;
   top: 8vh;
-  left: 6.5%; }
+  left: 6.5%;
+  border: 2px solid gold; }
   @media screen and (max-width: 1260px) {
     .federerVideo {
       width: 540px;

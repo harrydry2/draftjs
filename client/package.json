@@ -50,13 +50,16 @@
     "react-redux": "^5.0.6",
     "react-responsive": "^2.0.0",
     "react-router-dom": "^4.2.2",
+    "react-scroll": "^1.6.4",
     "react-scroll-to-component": "^1.0.1",
+    "react-scroll-trigger": "^0.1.4",
     "react-select": "^1.0.0-rc.10",
     "react-selectize": "^3.0.1",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "resolve-url-loader": "^2.1.1",
+    "scroll-watcher": "^0.6.0",
     "twitter": "^1.7.1"
   }
 }

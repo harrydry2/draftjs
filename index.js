@@ -16,6 +16,18 @@ app.use(bodyParser.json());
 require('./routes/twitterRoutes')(app);
 require('./routes/billingRoutes')(app);
 
+// if (process.env.NODE_ENV !== 'production') {
+//   const webpackMiddleware = require('webpack-dev-middleware');
+//   const webpack = require('webpack');
+//   const webpackConfig = require('./client/webpack.config.js');
+//   app.use(webpackMiddleware(webpack(webpackConfig)));
+// } else {
+//   app.use('/', expressStaticGzip('client/dist'));
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+//   });
+// }
+
 // building the project each time
 
 app.use('/', expressStaticGzip('client/dist'));
