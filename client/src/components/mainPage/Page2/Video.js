@@ -21,6 +21,7 @@ class Video extends Component {
         muted
         playsInline
         loop
+        preload="auto"
         className="federerVideo"
         poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
         ref={(element) => {
