@@ -36,7 +36,6 @@ class Video extends Component {
         <video
           src="./promVideo.mp4"
           type="video/mp4"
-          muted
           playsInline
           loop
           preload="auto"
