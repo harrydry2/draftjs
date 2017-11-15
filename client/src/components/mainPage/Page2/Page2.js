@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import CheckmarkOutline1 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline1.svg';
 import CheckmarkOutline2 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline2.svg';
 import CheckmarkOutline3 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline3.svg';
+import ScrollWatcher from 'scroll-watcher';
 
 class Page2 extends Component {
   constructor(props) {
@@ -13,28 +14,31 @@ class Page2 extends Component {
 		this.playPhoneVideo = this.playPhoneVideo.bind(this);
 	}
 
-  componentDidUpdate() {
-    if (
-      (this.video.currentTime === 0 &&
-        this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0
-    ) { 
-			this.video.play();
-			if (this.video.paused === false) {
-				console.log('fuck');
-				this.setState({
-					posterDisplay: 'none',
-				});		
-			} 
-		}
-	}
-	
-	playPhoneVideo(e){
+
+	componentDidMount() {
+    const scroll = new ScrollWatcher();
+
+    scroll.watch('#federerVideo')
+      .on('enter:full', (e) => {
+				e.target.play();
+				if (this.video.paused === false) {
+					this.setState({
+						posterDisplay: 'none',
+					});
+				}
+      })
+      .on('exit:partial', (e) => {
+        e.target.pause();
+      });
+  }
+
+
+		playPhoneVideo(e){
 		this.video.play();
 		this.setState({
 			posterDisplay: 'none',
 		});
 	}
-
 
   render() {
 		const poster = {
@@ -73,7 +77,7 @@ class Page2 extends Component {
 					loop
 					id="federerVideo"
 					ref={(element) => {this.video = element;}}
-					onClick={() => (this.video.paused ? (e => this.playPhoneVideo(e)) : this.video.pause())}
+					// onClick={() => (this.video.paused ? (e => this.playPhoneVideo(e)) : this.video.pause())}
 					/>
 					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
 				</div>
