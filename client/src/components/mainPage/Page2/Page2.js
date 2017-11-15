@@ -28,12 +28,13 @@ class Page2 extends Component {
 				}
       })
       .on('exit:partial', (e) => {
+				console.log('exit');
         e.target.pause();
       });
   }
 
 
-		playPhoneVideo(e){
+	playPhoneVideo(e){
 		this.video.play();
 		this.setState({
 			posterDisplay: 'none',
@@ -77,7 +78,7 @@ class Page2 extends Component {
 					loop
 					id="federerVideo"
 					ref={(element) => {this.video = element;}}
-					// onClick={() => (this.video.paused ? (e => this.playPhoneVideo(e)) : this.video.pause())}
+					onClick={() => (this.video.paused ? (e => this.playPhoneVideo(e)) : this.video.pause())}
 					/>
 					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
 				</div>
