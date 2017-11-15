@@ -38,11 +38,10 @@ class Page2 extends Component {
 	playPhoneVideo(){
 		console.log('function fired');
 		if (this.video.paused) {
-			console.log('currently paused');
-			this.video.play();
 			this.setState({
 				posterDisplay: 'none',
 			});
+			this.video.play();
 		} else {
 			this.video.pause();
 		}
