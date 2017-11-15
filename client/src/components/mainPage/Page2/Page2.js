@@ -22,7 +22,8 @@ class Page2 extends Component {
       .on('enter:full', (e) => {
 				console.log('enter full');
 				e.target.play();
-				if (this.video.paused === false || this.video.currentTime === 0) {
+				// if it is actually playing
+				if (this.video.paused === false || this.video.currentTime !== 0) {
 					this.setState({
 						posterDisplay: 'none',
 					});
@@ -35,9 +36,9 @@ class Page2 extends Component {
   }
 
 
-	playPhoneVideo(){
+	async playPhoneVideo(){
 		console.log('function fired');
-		if (this.video.paused) {
+		if (this.video.paused || this.video.currentTime === 0) {
 			this.setState({
 				posterDisplay: 'none',
 			});
