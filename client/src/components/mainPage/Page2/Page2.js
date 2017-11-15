@@ -20,6 +20,7 @@ class Page2 extends Component {
 
     scroll.watch('#federerVideo')
       .on('enter:full', (e) => {
+				console.log('enter full');
 				e.target.play();
 				if (this.video.paused === false) {
 					this.setState({
@@ -34,11 +35,17 @@ class Page2 extends Component {
   }
 
 
-	playPhoneVideo(e){
-		this.video.play();
-		this.setState({
-			posterDisplay: 'none',
-		});
+	playPhoneVideo(){
+		console.log('function fired');
+		if (this.video.paused) {
+			console.log('currently paused');
+			this.video.play();
+			this.setState({
+				posterDisplay: 'none',
+			});
+		} else {
+			this.video.pause();
+		}
 	}
 
   render() {
@@ -78,7 +85,7 @@ class Page2 extends Component {
 					loop
 					id="federerVideo"
 					ref={(element) => {this.video = element;}}
-					onClick={() => (this.video.paused ? (e => this.playPhoneVideo(e)) : this.video.pause())}
+					onClick={e => this.playPhoneVideo(e)}					
 					/>
 					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
 				</div>
