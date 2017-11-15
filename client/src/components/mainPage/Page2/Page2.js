@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import Video from './Video';
+// import Video from './Video';
 import CheckmarkOutline1 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline1.svg';
 import CheckmarkOutline2 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline2.svg';
 import CheckmarkOutline3 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline3.svg';
+import ScrollWatcher from 'scroll-watcher';
 
 class Page2 extends Component {
   constructor(props) {
     super(props);
+	}
+	componentDidMount() {
+    const scroll = new ScrollWatcher();
+
+    scroll.watch('#federerVideo')
+      .on('enter:full', (e) => {
+				e.target.play();
+        console.log("I'm fully inside viewport");
+      })
+      .on('exit:partial', (e) => {
+        e.target.pause();
+        console.log("I'm partially out of viewport");
+      });
   }
   render() {
     return (
@@ -17,7 +31,7 @@ class Page2 extends Component {
           <div className="actionCheckContainer">
             <CheckmarkOutline1 className="checkmarkOutline" />
             <div className="instruction gothamBook instruction1">
-              Input a unique twitter handle and press enter. e.g.{' '}
+              Input a unique Twitter handle and press enter. e.g.{' '}
               <div className="rfHandle">@RogerFederer</div>
             </div>
           </div>
@@ -30,11 +44,21 @@ class Page2 extends Component {
           <div className="actionCheckContainer">
             <CheckmarkOutline3 className="checkmarkOutline" />
             <div className="instruction gothamBook">
-              Edit your Retweets & likes. Then input a twitter handle to change favourites
+              Edit your retweets & likes. Then input a twitter handle to change favourites
             </div>
           </div>
         </div>
-        <Video scrolledAmount={this.props.scrolledAmount} />
+				<video
+        src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
+        muted
+        playsInline
+        loop
+				id="federerVideo"
+				poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
+				preload="metadata"
+				ref={(element) => {this.video = element;}}
+				onClick={() => (this.video.paused ? this.video.play() : this.video.pause())}
+      	/>
       </div>
     );
   }

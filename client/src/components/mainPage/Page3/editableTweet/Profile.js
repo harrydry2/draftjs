@@ -14,19 +14,19 @@ class Profile extends Component {
       favImgCounter: 0,
       favChangedCounter: 0,
       popoverHTML: [
-        'This is your tweet. Change <div class="rfHandle">@140_Canvas</div> to any unique twitter handle and press enter 😜', // 0
+        'This is your tweet. Change <div class="rfHandle">@140_Canvas</div> to any unique Twitter handle and press enter 😜', // 0
         "Awesome! Now it's time to write up your tweet 🖋️ You can also change the date if you want 😀", // 1
         "It looks like you've entered an invalid twitter username 🚫 Please try again.", // 2
         'You\'re trying to edit the wrong field 🚫 Try editing the username below e.g. <div class="rfHandle">@140_Canvas</div>', // 3
-        "To change Retweets simply edit this field and watch the number of 'Retweets' update automatically below 😎", // 4
-        "To change Likes edit this field and watch the number of 'Likes' update automatically below 😁", // 5
+        "To change 'retweets' simply edit this field and watch the number of 'retweets' update automatically below 😎", // 4
+        "To change 'likes' edit this field and watch the number of 'likes' update automatically below 😁", // 5
         "To change 'favourites' type in any unqiue twitter username and press enter 🎇", // 6
         "Awesome! Looks like you've got the hang of this! The tweet autosaves so when you're ready choose your size and click Buy Now 🎁", // 7
         "It looks like you've entered an invalid twitter username. Please try again 🚫", // 8
         'You can also edit replies if you want 😀 Simply type in a new number.', // 9
-        "You can't edit this! 🚫 To change Retweets edit the number in the section above and this field will update automatically", // 10
-        "You can't edit this! 🚫 To change Likes edit the number in the section above and this field will update automatically", // 11
-        "Write your tweet here. To include emoji's either use an emoji keyboard or copy and paste them from the web 🔥", // 12
+        "You can't edit this! 🚫 To change 'retweets' edit the number in the section above and this field will update automatically", // 10
+        "You can't edit this! 🚫 To change 'likes' edit the number in the section above and this field will update automatically", // 11
+        `Write your tweet here. To include emoji's either use an emoji keyboard or copy and paste them from <a target="_blank" href="https://emojipedia.org/"> https://emojipedia.org/ </a> 🔥`, // 12
         'Change this field to any unique twitter handle and press enter e.g. <div class="rfHandle">@RogerFederer</div>', // 13
         'You can edit the date of your tweet in this field 📅', // 14
         'This user has no profile or cover image. You might want to re-enter a new username 🚫', // 15
@@ -66,8 +66,8 @@ class Profile extends Component {
     }
     if (
       this.props.lastClickedReducer.lastClicked === 'FAVIMG' &&
-      this.state.i !== 6 &&
-      this.state.favImgCounter < 1
+      this.state.i !== 6
+      // this.state.favImgCounter < 3
     ) {
       const counter = this.state.favImgCounter + 1;
       this.setState({
@@ -77,8 +77,8 @@ class Profile extends Component {
     }
     if (
       this.props.lastClickedReducer.lastClicked === 'FAVCHANGED' &&
-      this.state.i !== 7 &&
-      this.state.favChangedCounter < 2
+      this.state.i !== 7
+      // this.state.favChangedCounter < 3
     ) {
       const counter = this.state.favChangedCounter + 1;
       this.setState({

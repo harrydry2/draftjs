@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import * as actions from "../../../actions/index";
 import Select from "react-select";
 import PaymentBlock from "./paymentBlock";
+import PaymentBlock1 from "./paymentBlock1";
 import "../../../../node_modules/react-select/dist/react-select.css";
 
 class Buttons extends Component {
@@ -62,7 +63,7 @@ class Buttons extends Component {
           className="blueBorderButton sizeButton"
         />
         <div className="blueBorderButton priceDiv">Price: £{price}</div>
-        <PaymentBlock />
+        <PaymentBlock1 />
       </div>
     );
   }
