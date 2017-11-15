@@ -15,7 +15,7 @@ class Page2 extends Component {
     scroll.watch('#federerVideo')
       .on('enter', (e) => {
 				e.target.play();
-				e.target.removeAttribute('controls');
+				// e.target.removeAttribute('controls');
 			})
       .on('exit:partial', (e) => {
         e.target.pause();
