@@ -37,6 +37,7 @@ class Page2 extends Component {
 
 	playPhoneVideo(){
 		console.log('function fired');
+		alert('banter')
 		if (this.video.paused || this.video.currentTime === 0) {
 			console.log('currently paused');
 			this.video.play();
@@ -77,7 +78,7 @@ class Page2 extends Component {
             </div>
           </div>
         </div>
-				<div className="federerVideoOuter">
+				<div className="federerVideoOuter" onClick={e => this.playPhoneVideo(e)}>
 					<video
 					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
 					muted
@@ -85,7 +86,7 @@ class Page2 extends Component {
 					loop
 					id="federerVideo"
 					ref={(element) => {this.video = element;}}
-					onClick={e => this.playPhoneVideo(e)}					
+					// onClick={e => this.playPhoneVideo(e)}					
 					/>
 					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
 				</div>
