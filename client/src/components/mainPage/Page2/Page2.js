@@ -37,7 +37,7 @@ class Page2 extends Component {
 
 	playPhoneVideo(){
 		console.log('function fired');
-		if (this.video.paused) {
+		if (this.video.paused || this.video.currentTime === 0) {
 			console.log('currently paused');
 			this.video.play();
 			this.setState({
