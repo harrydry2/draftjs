@@ -13,10 +13,10 @@ class Page2 extends Component {
     const scroll = new ScrollWatcher();
 
     scroll.watch('#federerVideo')
-      .on('enter', (e) => {
+      .on('enter:full', (e) => {
+				console.log('fuckfitches');
 				e.target.play();
-				e.target.removeAttribute('controls');
-				console.log('fuckbitches');
+				// e.target.removeAttribute('controls');
 			})
       .on('exit:partial', (e) => {
         e.target.pause();
@@ -55,9 +55,9 @@ class Page2 extends Component {
         playsInline
         loop
 				id="federerVideo"
-				poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
-				controls="true"
-				preload="metadata"
+				// poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
+				// controls="true"
+				// preload="metadata"
 				ref={(element) => {this.video = element;}}
 				onClick={() => (this.video.paused ? this.video.play() : this.video.pause())}
       	/>
