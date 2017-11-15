@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import CheckmarkOutline1 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline1.svg';
 import CheckmarkOutline2 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline2.svg';
 import CheckmarkOutline3 from 'svg-react-loader?name=Icon!../../../svg/checkmarkOutline3.svg';
-import ScrollWatcher from 'scroll-watcher';
 
 class Page2 extends Component {
   constructor(props) {
@@ -12,20 +11,23 @@ class Page2 extends Component {
 			posterDisplay: 'auto',
 		}
 	}
-	componentDidMount() {
-    const scroll = new ScrollWatcher();
 
-    scroll.watch('#federerVideo')
-      .on('enter:full', (e) => {
+  componentDidUpdate() {
+    if (
+      (this.video.currentTime === 0 &&
+        this.video.getBoundingClientRect().top + 100 - window.innerHeight) < 0
+    ) { 
+			this.video.play();
+			if (this.video.paused === false) {
+				console.log('fuck');
 				this.setState({
 					posterDisplay: 'none',
-				});
-				e.target.play();
-			})
-      .on('exit:partial', (e) => {
-        e.target.pause();
-      });
-	}
+				});		
+			} 
+		}
+  }
+
+
   render() {
 		const poster = {
       display: this.state.posterDisplay,
