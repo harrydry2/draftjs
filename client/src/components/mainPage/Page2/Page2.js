@@ -13,15 +13,15 @@ class Page2 extends Component {
     const scroll = new ScrollWatcher();
 
     scroll.watch('#federerVideo')
-      .on('enter:full', (e) => {
+      .on('enter', (e) => {
 				e.target.play();
-        console.log("I'm fully inside viewport");
-      })
+				e.target.removeAttribute('controls');
+			})
       .on('exit:partial', (e) => {
         e.target.pause();
         console.log("I'm partially out of viewport");
       });
-  }
+	}
   render() {
     return (
       <div className="page2Wrapper">
@@ -55,6 +55,7 @@ class Page2 extends Component {
         loop
 				id="federerVideo"
 				poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
+				controls="true"
 				preload="metadata"
 				ref={(element) => {this.video = element;}}
 				onClick={() => (this.video.paused ? this.video.play() : this.video.pause())}
