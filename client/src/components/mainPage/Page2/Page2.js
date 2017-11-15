@@ -22,7 +22,7 @@ class Page2 extends Component {
       .on('enter:full', (e) => {
 				console.log('enter full');
 				e.target.play();
-				if (this.video.paused === false) {
+				if (this.video.paused === false || this.video.currentTime === 0) {
 					this.setState({
 						posterDisplay: 'none',
 					});
