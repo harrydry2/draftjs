@@ -7,23 +7,29 @@ import ScrollWatcher from 'scroll-watcher';
 
 class Page2 extends Component {
   constructor(props) {
-    super(props);
+		super(props);
+		this.state = {
+			posterDisplay: 'auto',
+		}
 	}
 	componentDidMount() {
     const scroll = new ScrollWatcher();
 
     scroll.watch('#federerVideo')
       .on('enter:full', (e) => {
-				console.log('fuckfitches');
+				this.setState({
+					posterDisplay: 'none',
+				});
 				e.target.play();
-				// e.target.removeAttribute('controls');
 			})
       .on('exit:partial', (e) => {
         e.target.pause();
-        console.log("I'm partially out of viewport");
       });
 	}
   render() {
+		const poster = {
+      display: this.state.posterDisplay,
+    };
     return (
       <div className="page2Wrapper">
         <div className="P2WrapperBackground" />
@@ -49,18 +55,18 @@ class Page2 extends Component {
             </div>
           </div>
         </div>
-				<video
-        src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
-        muted
-        playsInline
-        loop
-				id="federerVideo"
-				// poster="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg"
-				// controls="true"
-				// preload="metadata"
-				ref={(element) => {this.video = element;}}
-				onClick={() => (this.video.paused ? this.video.play() : this.video.pause())}
-      	/>
+				<div className="federerVideoOuter">
+					<video
+					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
+					muted
+					playsInline
+					loop
+					id="federerVideo"
+					ref={(element) => {this.video = element;}}
+					onClick={() => (this.video.paused ? this.video.play() : this.video.pause())}
+					/>
+					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
+				</div>
       </div>
     );
   }
