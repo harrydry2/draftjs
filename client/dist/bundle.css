@@ -431,26 +431,22 @@ input, .tweetTextSize {
   @media screen and (max-width: 1060px) {
     .P1WrapperBackground {
       transform: skewY(-15deg) translateY(-14%); } }
-  @media screen and (max-width: 1060px) {
+  @media screen and (max-width: 550px) {
     .P1WrapperBackground {
       transform: skewY(-15deg) translateY(-7%); } }
-  @media screen and (max-width: 1060px) {
-    .P1WrapperBackground {
-      transform: skewY(-15deg) translateY(-6%); } }
 
 .examplePhoto {
   position: absolute;
   width: 638px;
   height: 432.8px;
   z-index: 2;
-  top: 20%;
+  bottom: 17%;
   right: 1%;
   opacity: 0; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .examplePhoto {
       width: 586.96px;
-      height: 398.2px;
-      top: 24%; } }
+      height: 398.2px; } }
   @media screen and (max-width: 1060px) {
     .examplePhoto {
       position: static;
