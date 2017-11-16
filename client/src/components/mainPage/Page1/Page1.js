@@ -27,7 +27,7 @@ const Page1 = () => (
       </div>
     </div>
     <img
-      src="https://s3.eu-west-2.amazonaws.com/lifeishappening/exampleTweet.png"
+      src="https://s3.eu-west-2.amazonaws.com/lifeishappening/test2a.png"
       className="examplePhoto animatedImg"
       alt=""
     />
