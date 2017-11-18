@@ -88,7 +88,7 @@ class PaymentBlock extends Component {
         billingAddress
         amount={stripePrice}
         token={(token, address) => this.handleToken(token, address)}
-        stripeKey="pk_live_IYA9l3NvFPJTE7PIIxLq1b4o"
+        stripeKey="pk_test_yUrPLJzhnMHyCGUgLkln85hA"
       >
         <button className="paymentButton">Buy Now</button>
       </StripeCheckout>
@@ -100,7 +100,11 @@ function mapStateToProps({
   infoObject, textReducer, statsReducer, footerReducer, sizeReducer,
 }) {
   return {
-    infoObject, textReducer, statsReducer, footerReducer, sizeReducer,
+    infoObject,
+    textReducer,
+    statsReducer,
+    footerReducer,
+    sizeReducer,
   };
 }
 
