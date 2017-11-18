@@ -26,7 +26,7 @@ class Profile extends Component {
         'You can also edit replies if you want 😀 Simply type in a new number.', // 9
         "You can't edit this! 🚫 To change 'retweets' edit the number in the section above and this field will update automatically", // 10
         "You can't edit this! 🚫 To change 'likes' edit the number in the section above and this field will update automatically", // 11
-        `Write your tweet here. To include emoji's either use an emoji keyboard or copy and paste them from <a target="_blank" href="https://emojipedia.org/"> https://emojipedia.org/ </a> 🔥`, // 12
+        'Write your tweet here. To include emoji\'s either use an emoji keyboard or copy and paste them from <a target="_blank" href="https://emojipedia.org/"> https://emojipedia.org/ </a> 🔥', // 12
         'Change this field to any unique twitter handle and press enter e.g. <div class="rfHandle">@RogerFederer</div>', // 13
         'You can edit the date of your tweet in this field 📅', // 14
         'This user has no profile or cover image. You might want to re-enter a new username 🚫', // 15
@@ -153,7 +153,7 @@ class Profile extends Component {
     const { fullName, profileImage, verified } = this.props.infoObject;
     let display;
     if (!verified) {
-      display = 'inline';
+      display = 'none';
     } else {
       display = 'inline';
     }

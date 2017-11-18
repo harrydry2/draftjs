@@ -7,49 +7,45 @@ import ScrollWatcher from 'scroll-watcher';
 
 class Page2 extends Component {
   constructor(props) {
-		super(props);
-		this.state = {
-			posterDisplay: 'auto',
-		}
-		this.playPhoneVideo = this.playPhoneVideo.bind(this);
-	}
+    super(props);
+    this.state = {
+      posterDisplay: 'auto',
+    };
+    this.playPhoneVideo = this.playPhoneVideo.bind(this);
+  }
 
-
-	componentDidMount() {
+  componentDidMount() {
     const scroll = new ScrollWatcher();
 
-    scroll.watch('#federerVideo')
+    scroll
+      .watch('#federerVideo')
       .on('enter:full', (e) => {
-				console.log('enter full');
-				e.target.play();
-				// if it is actually playing
-				if (this.video.paused === false || this.video.currentTime !== 0) {
-					this.setState({
-						posterDisplay: 'none',
-					});
-				}
+        e.target.play();
+        // if it is actually playing
+        if (this.video.paused === false || this.video.currentTime !== 0) {
+          this.setState({
+            posterDisplay: 'none',
+          });
+        }
       })
       .on('exit:partial', (e) => {
-				console.log('exit');
         e.target.pause();
       });
   }
 
-
-	async playPhoneVideo(){
-		console.log('function fired');
-		if (this.video.paused || this.video.currentTime === 0) {
-			this.setState({
-				posterDisplay: 'none',
-			});
-			this.video.play();
-		} else {
-			this.video.pause();
-		}
-	}
+  async playPhoneVideo() {
+    if (this.video.paused || this.video.currentTime === 0) {
+      this.setState({
+        posterDisplay: 'none',
+      });
+      this.video.play();
+    } else {
+      this.video.pause();
+    }
+  }
 
   render() {
-		const poster = {
+    const poster = {
       display: this.state.posterDisplay,
     };
     return (
@@ -77,18 +73,25 @@ class Page2 extends Component {
             </div>
           </div>
         </div>
-				<div className="federerVideoOuter" onClick={e => this.playPhoneVideo(e)}>
-					<video
-					src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
-					muted
-					playsInline
-					loop
-					id="federerVideo"
-					ref={(element) => {this.video = element;}}
-					// onClick={e => this.playPhoneVideo(e)}					
-					/>
-					<img src="https://s3.eu-west-2.amazonaws.com/lifeishappening/draftPoster.jpg" alt="" className="poster" style={poster}/>
-				</div>
+        <div className="federerVideoOuter" onClick={e => this.playPhoneVideo(e)}>
+          <video
+            src="https://s3.eu-west-2.amazonaws.com/lifeishappening/promVideo.mp4"
+            muted
+            playsInline
+            loop
+            id="federerVideo"
+            ref={(element) => {
+              this.video = element;
+            }}
+            // onClick={e => this.playPhoneVideo(e)}
+          />
+          <img
+            src="https://s3.eu-west-2.amazonaws.com/lifeishappening/TCdraftPoster.jpg"
+            alt=""
+            className="poster"
+            style={poster}
+          />
+        </div>
       </div>
     );
   }

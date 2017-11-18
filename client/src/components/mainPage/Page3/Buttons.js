@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "../../../actions/index";
-import Select from "react-select";
-import PaymentBlock from "./paymentBlock";
-import PaymentBlock1 from "./paymentBlock1";
-import "../../../../node_modules/react-select/dist/react-select.css";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../../actions/index';
+import Select from 'react-select';
+import PaymentBlock from './paymentBlock';
+import PaymentBlock1 from './paymentBlock1';
+import '../../../../node_modules/react-select/dist/react-select.css';
 
 class Buttons extends Component {
   constructor(props) {
@@ -12,29 +12,29 @@ class Buttons extends Component {
     this.state = {
       options: [
         {
-          value: "Size: A0 (841 x 1189 mm)",
-          label: "Size: A0 (841 x 1189 mm)",
-          priceOption: "30",
+          value: 'Size: A1 (594 x 841 mm)',
+          label: 'Size: A1 (594 x 841 mm)',
+          priceOption: '26',
           clearable: false,
-          searchable: false
+          searchable: false,
         },
         {
-          value: "Size: A1 (594 x 841 mm)",
-          label: "Size: A1 (594 x 841 mm)",
-          priceOption: "24",
+          value: 'Size: A2 (420 x 594 mm)',
+          label: 'Size: A2 (420 x 594 mm)',
+          priceOption: '22',
           clearable: false,
-          searchable: false
+          searchable: false,
         },
         {
-          value: "Size: A4 (210 × 297 mm)",
-          label: "Size: A4 (210 × 297 mm)",
-          priceOption: "20",
+          value: 'Size: A4 (210 × 297 mm)',
+          label: 'Size: A4 (210 × 297 mm)',
+          priceOption: '17',
           clearable: false,
-          searchable: false
-        }
+          searchable: false,
+        },
       ],
-      value: "Size: A1 (594 x 841 mm)",
-      price: "24"
+      value: 'Size: A1 (594 x 841 mm)',
+      price: '26',
     };
   }
 
@@ -45,7 +45,7 @@ class Buttons extends Component {
   onChange(e) {
     this.setState({
       value: e.value,
-      price: e.priceOption
+      price: e.priceOption,
     });
   }
 

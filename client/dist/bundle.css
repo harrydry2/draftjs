@@ -438,15 +438,15 @@ input, .tweetTextSize {
 .examplePhoto {
   position: absolute;
   width: 638px;
-  height: 432.8px;
+  height: 439px;
   z-index: 2;
   bottom: 17%;
   right: 1%;
   opacity: 0; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .examplePhoto {
-      width: 586.96px;
-      height: 398.2px; } }
+      width: 587px;
+      height: 404.3px; } }
   @media screen and (max-width: 1060px) {
     .examplePhoto {
       position: static;
@@ -454,17 +454,17 @@ input, .tweetTextSize {
   @media screen and (max-width: 650px) {
     .examplePhoto {
       width: 528px;
-      height: 358px; } }
+      height: 363.7px; } }
   @media screen and (max-width: 550px) {
     .examplePhoto {
       width: 422.4px;
-      height: 286.4px;
+      height: 290.7px;
       margin-top: 40px;
       margin-bottom: 10px; } }
   @media screen and (max-width: 435px) {
     .examplePhoto {
       width: 338px;
-      height: 228px; } }
+      height: 232.8px; } }
 
 .canvasLogo {
   width: 228.44px;
@@ -1009,7 +1009,7 @@ input, .tweetTextSize {
   width: 410px;
   height: 334px;
   z-index: 2;
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
   @media screen and (max-width: 1230px) {
     .bodyContainerp3 {
       left: 5%; } }
@@ -1021,7 +1021,7 @@ input, .tweetTextSize {
     .bodyContainerp3 {
       left: 0;
       padding-top: 35px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       width: auto;
       height: auto; } }
 
@@ -1799,6 +1799,83 @@ input, .tweetTextSize {
     opacity: 0.9; }
   .inputReplies:focus {
     opacity: 1; }
+
+.footerSection {
+  height: 80px;
+  background: #FAFAFA;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.18);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media screen and (max-width: 1060px) {
+    .footerSection {
+      justify-content: center; } }
+  @media screen and (max-width: 360px) {
+    .footerSection {
+      height: 60px; } }
+
+.footerFont {
+  font-size: 16px;
+  font-family: Gotham-Medium;
+  color: #34434b; }
+  @media screen and (max-width: 430px) {
+    .footerFont {
+      font-size: 14.5px; } }
+  @media screen and (max-width: 430px) {
+    .footerFont {
+      font-size: 13px; } }
+  @media screen and (max-width: 350px) {
+    .footerFont {
+      font-size: 12px; } }
+
+.copyright {
+  padding-left: 7%; }
+  @media screen and (max-width: 1230px) {
+    .copyright {
+      padding-left: 5%; } }
+  @media screen and (max-width: 1060px) {
+    .copyright {
+      display: none; } }
+
+.anyQuestions {
+  transform: translateX(-10px); }
+  @media screen and (max-width: 1060px) {
+    .anyQuestions {
+      transform: translateX(0); } }
+
+a:-webkit-any-link {
+  text-decoration: none !important; }
+
+.emailHandle {
+  color: #2E55F5; }
+
+.animationLine {
+  position: relative; }
+  .animationLine:hover::after {
+    width: 100%; }
+  .animationLine::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid #2E55F5;
+    transition: 0.4s;
+    transform: translateY(2px); }
+
+.twitter {
+  width: 22px;
+  height: 18px;
+  fill: #34434b; }
+  .twitter:hover {
+    fill: #2E55F5; }
+
+.twitterLeft {
+  padding-right: 5%; }
+  @media screen and (max-width: 1060px) {
+    .twitterLeft {
+      display: none; } }
 
 .thankYouPageBackground {
   background-color: #f3f3f2;

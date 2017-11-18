@@ -15,7 +15,7 @@ class Stats extends Component {
       favourites: [
         [
           'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/adele.jpg',
-          'French Motana',
+          'Adele',
         ],
         [
           'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/leoDiCaprio.jpg',

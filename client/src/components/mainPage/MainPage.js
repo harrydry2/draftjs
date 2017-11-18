@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Page1 from './Page1/Page1';
 import Page2 from './Page2/Page2';
 import Page3 from './Page3/Page3';
+import Footer from './Footer/Footer';
 
 class MainPage extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class MainPage extends Component {
         <Page1 />
         <Page2 scrolledAmount={this.state.scrolledAmount} />
         <Page3 width={this.state.width} />
+        <Footer />
       </div>
     );
   }
