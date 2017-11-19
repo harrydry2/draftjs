@@ -12,5 +12,6 @@ module.exports = {
     'react/sort-comp': 0,
     'jsx-a11y/media-has-caption': 0,
     'react/no-danger': 0,
+    'max-len': 0,
   },
 };

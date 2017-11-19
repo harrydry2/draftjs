@@ -88,7 +88,7 @@ class PaymentBlock extends Component {
         billingAddress
         amount={stripePrice}
         token={(token, address) => this.handleToken(token, address)}
-        stripeKey="pk_live_onj1lSO92e4BA2eafkdBChDt"
+        stripeKey="pk_test_yUrPLJzhnMHyCGUgLkln85hA"
       >
         <button className="paymentButton">Buy Now</button>
       </StripeCheckout>

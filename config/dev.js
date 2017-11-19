@@ -1,5 +1,5 @@
 module.exports = {
-  mongoURI: 'mongodb://harrydry:DavidLuiz4@ds147964.mlab.com:47964/draftjs',
+  mongoURI: 'mongodb://harrydry:DavidLuiz4@ds241065.mlab.com:41065/140canvasproduction',
   stripePublishableKey: 'pk_test_yUrPLJzhnMHyCGUgLkln85hA',
   stripeSecretKey: 'sk_test_PM7YcL0Qs56hSsQp3c6YEaTJ',
   mailHost: 'smtp.postmarkapp.com',

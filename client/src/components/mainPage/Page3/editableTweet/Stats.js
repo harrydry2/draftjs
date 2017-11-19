@@ -11,7 +11,7 @@ class Stats extends Component {
       insideRetweets: '1,670,390',
       insideLikes: '3,844,290',
       footerRetweets: '1.7M',
-      footerLikes: '5.8M',
+      footerLikes: '3.8M',
       favourites: [
         [
           'https://s3.eu-west-2.amazonaws.com/lifeishappening/originalImg/adele.jpg',
@@ -85,6 +85,8 @@ class Stats extends Component {
       this.state.footerRetweets,
       this.state.footerLikes,
       this.state.favourites,
+      this.state.insideRetweets,
+      this.state.insideLikes,      
     );
     if (this.rtRef.value) {
       const rtLength = this.rtRef.value.length;
