@@ -22,15 +22,20 @@ class PaymentBlock extends Component {
   async handleToken(token, address) {
     const { username } = this.props.infoObject;
     const { dateAndTime, editorState } = this.props.textReducer;
-    const { insideRetweets, insideLikes, favouritesArray } = this.props.statsReducer;
+    const {
+      insideRetweets,
+      insideLikes,
+      favouritesArray,
+    } = this.props.statsReducer;
     const { insideReplies } = this.props.footerReducer;
     const eachFavourite = favouritesArray.map(favourite => favourite[1]);
     const timeOfPurchase = format(new Date(), 'h:mm A - D MMM YYYY');
     const emailDate = format(new Date(), 'MM/DD/YYYY');
     // manipulating price
-    const { size, price } = this.props.sizeReducer;
-    const emailPrice = `${price}.00`;
-    const stripePrice = parseFloat(`${price}00`);
+    const { size, sumTotal } = this.props.sizeReducer;
+    const emailPrice = `${sumTotal}.00`;
+    const stripePrice = parseFloat(`${sumTotal}00`);
+    console.log(stripePrice, 'stripePrice');
     const toPost = {
       username,
       tweetDate: dateAndTime,
@@ -97,7 +102,11 @@ class PaymentBlock extends Component {
 }
 
 function mapStateToProps({
-  infoObject, textReducer, statsReducer, footerReducer, sizeReducer,
+  infoObject,
+  textReducer,
+  statsReducer,
+  footerReducer,
+  sizeReducer,
 }) {
   return {
     infoObject,

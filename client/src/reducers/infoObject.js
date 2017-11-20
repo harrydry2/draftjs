@@ -22,17 +22,38 @@ const initialStatsObject = {
   insideRetweets: '1,670,390',
   insideLikes: '3,844,290',
   favouritesArray: [
-    ['http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg', 'neymarjr'],
+    [
+      'http://pbs.twimg.com/profile_images/907721243138424832/cLPYPDvd_400x400.jpg',
+      'neymarjr',
+    ],
     [
       'http://pbs.twimg.com/profile_images/573230831688290304/-qLaj3t7_400x400.png',
       'thecampaignbook',
     ],
-    ['http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg', 'ArianaGrande'],
-    ['http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg', 'chris_kammy'],
-    ['http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg', 'Cristiano'],
-    ['http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg', 'jeremycorbyn'],
-    ['http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg', 'JLo'],
-    ['http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg', 'Oprah'],
+    [
+      'http://pbs.twimg.com/profile_images/910720968305152001/DUogJANZ_400x400.jpg',
+      'ArianaGrande',
+    ],
+    [
+      'http://pbs.twimg.com/profile_images/1374860273/Brief_CK_400x400.jpg',
+      'chris_kammy',
+    ],
+    [
+      'http://pbs.twimg.com/profile_images/892679444799868928/lht8DtPv_400x400.jpg',
+      'Cristiano',
+    ],
+    [
+      'http://pbs.twimg.com/profile_images/868124921402150912/V0SkMhCD_400x400.jpg',
+      'jeremycorbyn',
+    ],
+    [
+      'http://pbs.twimg.com/profile_images/882405762839871488/BGcggljY_400x400.jpg',
+      'JLo',
+    ],
+    [
+      'http://pbs.twimg.com/profile_images/771885422834098176/c5_Nj8j4_400x400.jpg',
+      'Oprah',
+    ],
     [
       'http://pbs.twimg.com/profile_images/786423002820784128/cjLHfMMJ_400x400.jpg',
       'MariaSharapova',
@@ -46,7 +67,7 @@ const initialReplies = {
 
 const initialSize = {
   size: 'Size: A1 (594 x 841 mm)',
-  price: '24',
+  sumTotal: 26,
 };
 
 const initialPInfo = {
