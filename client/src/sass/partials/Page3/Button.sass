@@ -1,8 +1,8 @@
 // overwriting default styles SIZE BUTTON SIZE BUTTON 
 .Select-value
-	transform: translateX(11.9px) !important
+	transform: translateX(3px) !important
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
-		transform: translateX(0.92vw) !important
+		transform: translateX(0vw) !important
 	@media screen and (max-width: 550px)
 		transform: translateX(0px) !important
 
@@ -44,6 +44,7 @@
 .is-open > .Select-control .Select-arrow
 	border-color: transparent transparent #2c76d1 !important
 	top: -3.3px !important
+	z-index: 1000 !important	
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		transform: translateX(-0.50vw) !important
 		top: -0.25vw !important
@@ -54,6 +55,7 @@
 // menuOuterColour
 .Select-menu-outer *
 	color: rgba(44, 118, 209, 0.87) !important
+	z-index: 1000 !important	
 
 .Select-menu-outer
 	font-family: Gotham-Medium !important
@@ -63,6 +65,7 @@
 	width: 86.0% !important
 	transform: translate(-6.2px, 1px)
 	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.13) !important
+	z-index: 1000 !important
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
 		font-size: 1.17vw !important
 		transform: translate(-.52vw, 0.08vw) !important

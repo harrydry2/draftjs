@@ -1055,7 +1055,7 @@ input, .tweetTextSize {
 
 .buttonSectionp3 {
   width: 410px;
-  height: 119px;
+  height: auto;
   display: flex;
   align-content: space-between;
   flex-wrap: wrap; }
@@ -1077,66 +1077,47 @@ input, .tweetTextSize {
   border-radius: 4.4px;
   border: 2.2px solid #2c76d1;
   background: #FFFFFF;
+  width: 200px;
+  height: 41px;
   display: flex;
-  height: 41.11px; }
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-right: 30px; }
+  .blueBorderButton:hover {
+    cursor: pointer !important;
+    box-shadow: 0 6px 11px rgba(50, 50, 93, 0.08), 0 2px 7px rgba(0, 0, 0, 0.06); }
   .blueBorderButton:focus {
     border: none !important; }
   .blueBorderButton:visited {
     border: none !important; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .blueBorderButton {
+      width: 19.18vw;
       height: 3.17vw; } }
   @media screen and (max-width: 550px) {
     .blueBorderButton {
+      width: 193px;
       height: 31px; } }
   @media screen and (max-width: 357px) {
     .blueBorderButton {
+      width: 179.49px;
       height: 28.83px; } }
 
-.sizeButton {
-  width: 248.81px;
-  margin-right: 35.7px;
+.leftColumnStyles {
+  width: 176px;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .sizeButton:hover {
-    transform: translateY(-0.5px);
-    cursor: pointer !important;
-    box-shadow: 0 6px 11px rgba(50, 50, 93, 0.08), 0 2px 7px rgba(0, 0, 0, 0.06); }
-  @media screen and (max-width: 1199px) and (min-width: 1061px) {
-    .sizeButton {
-      width: 19.18vw;
-      margin-right: 2.75vw; } }
-  @media screen and (max-width: 550px) {
-    .sizeButton {
-      width: 193px;
-      margin-right: 14px; } }
-  @media screen and (max-width: 357px) {
-    .sizeButton {
-      width: 179.49px;
-      margin-right: 13.02px; } }
-
-.priceDiv {
-  width: 125.49px;
-  color: #2c76d1;
+  justify-content: space-between;
   font-family: Gotham-Medium;
-  font-size: 15.15px;
-  letter-spacing: -0.2px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  @media screen and (max-width: 1199px) and (min-width: 1061px) {
-    .priceDiv {
-      width: 9.67vw;
-      font-size: 1.17vw; } }
-  @media screen and (max-width: 550px) {
-    .priceDiv {
-      width: 97px;
-      font-size: 13px; } }
-  @media screen and (max-width: 357px) {
-    .priceDiv {
-      width: 90.219px;
-      font-size: 12.09px; } }
+  font-size: 16px;
+  color: #2C76D1; }
+
+.canvasTotalBold {
+  font-family: Gotham-Bold; }
+
+.canvasShipping {
+  margin-top: 8px;
+  margin-bottom: 35px; }
 
 .paymentButton {
   width: 410px;
@@ -1149,7 +1130,8 @@ input, .tweetTextSize {
   font-family: Gotham-Bold;
   font-size: 23.8px;
   letter-spacing: -0.2px;
-  border: none; }
+  border: none;
+  margin-top: 6px; }
   .paymentButton:hover {
     transform: translateY(-1px);
     cursor: pointer;
@@ -1171,10 +1153,10 @@ input, .tweetTextSize {
       font-size: 18.6px; } }
 
 .Select-value {
-  transform: translateX(11.9px) !important; }
+  transform: translateX(3px) !important; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .Select-value {
-      transform: translateX(0.92vw) !important; } }
+      transform: translateX(0vw) !important; } }
   @media screen and (max-width: 550px) {
     .Select-value {
       transform: translateX(0px) !important; } }
@@ -1216,7 +1198,8 @@ input, .tweetTextSize {
 
 .is-open > .Select-control .Select-arrow {
   border-color: transparent transparent #2c76d1 !important;
-  top: -3.3px !important; }
+  top: -3.3px !important;
+  z-index: 1000 !important; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .is-open > .Select-control .Select-arrow {
       transform: translateX(-0.5vw) !important;
@@ -1226,7 +1209,8 @@ input, .tweetTextSize {
       transform: translateX(0); } }
 
 .Select-menu-outer * {
-  color: rgba(44, 118, 209, 0.87) !important; }
+  color: rgba(44, 118, 209, 0.87) !important;
+  z-index: 1000 !important; }
 
 .Select-menu-outer {
   font-family: Gotham-Medium !important;
@@ -1235,7 +1219,8 @@ input, .tweetTextSize {
   border: none !important;
   width: 86.0% !important;
   transform: translate(-6.2px, 1px);
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.13) !important; }
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.13) !important;
+  z-index: 1000 !important; }
   @media screen and (max-width: 1199px) and (min-width: 1061px) {
     .Select-menu-outer {
       font-size: 1.17vw !important;

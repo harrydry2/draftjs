@@ -54,7 +54,6 @@
 		height: 4.34vw 
 	@media screen and (max-width: 1060px)
 		display: none
-		
 
 .instructionp3
 	color: #34434b
@@ -71,10 +70,9 @@
 		display: none
 
 // buttonSection
-
 .buttonSectionp3
 	width: 410px
-	height: 119px
+	height: auto
 	display: flex
 	align-content: space-between
 	flex-wrap: wrap
@@ -88,66 +86,55 @@
 		width: 283.65px
 		height: 82.77px
 
-// sizeButton
+// Button
 .blueBorderButton
 	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06)
 	border-radius: 4.4px
 	border: 2.2px solid #2c76d1
 	background: #FFFFFF
+	width: 200px
+	height: 41px
 	display: flex
-	height: 41.11px
+	justify-content: center
+	align-items: center
+	margin-bottom: 12px
+	margin-right: 30px
+	&:hover
+		cursor: pointer !important
+		box-shadow: 0 6px 11px rgba(50,50,93,.08), 0 2px 7px rgba(0,0,0,.06)
 	&:focus
 		border: none !important 
 	&:visited
 		border: none !important
 	@media screen and (max-width: 1199px) and (min-width: 1061px)
+		width: 19.18vw		
 		height: 3.17vw
 	@media screen and (max-width: 550px)
+		width: 193px
 		height: 31px
 	@media screen and (max-width: 357px)
+		width: 179.49px
 		height: 28.83px
 
 
-.sizeButton
-	width: 248.81px
-	margin-right: 35.7px
-	display: flex
-	justify-content: center
-	align-items: center
-	&:hover
-		transform: translateY(-0.5px)
-		cursor: pointer !important
-		box-shadow: 0 6px 11px rgba(50,50,93,.08), 0 2px 7px rgba(0,0,0,.06)
-	@media screen and (max-width: 1199px) and (min-width: 1061px)
-		width: 19.18vw
-		margin-right: 2.75vw
-	@media screen and (max-width: 550px)
-		width: 193px
-		margin-right: 14px
-	@media screen and (max-width: 357px)
-		width: 179.49px
-		margin-right: 13.02px
+// subtotalSection
 
-// priceButton
-.priceDiv
-	width: 125.49px
-	color: #2c76d1
+.subtotalColumn
+
+.leftColumnStyles
+	width: 176px
+	display: flex
+	justify-content: space-between
 	font-family: Gotham-Medium
-	font-size: 15.15px
-	letter-spacing: -0.2px
-	display: flex
-	align-items: center
-	justify-content: center
-	@media screen and (max-width: 1199px) and (min-width: 1061px)
-		width: 9.67vw
-		font-size: 1.17vw
-	@media screen and (max-width: 550px)
-		width: 97px
-		font-size: 13px
-	@media screen and (max-width: 357px)
-		width: 90.219px
-		font-size: 12.09px
+	font-size: 16px
+	color: #2C76D1
 
+.canvasTotalBold
+	font-family: Gotham-Bold
+
+.canvasShipping
+	margin-top: 8px
+	margin-bottom: 35px	
 
 // paymentButton
 .paymentButton
@@ -162,6 +149,7 @@
 	font-size: 23.8px
 	letter-spacing: -0.2px
 	border: none
+	margin-top: 6px
 	&:hover
 		transform: translateY(-1px)
 		cursor: pointer
